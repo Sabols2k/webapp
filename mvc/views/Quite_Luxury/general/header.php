@@ -21,7 +21,7 @@
                 <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/index.html">HOME</a>
               </li>
               <li class="menu-item">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/about-us.html">About Us</a>
+                <a href="<?php echo URL ."views/Quite_Luxury/about-us.php"?>">About Us</a>
               </li>
               <li class="menu-item">
                 <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/rooms-list.html">ROOMS</a>

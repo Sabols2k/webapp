@@ -24,7 +24,6 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">GuestID</label>
                         <input value="<?php echo $data['booking']['bGuestID']; ?>" name="GuestID" type="text" class="form-control">
-                        
                     </div>
                 </div>
             </div>

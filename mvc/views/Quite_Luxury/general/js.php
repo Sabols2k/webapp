@@ -1,8 +1,5 @@
-<div class="back-to-top">
-      <i class="fa fa-angle-up" aria-hidden="true"></i>
-    </div>
-<!-- ========== JAVASCRIPT ========== -->
-<script src="<?php echo URL ."mvc/Assets/js/jquery.min.js"?>"></script>
+    <!-- ========== JAVASCRIPT ========== -->
+    <script src="<?php echo URL ."mvc/Assets/js/jquery.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/http://maps.google.com/maps/api/js?key=YOUR_API_KEY"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/bootstrap.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/bootstrap-select.min.js"?>"></script>
