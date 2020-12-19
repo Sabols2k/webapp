@@ -355,6 +355,7 @@ class Admin extends Controller{
     
     public function AddAccount() {
         $data['account'] = [
+            'img' =>'',
             'username' =>'',
             'password' => '',
             'email' => '', 
@@ -378,13 +379,36 @@ class Admin extends Controller{
             'birthdayError' => ' ',
             'rolesIDError' => ' ',
         ];
-        
+
+     
+ 
+            
+          
+            // Check extension
+            // if( in_array($imageFileType,$extensions_arr) ){
+               // Upload file
+            //    move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
+          
+            // }
+       
         //Check for post
         if(isset($_POST['addaccount'])) {
             //Sanitize post data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
+            $file = $_FILES['file']['tmp_name'];
+            $target_dir = imgAccount;
+            
+            // $target_file = $target_dir . basename($_FILES["file"]["name"]);
+          
+            // Select file type
+            // $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+          
+            // Valid file extensions
+            // $extensions_arr = array("jpg","jpeg","png","gif");
+
             $data['account'] = [
+                'img' =>trim($_POST['file']),
                 'username' => trim($_POST['username']),
                 'password' => trim($_POST['password']),
                 'email' => trim($_POST['email']),
@@ -411,9 +435,12 @@ class Admin extends Controller{
 
 
             ];
+
+            
+            
             //Validate username
             if (empty($data['account']['username'])) {
-                $data['usernameError'] = 'Please enter a username.';
+                $data['usernameError'] = 'Please enter a username.';    
             }
 
             //Validate password
@@ -423,6 +450,7 @@ class Admin extends Controller{
 
             //Check if all errors are empty
             if (empty($data['account']['usernameError']) && empty($data['account']['passwordError'])) {
+                move_uploaded_file($_FILES['file']['tmp_name'], $target_dir.$file);
                 $model=$this->modeladmin("account");
                 $model->InsertAccount($data['account']['username'],
                     $data['account']['password' ],

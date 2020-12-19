@@ -14,6 +14,15 @@
         </div>
         <div class="card-body">
             <div class="row">
+                <div class="col-lg-12 p-t-20">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Ảnh đại diện</label>
+                        <input value="<?php echo $data['account']['aimg']; ?>" name="aUsername" type="text" class="form-control">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">AdminID</label>

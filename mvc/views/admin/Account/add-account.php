@@ -9,12 +9,20 @@
     </div>
 
     <!-- New Booking Form Example -->
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-secondary">Add Account Details</h6>
         </div>
         <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12 p-t-20">
+                    <div class="form-group">
+                        <input type='file' name='file' />
+                            <!-- <input type='submit' value='Save name' name='but_upload'> -->
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">

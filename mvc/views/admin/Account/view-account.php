@@ -26,6 +26,7 @@
                         <tr>
                             <th>STT</th>
                             <th>AccountID</th>
+                            <th>IMG</th>
                             <th>Username</th>
                             <th>Password</th>
                             <th>Email</th>
@@ -40,13 +41,19 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>STT</th>
-                            <th>RoomID</th>
-                            <th>Type</th>
-                            <th>Price</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                        <th>STT</th>
+                            <th>AccountID</th>
+                            <th>IMG</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Email</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Address</th>
+                            <th>Country</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>BirthDate</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -57,6 +64,7 @@
                         <tr>
                             <td><?php echo $stt ?></td>
                             <td><?php echo $row['aAdminID'] ?></td>
+                            <td><img style="height: 100px" src="<?php echo imgAccount . $row['aimg'] ?>" alt=""></td> 
                             <td><?php echo $row['aUsername'] ?></td>
                             <td><?php echo $row['aPassword'] ?></td>
                             <td><?php echo $row['aEmail'] ?></td>
