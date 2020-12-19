@@ -12,23 +12,21 @@
 // }
 //  echo 'You are visitor number ' . $_SESSION['page_count']; -->
 <?php  
-    // echo 'abc'. $_SESSION['test'];
-    if(empty($_SESSION['username'])){
-        header('Location:'.URLAdmin.'login');
+    // if(empty($_SESSION['username'])){
+    //     header('Location:'.URLAdmin.'login');
 
-    }
-    // print_r($data);
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Hotel Booking Room</title>
     <?php
-    require_once('general/meta.php');
     require_once('general/css.php');
     ?>
-    <title>Admin - Hotel Booking Room</title>
-    <link rel="icon" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/admin/img/favicon-logo.png">
-
 </head>
 
 <body id="page-top">

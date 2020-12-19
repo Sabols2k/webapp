@@ -64,8 +64,7 @@
                 
             
                 <div class="col-lg-12 p-t-20 text-center">
-                    <button type="submit" name="editRoom" value="Update" class="mdl-button mdl-button--raised btn-pink" href=""> Submit
-                </button>
+                    <button type="submit" name="editRoom" value="Update" class="mdl-button mdl-button--raised btn-yellow" href="">Submit</button>
                     <button type="button" class="mdl-button mdl-button--raised btn-default">Cancel</button>
                 </div> 
             </div>

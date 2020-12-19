@@ -1,5 +1,3 @@
-
-
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -59,10 +57,8 @@
                 </div>
             </div>
             <div class="col-lg-12 p-t-20 text-center">
-                <button type="submit" name="addbooking" class="mdl-button mdl-button--raised btn-pink">Submit</button>
-                <button type="button"  class="mdl-button mdl-button--raised btn-default">
-                    <a href="<?php echo URLAdmin."viewbooking" ?>">
-                Cancel</a></button>
+                <button type="submit" name="addbooking" class="mdl-button mdl-button--raised btn-yellow">Submit</button>
+                <a class="mdl-button mdl-button--raised btn-default" href="<?php echo URLAdmin."viewbooking" ?>" style="text-decoration: none;">Cancel</a>
             </div> 
         </div>
     </div>

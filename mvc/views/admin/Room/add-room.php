@@ -76,7 +76,7 @@
                 </div>
             </div> -->
             <div class="col-lg-12 p-t-20 text-center">
-                <button type="submit" name="addroom" class="mdl-button mdl-button--raised btn-pink">Submit</button>
+                <button type="submit" name="addroom" class="mdl-button mdl-button--raised btn-yellow">Submit</button>
                 <button type="button" class="mdl-button mdl-button--raised btn-default">Cancel</button>
             </div> 
         </div>

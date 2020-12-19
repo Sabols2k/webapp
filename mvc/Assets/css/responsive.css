@@ -8,19 +8,19 @@ Version:       1.1.0
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
-  
+  ...
 }
 
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
- 
+  ...
 }
 
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
- 
+  ...
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -78,7 +78,7 @@ Version:       1.1.0
     height: 55px;
   }
   header .brand {
-    padding: 15px 0;
+    padding: 10px 0;
   }
   header .brand .logo img {
     max-width: 100px;
@@ -316,7 +316,7 @@ Version:       1.1.0
   }
   .section-title h4,
   .section-title.sm h4 {
-    font-size: 30px;
+    font-size: 42px;
   }
 
   section .places-item {

@@ -135,16 +135,10 @@
                         </span>
                     </div>
                 </div>
-                
             </div>
-
-            
-            
             <div class="col-lg-12 p-t-20 text-center">
-                <button type="submit" name="addaccount" class="mdl-button mdl-button--raised btn-pink">Submit</button>
-                <button type="button"  class="mdl-button mdl-button--raised btn-default">
-                    <a href="http://localhost:8080/Web_App/Quite_Luxury/admin/viewaccount">
-                Cancel</a></button>
+                <button type="submit" name="addaccount" class="mdl-button mdl-button--raised btn-yellow">Submit</button>
+                <a class="mdl-button mdl-button--raised btn-default" href="<?php echo URLAdmin."viewaccount" ?>" style="text-decoration: none;">Cancel</a>
             </div> 
         </div>
     </div>
