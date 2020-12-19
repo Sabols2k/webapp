@@ -8,8 +8,8 @@
     <title>Hotel Quite Luxury</title>
     <!-- ========== FAVICON ========== -->
     <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
-  </head>
-  <body>
+</head>
+<body>
     <!-- ========== MOBILE MENU ========== -->
     <nav id="mobile-menu"></nav>
     <!-- ========== WRAPPER ========== -->
@@ -44,7 +44,7 @@
             <?php
               require_once "general/about.php";
             ?> 
-            <h4 class="text-uppercase mt40 mb20">Features</h4>
+            <h4 class="text-uppercase mt40 mb20" style="color: #B6ADAD;">Features</h4>
             <div class="row">
               <!-- ITEM -->
               <div class="col-md-3 col-6">
@@ -116,7 +116,7 @@
               Dolores unde ut amet et rerum minus aliquam doloremque obcaecati assumenda, quod autem optio dignissimos qui, cum minima, voluptas nostrum mollitia, perferendis similique asperiores fuga earum accusantium? Alias nesciunt recusandae autem quae quo
               consectetur laboriosam reprehenderit numquam. Nesciunt quae, eius aut rerum impedit, suscipit ducimus! Nam, aperiam officia ipsum illum ut fugit perspiciatis. Quis cumque ea nulla quaerat, debitis adipisci provident maxime odio odit atque.
             </p>
-            <h4 class="text-uppercase mt40 mb20">Services</h4>
+            <h4 class="text-uppercase mt40 mb20" style="color: #B6ADAD;">Services</h4>
             <div class="image-gallery">
               <div class="row">
                 <!-- ITEM -->
@@ -152,7 +152,7 @@
               perspiciatis impedit cum deserunt officiis, consectetur error architecto vero amet quos suscipit nam voluptates ea at. Optio at asperiores culpa, officiis commodi qui eveniet, debitis deleniti atque, saepe quis quas blanditiis. Itaque placeat ab non
               qui ut commodi sed vitae, dicta mollitia beatae enim nobis architecto consectetur? Dolorum delectus voluptate est exercitationem.
             </p>
-            <h4 class="text-uppercase mt40 mb20">Awards</h4>
+            <h4 class="text-uppercase mt40 mb20" style="color: #B6ADAD;">Awards</h4>
             <div class="row mb40">
               <!-- ITEM -->
               <div class="col-md-4">

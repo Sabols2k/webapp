@@ -380,10 +380,6 @@ class Admin extends Controller{
             'rolesIDError' => ' ',
         ];
 
-     
- 
-            
-          
             // Check extension
             // if( in_array($imageFileType,$extensions_arr) ){
                // Upload file
@@ -436,7 +432,6 @@ class Admin extends Controller{
 
             ];
 
-            
             
             //Validate username
             if (empty($data['account']['username'])) {

@@ -2516,7 +2516,7 @@ section.dark .countup-box i {
 
 .countup-box .number {
   position: relative;
-  color: #c9c9c9;
+  color: #B6ADAD;
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 700;
@@ -2525,16 +2525,12 @@ section.dark .countup-box i {
 
 .countup-box .text {
   position: relative;
-  color: #c9c9c9;
+  color: #B6ADAD;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
   z-index: 9;
-}
-
-section.dark .countup-box .number, section.dark .countup-box .text {
-  color: #a4a4a4;
 }
 
 /* =====  GALLERY  ===== */
