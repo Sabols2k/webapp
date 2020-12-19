@@ -23,7 +23,7 @@
         require_once "general/header.php";
       ?> 
       <!-- ========== PAGE TITLE ========== -->
-      <div class="page-title gradient-overlay op5" style="background: url(images/breadcrumb.jpg); background-repeat: no-repeat;
+      <div class="page-title gradient-overlay op5" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>"?>); background-repeat: no-repeat;
       background-size: cover;">
         <div class="container">
           <div class="inner">
@@ -33,10 +33,10 @@
             </div>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="<?php echo URL?>">Home</a>
               </li>
               <li>
-                <a href="index.html">Rooms</a>
+                <a href="<?php echo URL_Layout."roomlist"?>">Rooms</a>
               </li>
               <li>Single Room</li>
             </ol>
@@ -54,85 +54,85 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single1.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single1.jpg" alt="Image">
+                      <a href="images/rooms/single/single1.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single2.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single2.jpg" alt="Image">
+                      <a href="images/rooms/single/single2.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single2.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single3.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single3.jpg" alt="Image">
+                      <a href="images/rooms/single/single3.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single3.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single4.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single4.jpg" alt="Image">
+                      <a href="images/rooms/single/single4.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single4.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single5.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single5.jpg" alt="Image">
+                      <a href="images/rooms/single/single5.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single5.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single6.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single6.jpg" alt="Image">
+                      <a href="images/rooms/single/single6.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single6.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single7.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single7.jpg" alt="Image">
+                      <a href="images/rooms/single/single7.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single7.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single8.jpg">
-                        <img class="img-fluid" src="images/rooms/single/single8.jpg" alt="Image">
+                      <a href="images/rooms/single/single8.jpg"?>
+                        <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single8.jpg"?>" alt="Image">
                       </a>
                     </figure>
                   </div>
                 </div>
                 <div id="room-thumbs" class="room-thumbs owl-carousel">
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single1.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single2.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single2.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single3.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single3.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single4.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single4.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single5.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single5.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single6.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single6.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single7.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single7.jpg"?>" alt="Image"></div>
                   <!-- ITEM -->
-                  <div class="item"><img class="img-fluid" src="images/rooms/single/single8.jpg" alt="Image"></div>
+                  <div class="item"><img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single8.jpg"?>" alt="Image"></div>
                 </div>
               </div>
               <p class="dropcap">You can relax and feel at home as all our single rooms are fitted with a spacious semi double bed. Some are also fitted with a desk
@@ -306,7 +306,7 @@
                 </div>
                 <div class="review-box">
                   <figure class="review-author">
-                    <img src="images/users/user1.jpg" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/users/user1.jpg"?>" alt="Image">
                   </figure>
                   <div class="review-contentt">
                     <div class="rating">
@@ -329,7 +329,7 @@
                 <!-- End review-box -->
                 <div class="review-box clearfix">
                   <figure class="review-author">
-                    <img src="images/users/user2.jpg" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/users/user2.jpg"?>" alt="Image">
                   </figure>
                   <div class="review-contentt">
                     <div class="rating">
@@ -352,7 +352,7 @@
                 <!-- End review-box -->
                 <div class="review-box clearfix">
                   <figure class="review-author">
-                    <img src="images/users/user3.jpg" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/users/user3.jpg"?>" alt="Image">
                   </figure>
                   <div class="review-contentt">
                     <div class="rating">
@@ -384,7 +384,7 @@
                     <div class="room-grid-item">
                       <figure class="gradient-overlay-hover link-icon">
                         <a href="room.html">
-                          <img src="images/rooms/single/single1.jpg" class="img-fluid" alt="Image">
+                          <img src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" class="img-fluid" alt="Image">
                         </a>
                         <div class="room-services">
                           <i class="fa fa-coffee" aria-hidden="true" data-toggle="popover" data-placement="right" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
@@ -406,7 +406,7 @@
                     <div class="room-grid-item">
                       <figure class="gradient-overlay-hover link-icon">
                         <a href="room.html">
-                          <img src="images/rooms/double/double.jpg" class="img-fluid" alt="Image">
+                          <img src="<?php echo URL ."mvc/Assets/images/rooms/double/double.jpg"?>" class="img-fluid" alt="Image">
                         </a>
                         <div class="room-services">
                           <i class="fa fa-coffee" aria-hidden="true" data-toggle="popover" data-placement="right" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
@@ -428,7 +428,7 @@
                     <div class="room-grid-item">
                       <figure class="gradient-overlay-hover link-icon">
                         <a href="room.html">
-                          <img src="images/rooms/deluxe/deluxe.jpg" class="img-fluid" alt="Image">
+                          <img src="<?php echo URL ."mvc/Assets/images/rooms/deluxe/deluxe.jpg"?>" class="img-fluid" alt="Image">
                         </a>
                         <div class="room-services">
                           <i class="fa fa-coffee" aria-hidden="true" data-toggle="popover" data-placement="right" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
@@ -538,7 +538,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post1.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post1.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -557,7 +557,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post2.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post2.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -576,7 +576,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post3.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post3.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -595,7 +595,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post4.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post4.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -614,7 +614,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post5.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post5.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -631,7 +631,7 @@
                 </aside>
                 <!-- WIDGET -->
                 <aside class="widget noborder">
-                  <img src="images/banner.jpg" class="img-fluid" alt="Image">
+                  <img src="<?php echo URL ."mvc/Assets/images/banner.jpg"?>" class="img-fluid" alt="Image">
                 </aside>
               </div>
             </div>

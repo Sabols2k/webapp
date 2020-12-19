@@ -30,7 +30,7 @@
             <h1>ABOUT QUIET LUXURY HOTEL</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="<?php echo URL?>">Home</a>
               </li>
               <li>About Quite Luxury Hotel</li>
             </ol>
@@ -122,25 +122,25 @@
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/restaurant.jpg"><img src="images/services/restaurant.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/restaurant.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/restaurant.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/gym.jpg"><img src="images/services/gym.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/gym.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/gym.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/spa.jpg"><img src="images/services/spa.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/spa.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/spa.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/bar.jpg"><img src="images/services/bar.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/bar.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/bar.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
               </div>
@@ -158,7 +158,7 @@
               <div class="col-md-4">
                 <div class="award-item">
                   <figure>
-                    <img src="images/award1.svg" class="img-fluid" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/award1.svg"?>" class="img-fluid" alt="Image">
                     <figcaption>
                       #1 Global Choice
                     </figcaption>
@@ -169,7 +169,7 @@
               <div class="col-md-4">
                 <div class="award-item">
                   <figure>
-                    <img src="images/award2.svg" class="img-fluid" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/award2.svg"?>" class="img-fluid" alt="Image">
                     <figcaption>
                       #2 Top Quality
                     </figcaption>
@@ -180,7 +180,7 @@
               <div class="col-md-4">
                 <div class="award-item">
                   <figure>
-                    <img src="images/award3.svg" class="img-fluid" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/award3.svg"?>" class="img-fluid" alt="Image">
                     <figcaption>
                       #1 Genuine Quality
                     </figcaption>
