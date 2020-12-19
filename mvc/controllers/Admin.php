@@ -13,7 +13,7 @@ class Admin extends Controller{
         $this->accountModel= $this->modeladmin("account");
         
     }
-    function SayHi(){
+    function index(){
         // $this->viewadmin("index");
         
         $data['main'] = "home/main";

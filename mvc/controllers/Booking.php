@@ -2,9 +2,9 @@
 
 class Booking extends Controller{
 
-    function SayHi(){
+    function index(){
         
-        require_once "./mvc/views/Quite_Luxury/Booking-form.php";
+        require_once "./mvc/views/layout/Booking-form.php";
 
     }
 
