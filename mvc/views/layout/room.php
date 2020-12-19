@@ -23,7 +23,7 @@
         require_once "general/header.php";
       ?> 
       <!-- ========== PAGE TITLE ========== -->
-      <div class="page-title gradient-overlay op5" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>"?>); background-repeat: no-repeat;
+      <div class="page-title gradient-overlay op5" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>); background-repeat: no-repeat;
       background-size: cover;">
         <div class="container">
           <div class="inner">
@@ -54,7 +54,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single1.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -62,7 +62,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single2.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single2.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single2.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -70,7 +70,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single3.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single3.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single3.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -78,7 +78,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single4.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single4.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single4.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -86,7 +86,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single5.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single5.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single5.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -94,7 +94,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single6.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single6jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single6.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -102,7 +102,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single7.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single7.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single7.jpg"?>" alt="Image">
                       </a>
                     </figure>
@@ -110,7 +110,7 @@
                   <!-- ITEM -->
                   <div class="item">
                     <figure class="gradient-overlay-hover image-icon">
-                      <a href="images/rooms/single/single8.jpg"?>
+                      <a href="<?php echo URL ."mvc/Assets/images/rooms/single/single8.jpg"?>">
                         <img class="img-fluid" src="<?php echo URL ."mvc/Assets/images/rooms/single/single8.jpg"?>" alt="Image">
                       </a>
                     </figure>
