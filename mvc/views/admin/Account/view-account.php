@@ -77,7 +77,6 @@
                             <td><?php echo $row['aPhone'] ?></td>
                             <td><?php echo $row['aGender'] ?></td>
                             <td><?php echo $row['aBirthday'] ?></td>
-                            
                             <td>
                                 <button class="btn btn-edit">
                                     <a href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
@@ -85,7 +84,7 @@
                                     </a>
                                 </button>
                                 <button class="btn btn-delete">
-                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteAccount/'.$row['aAdminID']; ?>">
+                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteAccount/'.$row['aAdminID']; ?>" style="color: #fff;">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </button>
