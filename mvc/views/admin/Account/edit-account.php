@@ -109,7 +109,7 @@
             
            
             <div class="col-lg-12 p-t-20 text-center">
-                <button  type="submit" name="editAccount" value="Update" class="mdl-button mdl-button--raised btn-pink" href="<?php echo URLAdmin.'viewaccount'?>"> Submit
+                <button  type="submit" name="editAccount" value="Update" class="mdl-button mdl-button--raised btn-yellow" href="<?php echo URLAdmin.'viewaccount'?>"> Submit
                </button>
                 <button type="button" class="mdl-button mdl-button--raised btn-default">Cancel</button>
             </div> 
