@@ -37,7 +37,7 @@
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>BirthDate</th>
-                            <th width="500px">Action</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
