@@ -7738,11 +7738,6 @@ button.bg-dark:focus {
   margin-left: 3rem !important;
 }
 
-.mb-8,
-.my-8 {
-  margin-bottom: 8rem !important;
-}
-
 .p-0 {
   padding: 0 !important;
 }
@@ -10185,8 +10180,8 @@ a:focus {
 }
 
 .topbar .dropdown-list .dropdown-header {
-  background-color: var(--info);
-  border: 1px solid #36b9cc;
+  background-color: var(--dark);
+  border: 1px solid #4e73df;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   color: #fff;
@@ -10273,8 +10268,7 @@ a:focus {
   color: #858796;
 }
 
-.
- {
+.sidebar {
   width: 6.5rem;
   min-height: 100vh;
 }
@@ -10718,7 +10712,7 @@ a:focus {
 .btn-icon-split .icon {
   background: rgba(0, 0, 0, 0.15);
   display: inline-block;
-  padding: 0.6rem 0.75rem;
+  padding: 0.375rem 0.75rem;
 }
 
 .btn-icon-split .text {
@@ -11235,41 +11229,20 @@ body.sidebar-toggled footer.sticky-footer {
 .table{
   text-align: center;
 }
-.control-label {
-  margin-top: 1px;
-  font-weight: 400;
-}
-.dropzone.dz-clickable {
-  cursor: pointer;
-}
-.dropzone {
-  min-height: 150px;
-  border: 2px dashed rgba(0, 0, 0, 0.3);
-  background: white;
-  padding: 20px 20px;
-}
-.dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
-  cursor: pointer;
-}
-.dropzone .dz-message {
-  text-align: center;
-  margin: 2em 0;
-  font-size: 20px;
-}
 .btn-yellow {
-  background-color: #f5bf37 !important;
+  background-color: #f6c23e !important;
   color: #fff !important;
   margin-right: 15px;
 }
 .btn-default{
   background-color: #888888 !important;
-  border: #888888 !important;
   color: #fff !important;
 }
 .mdl-button {
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   color: #000;
+  position: relative;
   height: 36px;
   min-width: 64px;
   padding: 0 16px;
@@ -11280,6 +11253,7 @@ body.sidebar-toggled footer.sticky-footer {
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
   text-align: center;
   line-height: 36px;
   vertical-align: middle;

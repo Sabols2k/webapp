@@ -1,5 +1,6 @@
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo URL ."mvc/Assets/admin/vendor/jquery/jquery.min.js"?>"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="<?php echo URL ."mvc/Assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"?>"></script>
 
     <!-- Core plugin JavaScript-->

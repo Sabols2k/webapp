@@ -1,4 +1,5 @@
 <!-- Begin Page Content -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -42,37 +43,8 @@
                             <th>Action</th>
                         </tr>
                     </tfoot>
-                    <tbody>
-                    <?php  
-                        $stt=1;
-                        foreach($data['room'] as $row){
-                    ?>
-                        <tr>
-                            <td><?php echo $stt ?></td>
-                            <td><?php echo $row['RoomID'] ?></td>
-                            <td><?php echo $row['RoomTypeID'] ?></td>
-                            <td><?php echo $row['RoomPrice'] ?></td>
-                            <td><?php echo $row['Description'] ?></td>
-                            <td><?php echo $row['RoomstatusID'] ?></td>
-                            
-                            <td>
-                                <button class="btn btn-edit">
-                                    <a href="<?php echo URLAdmin.'editroom/'.$row['RoomID']; ?>">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </a>
-                                </button>
-                                <button class="btn btn-delete">
-                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteroom/'.$row['RoomID']; ?>">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
-                                </button>
-                            </td>
-                        </tr>
-                    <?php
-                        $stt++;
-                        }
-                    ?>   
-                        
+                    <tbody id="allroom" >
+                          
                     </tbody>
                 </table>
             </div>
@@ -81,3 +53,46 @@
 
 </div>
 <!-- /.container-fluid -->
+
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        // console.log(xmlhttp.responseText);
+        array = JSON.parse(xmlhttp.responseText);
+        console.log(array);
+
+    var stt=1;
+    html= array.map(item=>
+        `<tr>`+
+        `<td>`+stt+`</td>`+
+        `<td>`+item['RoomID']+`</td>`+
+        `<td>`+item['RoomTypeID']+`</td>`+
+        `<td>`+item['RoomPrice']+`</td>`+
+        `<td>`+item['Description']+`</td>`+
+        `<td>`+item['RoomstatusID']+`</td>`+
+        `<td> <button class="btn btn-edit">`+
+            `<a href="<?php echo URLAdmin ?>.'editroom/'.`+item['RoomID']+ `">`+
+               ` <i class="fas fa-pencil-alt"></i>`+
+           ` </a>`+
+            `</button>
+            <button class="btn btn-delete">
+                <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin?>.'deleteroom/'.`+item['RoomID']+` ">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </button>`+
+        `</td>`+
+        `</tr>`
+
+
+                    );
+                        $('#allroom').html(html);
+    }
+    
+    };
+    xmlhttp.open("GET", "http://localhost:8080/Web_App/Quite_Luxury/api/AllRoomtype", true);
+    xmlhttp.send();
+
+    
+
+</script>
