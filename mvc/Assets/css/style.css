@@ -2516,12 +2516,12 @@ section.dark .countup-box i {
 
 .countup-box .number {
   position: relative;
-  color: #c9c9c9;
+  color: #0000 ;
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 700;
   z-index: 9;
-}
+} 
 
 .countup-box .text {
   position: relative;
