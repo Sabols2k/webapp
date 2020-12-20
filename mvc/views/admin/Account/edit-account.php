@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">aUsername</label>
+                        <label for="exampleFormControlInput1">Username</label>
                         <input value="<?php echo $data['account']['aUsername']; ?>" name="aUsername" type="text" class="form-control">
                         
                     </div>
@@ -40,13 +40,13 @@
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">aPassword</label>
+                        <label for="exampleFormControlInput1">Password</label>
                         <input value="<?php echo $data['account']['aPassword']; ?>" name="aPassword" type="text" class="form-control">
                     </div>                               
                 </div>
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">aEmail</label>
+                        <label for="exampleFormControlInput1">Email</label>
                         <input value="<?php echo $data['account']['aEmail']; ?>" name="aEmail"type="text" class="form-control">
                     </div>
                 </div>
@@ -54,13 +54,13 @@
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aFirstName</label>
+                            <label for="exampleFormControlInput1">FirstName</label>
                             <input value="<?php echo $data['account']['aFirstName']; ?>" name="aFirstName"type="text" class="form-control">
                     </div>
                 </div>
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aLastName</label>
+                            <label for="exampleFormControlInput1">LastName</label>
                             <input value="<?php echo $data['account']['aLastName']; ?>" name="aLastName"type="text" class="form-control">
                     </div>
                 </div>
@@ -69,13 +69,13 @@
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aAddress</label>
+                            <label for="exampleFormControlInput1">Address</label>
                             <input value="<?php echo $data['account']['aAddress']; ?>" name="aAddress"type="text" class="form-control">
                     </div>
                 </div>
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aCountry</label>
+                            <label for="exampleFormControlInput1">Country</label>
                             <input value="<?php echo $data['account']['aCountry']; ?>" name="aCountry"type="text" class="form-control">
                     </div>
                 </div>
@@ -84,13 +84,13 @@
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aPhone</label>
+                            <label for="exampleFormControlInput1">Phone</label>
                             <input value="<?php echo $data['account']['aPhone']; ?>" name="aPhone"type="text" class="form-control">
                     </div>
                 </div>
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aGender</label>
+                            <label for="exampleFormControlInput1">Gender</label>
                             <input value="<?php echo $data['account']['aGender']; ?>" name="aGender"type="text" class="form-control">
                     </div>
                 </div>
@@ -99,7 +99,7 @@
             <div class="row">
                 <div class="col-lg-12 p-t-20">
                     <div class="form-group">
-                            <label for="exampleFormControlInput1">aBirthday</label>
+                            <label for="exampleFormControlInput1">Birthday</label>
                             <input value="<?php echo $data['account']['aBirthday']; ?>" name="aBirthday"type="date" class="form-control">
                     </div>
                 </div>
