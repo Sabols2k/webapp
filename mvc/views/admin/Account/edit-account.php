@@ -17,7 +17,7 @@
                 <div class="col-lg-12 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Ảnh đại diện</label>
-                        <input value="<?php echo $data['account']['aimg']; ?>" name="aimg" type="type" class="form-control">
+                        <input value="<?php echo $data['account']['aimg']; ?>" name="aimg" type="file" class="form-control">
                         
                     </div>
                 </div>

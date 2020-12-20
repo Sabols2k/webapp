@@ -37,27 +37,9 @@
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>BirthDate</th>
-                            <th>Action</th>
+                            <th width="500px">Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                        <th>STT</th>
-                            <th>AccountID</th>
-                            <th>IMG</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Email</th>
-                            <th>FirstName</th>
-                            <th>LastName</th>
-                            <th>Address</th>
-                            <th>Country</th>
-                            <th>Phone</th>
-                            <th>Gender</th>
-                            <th>BirthDate</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                     <?php  
                         $stt=1;
