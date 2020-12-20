@@ -4,7 +4,7 @@
                 <!-- SLIDE NR. 1 -->
                 <li data-transition="crossfade">
                 <!-- MAIN IMAGE -->
-                <img src="<?php echo URL ."mvc/Assets/layout/images/slider/slider1.jpg"?>" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+                <img src="<?php echo URL ."mvc/Assets/images/slider/slider1.jpg"?>" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
                 <h1
                     class="tp-caption tp-resizeme"
@@ -98,7 +98,7 @@
                 <!-- SLIDE NR. 2 -->
                 <li data-transition="crossfade">
                 <!-- MAIN IMAGE -->
-                <img src="<?php echo URL ."mvc/Assets/layout/images/slider/slider2.jpg"?>" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+                <img src="<?php echo URL ."mvc/Assets/images/slider/slider2.jpg"?>" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
                 <div
                     class="tp-caption tp-resizeme"
@@ -131,7 +131,7 @@
                 <!-- SLIDE NR. 3 -->
                 <li data-transition="crossfade">
                 <!-- MAIN IMAGE -->
-                <img src="<?php echo URL ."mvc/Assets/layout/images/slider/slider3.jpg"?>" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+                <img src="<?php echo URL ."mvc/Assets/images/slider/slider3.jpg"?>" alt="Image" title="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
                 <!-- LAYER NR. 1 -->
                 <div
                     class="tp-caption tp-resizeme"

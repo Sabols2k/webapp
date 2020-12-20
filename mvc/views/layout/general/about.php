@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="section-title">
-          <h4 class="text-uppercase" style="font-size: 55px">Hotel Quite Luxury. since 2020</h4>
+          <h4 class="text-uppercase">Hotel Quite Luxury. since 2020</h4>
           <p class="section-subtitle">High quality accommodation services</p>
         </div>
         <div class="info-branding">

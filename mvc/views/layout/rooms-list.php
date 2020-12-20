@@ -23,14 +23,14 @@
         require_once "general/header.php";
       ?> 
       <!-- ========== PAGE TITLE ========== -->
-      <div class="page-title gradient-overlay op6" style="background: url(images/breadcrumb.jpg); background-repeat: no-repeat;
+      <div class="page-title gradient-overlay op6" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>); background-repeat: no-repeat;
       background-size: cover; background-position: center;">
         <div class="container">
           <div class="inner">
             <h1>ROOMS</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="<?php echo URL?>">Home</a>
               </li>
               <li>Rooms</li>
             </ol>
@@ -45,13 +45,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/single/single1.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">SINGLE ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">SINGLE ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -59,7 +59,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="#">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -74,7 +74,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$89 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -87,13 +87,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/double/double.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/double/double.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">DOUBLE ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">DOUBLE ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -101,7 +101,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -116,7 +116,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$129 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -126,13 +126,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/deluxe/deluxe.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/deluxe/deluxe.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">DELUXE ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">DELUXE ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -140,7 +140,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -155,7 +155,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$189 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -165,13 +165,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/family/family.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/family/family.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">FAMILY ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">FAMILY ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -179,7 +179,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -194,7 +194,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$149 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -204,13 +204,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/king/king.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/king/king.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">KING ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">KING ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -218,7 +218,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -234,7 +234,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$289 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -247,13 +247,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/honeymoon/honeymoon.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/honeymoon/honeymoon.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">HONEYMOON ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">HONEYMOON ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -261,7 +261,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -276,7 +276,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$169 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -286,13 +286,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/view/view.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/view/view.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">ROOM WITH VIEW</a>
+                    <a href="<?php echo URL_Layout."room"?>">ROOM WITH VIEW</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -300,7 +300,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -315,7 +315,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$119 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -325,13 +325,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/luxury/luxury.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/luxury/luxury.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">LUXURY ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">LUXURY ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -339,7 +339,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -354,7 +354,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$349 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>
@@ -364,13 +364,13 @@
             <div class="row">
               <div class="col-lg-4">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="room.html"><img src="images/rooms/small/small.jpg" class="img-fluid" alt="Image"></a>
+                  <a href="<?php echo URL_Layout."room"?>"><img src="<?php echo URL ."mvc/Assets/images/rooms/small/small.jpg"?>" class="img-fluid" alt="Image"></a>
                 </figure>
               </div>
               <div class="col-lg-6">
                 <div class="room-info">
                   <h3 class="room-title">
-                    <a href="room.html">SMALL ROOM</a>
+                    <a href="<?php echo URL_Layout."room"?>">SMALL ROOM</a>
                   </h3>
                   <span class="room-rates">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -378,7 +378,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <a href="room.html#room-reviews">5.00 Based on 3 Ratings</a>
+                    <a href="<?php echo URL_Layout."room"?>">5.00 Based on 3 Ratings</a>
                   </span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus animi quod adipisci quia? Laudantium quibusdam, mollitia nisi quasi perspiciatis omnis...</p>
                   <div class="room-services">
@@ -392,7 +392,7 @@
               <div class="col-lg-2">
                 <div class="room-price">
                   <span class="price">$39 / night</span>
-                  <a href="room.html" class="btn btn-sm">VIEW DETAILS</a>
+                  <a href="<?php echo URL_Layout."room"?>" class="btn btn-sm">VIEW DETAILS</a>
                 </div>
               </div>
             </div>

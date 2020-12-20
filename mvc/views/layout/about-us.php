@@ -8,8 +8,8 @@
     <title>Hotel Quite Luxury</title>
     <!-- ========== FAVICON ========== -->
     <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
-  </head>
-  <body>
+</head>
+<body>
     <!-- ========== MOBILE MENU ========== -->
     <nav id="mobile-menu"></nav>
     <!-- ========== WRAPPER ========== -->
@@ -30,7 +30,7 @@
             <h1>ABOUT QUIET LUXURY HOTEL</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="<?php echo URL?>">Home</a>
               </li>
               <li>About Quite Luxury Hotel</li>
             </ol>
@@ -44,7 +44,7 @@
             <?php
               require_once "general/about.php";
             ?> 
-            <h4 class="text-uppercase mt40 mb20">Features</h4>
+            <h4 class="text-uppercase mt40 mb20" style="color: #B6ADAD;">Features</h4>
             <div class="row">
               <!-- ITEM -->
               <div class="col-md-3 col-6">
@@ -116,31 +116,31 @@
               Dolores unde ut amet et rerum minus aliquam doloremque obcaecati assumenda, quod autem optio dignissimos qui, cum minima, voluptas nostrum mollitia, perferendis similique asperiores fuga earum accusantium? Alias nesciunt recusandae autem quae quo
               consectetur laboriosam reprehenderit numquam. Nesciunt quae, eius aut rerum impedit, suscipit ducimus! Nam, aperiam officia ipsum illum ut fugit perspiciatis. Quis cumque ea nulla quaerat, debitis adipisci provident maxime odio odit atque.
             </p>
-            <h4 class="text-uppercase mt40 mb20">Services</h4>
+            <h4 class="text-uppercase mt40 mb20" style="color: #B6ADAD;">Services</h4>
             <div class="image-gallery">
               <div class="row">
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/restaurant.jpg"><img src="images/services/restaurant.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/restaurant.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/restaurant.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/gym.jpg"><img src="images/services/gym.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/gym.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/gym.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/spa.jpg"><img src="images/services/spa.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/spa.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/spa.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
                 <!-- ITEM -->
                 <div class="col-md-3">
                   <figure class="gradient-overlay-hover image-icon">
-                    <a href="images/services/bar.jpg"><img src="images/services/bar.jpg" alt="Image" class="img-fluid"></a>
+                    <a href="<?php echo URL ."mvc/Assets/images/services/bar.jpg"?>"><img src="<?php echo URL ."mvc/Assets/images/services/bar.jpg"?>" alt="Image" class="img-fluid"></a>
                   </figure>
                 </div>
               </div>
@@ -152,13 +152,13 @@
               perspiciatis impedit cum deserunt officiis, consectetur error architecto vero amet quos suscipit nam voluptates ea at. Optio at asperiores culpa, officiis commodi qui eveniet, debitis deleniti atque, saepe quis quas blanditiis. Itaque placeat ab non
               qui ut commodi sed vitae, dicta mollitia beatae enim nobis architecto consectetur? Dolorum delectus voluptate est exercitationem.
             </p>
-            <h4 class="text-uppercase mt40 mb20">Awards</h4>
+            <h4 class="text-uppercase mt40 mb20" style="color: #B6ADAD;">Awards</h4>
             <div class="row mb40">
               <!-- ITEM -->
               <div class="col-md-4">
                 <div class="award-item">
                   <figure>
-                    <img src="images/award1.svg" class="img-fluid" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/award1.svg"?>" class="img-fluid" alt="Image">
                     <figcaption>
                       #1 Global Choice
                     </figcaption>
@@ -169,7 +169,7 @@
               <div class="col-md-4">
                 <div class="award-item">
                   <figure>
-                    <img src="images/award2.svg" class="img-fluid" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/award2.svg"?>" class="img-fluid" alt="Image">
                     <figcaption>
                       #2 Top Quality
                     </figcaption>
@@ -180,7 +180,7 @@
               <div class="col-md-4">
                 <div class="award-item">
                   <figure>
-                    <img src="images/award3.svg" class="img-fluid" alt="Image">
+                    <img src="<?php echo URL ."mvc/Assets/images/award3.svg"?>" class="img-fluid" alt="Image">
                     <figcaption>
                       #1 Genuine Quality
                     </figcaption>

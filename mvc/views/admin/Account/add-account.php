@@ -49,7 +49,7 @@
                         <label for="exampleFormControlInput1">Email</label>
                         <input name="email"  type="text" class="form-control">
                         <span class="invalidFeedback">
-                            <?php echo $data['account']['usernameError']; ?>
+                            <?php echo $data['account']['emailError']; ?>
                         </span>
                     </div>
                 </div>

@@ -20,6 +20,12 @@ class Home extends Controller{
 
     }
 
+    function room(){
+
+        require_once "./mvc/views/layout/room.php";
+
+    }
+
     function restaurant(){
 
         require_once "./mvc/views/layout/restaurant.php";
