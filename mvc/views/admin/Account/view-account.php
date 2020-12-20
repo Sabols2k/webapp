@@ -37,6 +37,7 @@
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>BirthDate</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -54,6 +55,7 @@
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>BirthDate</th>
+                            <th>Action</th>
                         </tr>
                     </tfoot>
                     <tbody>
