@@ -11229,27 +11229,6 @@ body.sidebar-toggled footer.sticky-footer {
 .table{
   text-align: center;
 }
-.control-label {
-  margin-top: 1px;
-  font-weight: 400;
-}
-.dropzone.dz-clickable {
-  cursor: pointer;
-}
-.dropzone {
-  min-height: 150px;
-  border: 2px dashed rgba(0, 0, 0, 0.3);
-  background: white;
-  padding: 20px 20px;
-}
-.dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
-  cursor: pointer;
-}
-.dropzone .dz-message {
-  text-align: center;
-  margin: 2em 0;
-  font-size: 20px;
-}
 .btn-yellow {
   background-color: #f6c23e !important;
   color: #fff !important;
@@ -11257,7 +11236,6 @@ body.sidebar-toggled footer.sticky-footer {
 }
 .btn-default{
   background-color: #888888 !important;
-  border: #888888 !important;
   color: #fff !important;
 }
 .mdl-button {
