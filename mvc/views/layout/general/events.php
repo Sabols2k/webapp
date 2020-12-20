@@ -2,8 +2,7 @@
         <div class="container">
           <div class="section-title">
             <h4>UPCOMING EVENTS</h4>
-            <p class="section-subtitle">Check ou our upcoming events</p>
-            <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/events.html" class="view-all">View all events</a>
+            <p class="section-subtitle">Checkout our upcoming events</p>
           </div>
           <div class="events-owl owl-carousel">
             <!-- ITEM -->
@@ -15,12 +14,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Family Party</a>
+                  <a>Family Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -32,12 +28,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Traditional Music Festival</a>
+                  <a>Traditional Music Festival</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -49,12 +42,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Summer Party</a>
+                  <a>Summer Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -66,12 +56,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Wedding Party</a>
+                  <a>Wedding Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -83,12 +70,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Pool Party</a>
+                  <a>Pool Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -100,12 +84,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Season Closing Party</a>
+                  <a>Season Closing Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -117,12 +98,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Beer Party</a>
+                  <a>Beer Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
             <!-- ITEM -->
@@ -134,12 +112,9 @@
               </div>
               <div class="details">
                 <h6 class="title">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">Latin Dance Party</a>
+                  <a>Latin Dance Party</a>
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-              <div class="align-center">
-                <a class="btn btn-sm btn-dark" href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/event-details.html">MORE DETAILS</a>
               </div>
             </div>
         </div>

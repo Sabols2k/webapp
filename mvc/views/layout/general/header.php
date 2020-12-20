@@ -38,15 +38,7 @@
                 </ul>
               </li>
               <li class="menu-item dropdown">
-                <a href="#">NEWS</a>
-                <ul class="submenu">
-                  <li class="menu-item">
-                    <a href="<?php echo URL_Layout."blog"?>">Blog</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="<?php echo URL_Layout."event"?>">Events</a>
-                  </li>
-                </ul>
+                <a href="<?php echo URL_Layout."blog"?>">Blog</a>
               </li>
               <li class="menu-item">
                 <a href="<?php echo URL_Layout."contact"?>">CONTACT US</a>

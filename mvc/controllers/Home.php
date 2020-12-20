@@ -44,12 +44,6 @@ class Home extends Controller{
 
     }
 
-    function event(){
-
-        require_once "./mvc/views/layout/events.php";
-
-    }
-
     function contact(){
 
         require_once "./mvc/views/layout/contact.php";

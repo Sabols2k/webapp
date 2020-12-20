@@ -3,7 +3,6 @@
           <div class="section-title">
             <h4>QUITE LUXURY GALLERY</h4>
             <p class="section-subtitle">Check out our image gallery</p>
-            <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/gallery-3columns.html" class="view-all">View gallery images</a>
           </div>
           <div class="gallery-owl owl-carousel image-gallery">
             <!-- ITEM -->

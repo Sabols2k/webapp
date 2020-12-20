@@ -23,7 +23,7 @@
                 <li>
                   <i class="fa fa-envelope"></i>
                   Email:
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/mailto:info@site.com">quiteluxury@gmail.com</a>
+                  <a>quiteluxury@gmail.com</a>
                 </li>
               </ul>
             </div>

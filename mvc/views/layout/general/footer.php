@@ -8,10 +8,10 @@
                   <h1>QUIET LUXURY</h1>
                   <div class="inner">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, velit placeat assumenda incidunt dolorem aliquam!</p>
-                    <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/https://www.tripadvisor.com/" target="_blank">
+                    <a>
                       <div class="tripadvisor-banner">
                         <span class="review">Recommended</span>
-                        <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/icons/tripadvisor.png" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/icons/tripadvisor.png"?>" alt="Image">
                       </div>
                     </a>
                   </div>
@@ -24,16 +24,16 @@
                   <div class="inner">
                     <ul class="latest-posts">
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post-left-sidebar.html">10 Tips for holiday travel</a>
+                        <a>10 Tips for holiday travel</a>
                       </li>
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post-left-sidebar.html">Are you ready to enjoy your holidays</a>
+                        <a>Are you ready to enjoy your holidays</a>
                       </li>
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post-left-sidebar.html">Travel gift ideas for every type of traveler</a>
+                        <a>Travel gift ideas for every type of traveler</a>
                       </li>
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post-left-sidebar.html">Breakfast with coffee and orange juice</a>
+                        <a>Breakfast with coffee and orange juice</a>
                       </li>
                     </ul>
                   </div>
@@ -46,16 +46,16 @@
                   <div class="inner">
                     <ul class="useful-links">
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/about-us.html">About Us</a>
+                        <a href="<?php echo URL_Layout."aboutus"?>">About Us</a>
+                        </li>
+                        <li>
+                          <a href="<?php echo URL_Layout."contact"?>">Contact Us</a>
                       </li>
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/contact.html">Contact Us</a>
+                        <a href="<?php echo URL_Layout."roomlist"?>">Room</a>
                       </li>
                       <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/room.html">Room</a>
-                      </li>
-                      <li>
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/gallery-3columns.html">Himara Quite Luxury</a>
+                        <a>Quite Luxury Hotel</a>
                       </li>
                     </ul>
                   </div>
@@ -80,7 +80,7 @@
                       <li>
                         <i class="fa fa-envelope"></i>
                         Email:
-                        <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/mailto:info@site.com">quiteluxury@gmail.com</a>
+                        <a>quiteluxury@gmail.com</a>
                       </li>
                     </ul>
                   </div>

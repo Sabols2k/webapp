@@ -23,14 +23,14 @@
         require_once "general/header.php";
       ?> 
       <!-- ========== PAGE TITLE ========== -->
-      <div class="page-title gradient-overlay op6" style="background: url(images/breadcrumb.jpg); background-repeat: no-repeat;
+      <div class="page-title gradient-overlay op6" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>); background-repeat: no-repeat;
       background-size: cover;">
         <div class="container">
           <div class="inner">
             <h1>Blog</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="<?php echo URL?>">Home</a>
               </li>
               <li>Blog</li>
             </ol>
@@ -51,7 +51,7 @@
                       <div class="post-thumbnail">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="blog-post-left-sidebar.html">
-                            <img src="images/blog/blog-post1.jpg" class="img-fluid" alt="Image">
+                            <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post1.jpg"?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
@@ -63,7 +63,7 @@
                         </h2>
                         <div class="post-meta">
                           <span class="author">
-                            <a href="#"><img src="images/users/admin.jpg" width="16" alt="Image">Deigo</a>
+                            <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">Deigo</a>
                           </span>
                           <span class="date">
                             <a href="#">
@@ -91,7 +91,7 @@
                       <div class="post-thumbnail">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="blog-post-left-sidebar.html">
-                            <img src="images/blog/blog-post2.jpg" class="img-fluid" alt="Image">
+                            <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post2.jpg"?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
@@ -103,7 +103,7 @@
                         </h2>
                         <div class="post-meta">
                           <span class="author">
-                            <a href="#"><img src="images/users/admin.jpg" width="16" alt="Image">Deigo</a>
+                            <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">Deigo</a>
                           </span>
                           <span class="date">
                             <a href="#">
@@ -131,7 +131,7 @@
                       <div class="post-thumbnail">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="blog-post-left-sidebar.html">
-                            <img src="images/blog/blog-post3.jpg" class="img-fluid" alt="Image">
+                            <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post3.jpg"?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
@@ -143,7 +143,7 @@
                         </h2>
                         <div class="post-meta">
                           <span class="author">
-                            <a href="#"><img src="images/users/admin.jpg" width="16" alt="Image">Deigo</a>
+                            <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">Deigo</a>
                           </span>
                           <span class="date">
                             <a href="#">
@@ -171,7 +171,7 @@
                       <div class="post-thumbnail">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="blog-post-left-sidebar.html">
-                            <img src="images/blog/blog-post4.jpg" class="img-fluid" alt="Image">
+                            <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post4.jpg"?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
@@ -183,7 +183,7 @@
                         </h2>
                         <div class="post-meta">
                           <span class="author">
-                            <a href="#"><img src="images/users/admin.jpg" width="16" alt="Image">Deigo</a>
+                            <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">Deigo</a>
                           </span>
                           <span class="date">
                             <a href="#">
@@ -211,7 +211,7 @@
                       <div class="post-thumbnail">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="blog-post-left-sidebar.html">
-                            <img src="images/blog/blog-post5.jpg" class="img-fluid" alt="Image">
+                            <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post5.jpg"?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
@@ -223,7 +223,7 @@
                         </h2>
                         <div class="post-meta">
                           <span class="author">
-                            <a href="#"><img src="images/users/admin.jpg" width="16" alt="Image">Deigo</a>
+                            <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">Deigo</a>
                           </span>
                           <span class="date">
                             <a href="#">
@@ -251,7 +251,7 @@
                       <div class="post-thumbnail">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="blog-post-left-sidebar.html">
-                            <img src="images/blog/blog-post6.jpg" class="img-fluid" alt="Image">
+                            <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post6.jpg"?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
@@ -263,7 +263,7 @@
                         </h2>
                         <div class="post-meta">
                           <span class="author">
-                            <a href="#"><img src="images/users/admin.jpg" width="16" alt="Image">Deigo</a>
+                            <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">Deigo</a>
                           </span>
                           <span class="date">
                             <a href="#">
@@ -373,7 +373,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post1.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post1.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -392,7 +392,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post2.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post2.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -411,7 +411,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post3.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post3.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -430,7 +430,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post4.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post4.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>
@@ -449,7 +449,7 @@
                         <div class="col-5">
                           <figure class="gradient-overlay-hover link-icon sm">
                             <a href="blog-post.html">
-                              <img src="images/blog/blog-post5.jpg" class="img-fluid" alt="Image">
+                              <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post5.jpg"?>" class="img-fluid" alt="Image">
                             </a>
                           </figure>
                         </div>

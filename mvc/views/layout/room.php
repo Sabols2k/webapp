@@ -511,7 +511,7 @@
                           </div>
                         </div>
                         <!-- BOOKING BUTTON -->
-                        <button type="submit" class="btn btn-dark btn-fw mt20 mb20">BOOK A ROOM</button>
+                        <a href="<?php echo URL.'Booking'?>" class="btn btn-dark btn-fw mt20 mb20">BOOK A ROOM</a>
                       </form>
                     </div>
                   </div>
