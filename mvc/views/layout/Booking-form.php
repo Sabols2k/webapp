@@ -49,7 +49,7 @@
               </div>
               <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia deleniti fuga recusandae perferendis modi voluptate, ad ratione saepe voluptas nam provident reiciendis velit nulla repellendus illo consequuntur amet similique hic.</p>
               <!-- BOOKING FORM -->
-              <form class="booking-form-advanced" id="booking-form">
+              <form class="booking-form-advanced" id="booking-form" method="POST">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
