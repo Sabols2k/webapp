@@ -1,9 +1,9 @@
-<section class="restaurant image-bg parallax gradient-overlay op5" data-src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/restaurant.jpg" data-parallax="scroll" data-speed="0.3" data-mirror-selector=".wrapper" data-z-index="0">
+<section class="restaurant image-bg parallax gradient-overlay op5" data-src="<?php echo URL ."mvc/Assets/images/images/restaurant.jpg"?>" data-parallax="scroll" data-speed="0.3" data-mirror-selector=".wrapper" data-z-index="0">
         <div class="container">
           <div class="section-title">
             <h4>QUITE LUXURY RESTAURANT</h4>
             <p class="section-subtitle">Live a gourmet dining experience</p>
-            <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/restaurant.html" class="view-all uppercase">More About Our Restaurant</a>
+            <a href="<?php echo URL ."mvc/Assets/images/restaurant"?>" class="view-all uppercase">More About Our Restaurant</a>
           </div>
           <div class="row">
             <!-- ITEM -->
@@ -12,7 +12,7 @@
                 <div class="row">
                   <div class="col-lg-4 col-12">
                     <figure>
-                      <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/restaurant/restaurant1.jpg" class="img-fluid " alt="Image">
+                      <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant1.jpg"?>" class="img-fluid " alt="Image">
                     </figure>
                   </div>
                   <div class="col-lg-8 col-12">
@@ -36,7 +36,7 @@
                 <div class="row">
                   <div class="col-lg-4 col-12">
                     <figure>
-                      <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/restaurant/restaurant2.jpg" class="img-fluid" alt="Image">
+                      <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant2.jpg"?>" class="img-fluid" alt="Image">
                     </figure>
                   </div>
                   <div class="col-lg-8 col-12">

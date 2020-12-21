@@ -40,6 +40,12 @@ class Home extends Controller{
 
     }
 
+    function blogpost(){
+
+        require_once "./mvc/views/layout/blog-post.php";
+
+    }
+
     function contact(){
 
         require_once "./mvc/views/layout/contact.php";

@@ -55,7 +55,7 @@
                         <a href="<?php echo URL_Layout."roomlist"?>">Room</a>
                       </li>
                       <li>
-                        <a>Quite Luxury Hotel</a>
+                        <a href="#">Quite Luxury Hotel</a>
                       </li>
                     </ul>
                   </div>

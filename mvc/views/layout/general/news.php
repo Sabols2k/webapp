@@ -3,25 +3,25 @@
           <div class="section-title">
             <h4 class="title">LATEST NEWS</h4>
             <p class="section-subtitle">Check out our latest news</p>
-            <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog.html" class="view-all">View all news</a>
+            <a href="<?php echo URL_Layout ."blog"?>" class="view-all">View all news</a>
           </div>
           <div class="row">
             <!-- ITEM -->
             <div class="col-md-4">
               <div class="news-grid-item">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post.html">
-                    <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/blog/blog-post1.jpg" class="img-fluid" alt="Image">
+                  <a href="<?php echo URL_Layout ."blogpost"?>">
+                    <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post1.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
                 <div class="news-info">
                   <h4 class="title">
-                    <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post.html">10 Tips for Holiday Travel</a>
+                    <a href="<?php echo URL_Layout ."blogpost"?>">10 Tips for Holiday Travel</a>
                   </h4>
                   <p>An examination of how the current political and economical climate is affecting the mental healthcare industry...</p>
                   <div class="post-meta">
                     <span class="author">
-                      <a href="#"><img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/admin.jpg" width="16" alt="Image">
+                      <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">
                         JANE</a>
                     </span>
                     <span class="date">
@@ -40,18 +40,18 @@
             <div class="col-md-4">
               <div class="news-grid-item">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post.html">
-                    <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/blog/blog-post2.jpg" class="img-fluid" alt="Image">
+                  <a href="<?php echo URL_Layout ."blogpost"?>">
+                    <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post2.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
                 <div class="news-info">
                   <h4 class="title">
-                    <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post.html">BREAKFAST WITH COFFEE AND...</a>
+                    <a href="<?php echo URL_Layout ."blogpost"?>">BREAKFAST WITH COFFEE AND...</a>
                   </h4>
                   <p>An examination of how the current political and economical climate is affecting the mental healthcare industry...</p>
                   <div class="post-meta">
                     <span class="author">
-                      <a href="#"><img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/admin.jpg" width="16" alt="Image">
+                      <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">
                         JANE</a>
                     </span>
                     <span class="date">
@@ -70,18 +70,18 @@
             <div class="col-md-4">
               <div class="news-grid-item">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post.html">
-                    <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/blog/blog-post3.jpg" class="img-fluid" alt="Image">
+                  <a href="<?php echo URL_Layout ."blogpost"?>">
+                    <img src="<?php echo URL ."mvc/Assets/images/blog/blog-post3.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
                 <div class="news-info">
                   <h4 class="title">
-                    <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/blog-post.html">RUNNING ON SAND</a>
+                    <a href="<?php echo URL_Layout ."blogpost"?>">RUNNING ON SAND</a>
                   </h4>
                   <p>An examination of how the current political and economical climate is affecting the mental healthcare industry...</p>
                   <div class="post-meta">
                     <span class="author">
-                      <a href="#"><img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/admin.jpg" width="16" alt="Image">
+                      <a href="#"><img src="<?php echo URL ."mvc/Assets/images/users/admin.jpg"?>" width="16" alt="Image">
                         JANE</a>
                     </span>
                     <span class="date">

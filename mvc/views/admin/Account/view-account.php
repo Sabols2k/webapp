@@ -15,7 +15,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/admin/addaccount" class="btn btn-light btn-icon-split mb-3">
+                <a href="<?php echo URLAdmin ."addaccount"?>" class="btn btn-light btn-icon-split mb-3">
                     <span class="icon text-gray-600">
                         <i class="fas fa-arrow-right"></i>
                     </span>
@@ -48,7 +48,7 @@
                         <tr>
                             <td><?php echo $stt ?></td>
                             <td><?php echo $row['aAdminID'] ?></td>
-                            <td><img style="height: 100px" src="<?php echo imgAccount . $row['aimg'] ?>" alt=""></td> 
+                            <td><img style="height: 50px; width: 50px; border-radius:50%" src="<?php echo imgAccount . $row['aimg'] ?>" alt=""></td> 
                             <td><?php echo $row['aUsername'] ?></td>
                             <td><?php echo $row['aPassword'] ?></td>
                             <td><?php echo $row['aEmail'] ?></td>
