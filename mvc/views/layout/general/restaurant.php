@@ -1,9 +1,9 @@
-<section class="restaurant image-bg parallax gradient-overlay op5" data-src="<?php echo URL ."mvc/Assets/images/images/restaurant.jpg"?>" data-parallax="scroll" data-speed="0.3" data-mirror-selector=".wrapper" data-z-index="0">
+<section class="restaurant image-bg parallax gradient-overlay op5" data-src="<?php echo URL ."mvc/Assets/images/restaurant.jpg"?>" data-parallax="scroll" data-speed="0.3" data-mirror-selector=".wrapper" data-z-index="0">
         <div class="container">
           <div class="section-title">
             <h4>QUITE LUXURY RESTAURANT</h4>
             <p class="section-subtitle">Live a gourmet dining experience</p>
-            <a href="<?php echo URL ."mvc/Assets/images/restaurant"?>" class="view-all uppercase">More About Our Restaurant</a>
+            <a href="<?php echo URL_Layout ."restaurant"?>" class="view-all uppercase">More About Our Restaurant</a>
           </div>
           <div class="row">
             <!-- ITEM -->
