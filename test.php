@@ -9,6 +9,9 @@
         if(isset($_POST['upload'])){
             $file = $_FILES['myFile']['tmp_name'];
             $path = "test/".$_FILES['myFile']['name'];
+            // echo $file;
+            echo $path;
+            die(); 
             if(move_uploaded_file($file, $path)){
                 echo "Tải tập tin thành công";
             }else{

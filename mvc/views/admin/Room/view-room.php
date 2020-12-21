@@ -4,13 +4,13 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">All Booking</h1>
+        <h1 class="h3 mb-0 text-gray-800">All Rooms</h1>
     </div>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-secondary">All Bookings</h6>
+            <h6 class="m-0 font-weight-bold text-secondary">All Rooms</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -78,7 +78,7 @@
             `</button>
             <button class="btn btn-delete">
                 <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin?>.'deleteroom/'.`+item['RoomID']+` ">
-                    <i class="fas fa-trash-alt"></i>
+                    <i style="color: #ffff" class="fas fa-trash-alt"></i>
                 </a>
             </button>`+
         `</td>`+
@@ -92,7 +92,5 @@
     };
     xmlhttp.open("GET", "http://localhost:8080/Web_App/Quite_Luxury/api/AllRoomtype", true);
     xmlhttp.send();
-
-    
 
 </script>

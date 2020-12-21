@@ -4,9 +4,9 @@ class account extends DB{
 	{
 		parent::__construct();
 	}
-    public function InsertAccount($username, $password, $email, $firstname, $lastname, $address, $country, $phone, $gender, $birthday, $roles){
+    public function InsertAccount($username, $password,$img, $email, $firstname, $lastname, $address, $country, $phone, $gender, $birthday, $roles){
         // $sql="INSERT INTO user(id,useName,passWord,level) VALUES (NULL,'$username','$password',0)";
-        $sql="INSERT INTO `admin` (`aAdminID`, `aUsername`, `aPassword`, `aEmail`, `aFirstName`, `aLastName`, `aAddress`, `aCountry`, `aPhone`, `aGender`, `aBirthday`, `aRoleID`) VALUES (NULL, '$username', '$password', '$email', '$firstname', '$lastname', '$address', '$country', '$phone', '$gender', '$birthday', '$roles')";
+        $sql="INSERT INTO `admin` (`aAdminID`, `aUsername`, `aPassword`,`aimg`, `aEmail`, `aFirstName`, `aLastName`, `aAddress`, `aCountry`, `aPhone`, `aGender`, `aBirthday`, `aRoleID`) VALUES (NULL, '$username', '$password','$img', '$email', '$firstname', '$lastname', '$address', '$country', '$phone', '$gender', '$birthday', '$roles')";
         return $this->execute($sql);
      }
     //  public function editbyId($id){
