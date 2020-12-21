@@ -2,8 +2,10 @@
 
 class Home extends Controller{
 
-    function index(){
-
+    public function index(){
+        // header("Location:". URL_Layout."index");
+         
+        // header('Location:'.URL_Layout.'index');
         require_once "./mvc/views/layout/index.php";
 
     }

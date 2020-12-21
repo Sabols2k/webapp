@@ -394,8 +394,9 @@ class Admin extends Controller{
             //Sanitize post data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-            $file = $_FILES['file']['tmp_name'];
-            $target_dir = imgAccount;
+            $file = $_FILES['file']['name'];
+            $target_dir = imgAdmin."account/";
+            $path=$target_dir.$file;
             
             // $target_file = $target_dir . basename($_FILES["file"]["name"]);
           
@@ -406,9 +407,10 @@ class Admin extends Controller{
             // $extensions_arr = array("jpg","jpeg","png","gif");
 
             $data['account'] = [
-                'img' =>trim($_POST['file']),
+                
                 'username' => trim($_POST['username']),
                 'password' => trim($_POST['password']),
+                'img' =>$_FILES['file']['name'],
                 'email' => trim($_POST['email']),
                 'firstname' => trim($_POST['firstname']),
                 'lastname' => trim($_POST['lastname']),
@@ -447,10 +449,21 @@ class Admin extends Controller{
 
             //Check if all errors are empty
             if (empty($data['account']['usernameError']) && empty($data['account']['passwordError'])) {
-                move_uploaded_file($_FILES['file']['tmp_name'], $target_dir.$file);
+                // echo $_FILES['file']['tmp_name'];
+                // echo $target_dir.$file;
+                // die();
+                if(isset($path)){
+
+                    $target_dir = $target_dir."(1)";
+                    $path=$target_dir.$file;
+                    move_uploaded_file($_FILES['file']['tmp_name'], $path);
+                    $data['account']['img']="(1)".$file;
+                }
+                
                 $model=$this->modeladmin("account");
                 $model->InsertAccount($data['account']['username'],
-                    $data['account']['password' ],
+                    $data['account']['password'],
+                    $data['account']['img'],
                     $data['account']['email' ],
                     $data['account']['firstname' ],
                     $data['account']['lastname' ],
@@ -461,6 +474,8 @@ class Admin extends Controller{
                     $data['account']['birthday' ],
                     $data['account']['rolesID' ]
                     );
+               
+                
                 
             }
 
