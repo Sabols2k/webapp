@@ -2999,7 +2999,7 @@ footer .subfooter .social-media a i {
   margin-top: 36px;
   padding: 10px 20px;
   width: 100%;
-  color: #fff;
+  color: #fff !important;
 }
 
 /* ===== VERTICAL BOOKING FORM ===== */
