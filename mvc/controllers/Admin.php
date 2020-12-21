@@ -393,8 +393,8 @@ class Admin extends Controller{
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $file = $_FILES['file']['name'];
-            $target_dir = "./mvc/Assets/admin/img/account/";
-            
+            $target_dir = imgAdmin."account/";
+            $path=$target_dir.$file;
             
             // $target_file = $target_dir . basename($_FILES["file"]["name"]);
           
@@ -450,7 +450,13 @@ class Admin extends Controller{
                 // echo $_FILES['file']['tmp_name'];
                 // echo $target_dir.$file;
                 // die();
-                
+                if(isset($path)){
+
+                    $target_dir = $target_dir."(1)";
+                    $path=$target_dir.$file;
+                    move_uploaded_file($_FILES['file']['tmp_name'], $path);
+                    $data['account']['img']="(1)".$file;
+                }
                 
                 $model=$this->modeladmin("account");
                 $model->InsertAccount($data['account']['username'],
@@ -466,7 +472,8 @@ class Admin extends Controller{
                     $data['account']['birthday' ],
                     $data['account']['rolesID' ]
                     );
-                move_uploaded_file($_FILES['file']['tmp_name'], $target_dir.$file);
+               
+                
                 
             }
 
