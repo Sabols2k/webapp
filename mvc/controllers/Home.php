@@ -32,12 +32,6 @@ class Home extends Controller{
 
     }
 
-    function spa(){
-
-        require_once "./mvc/views/layout/spa.php";
-
-    }
-
     function blog(){
 
         require_once "./mvc/views/layout/blog.php";

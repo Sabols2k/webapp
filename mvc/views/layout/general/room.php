@@ -3,7 +3,7 @@
           <div class="section-title">
             <h4>OUR ROOMS</h4>
             <p class="section-subtitle">Our favorite rooms</p>
-            <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/rooms-list.html" class="view-all">View all rooms</a>
+            <a href="<?php echo URL_Layout."roomlist"?>" class="view-all">View all rooms</a>
           </div>
           <div class="row">
             <!-- ITEM -->

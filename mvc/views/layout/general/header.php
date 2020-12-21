@@ -32,9 +32,6 @@
                   <li class="menu-item">
                     <a href="<?php echo URL_Layout."restaurant"?>">Our Restaurant</a>
                   </li>
-                  <li class="menu-item">
-                    <a href="<?php echo URL_Layout."spa"?>">Our Spa</a>
-                  </li>
                 </ul>
               </li>
               <li class="menu-item dropdown">

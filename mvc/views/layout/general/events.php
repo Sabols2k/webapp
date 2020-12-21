@@ -16,7 +16,7 @@
                 <h6 class="title">
                   <a>Family Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -30,7 +30,7 @@
                 <h6 class="title">
                   <a>Traditional Music Festival</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -44,7 +44,7 @@
                 <h6 class="title">
                   <a>Summer Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -58,7 +58,7 @@
                 <h6 class="title">
                   <a>Wedding Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -72,7 +72,7 @@
                 <h6 class="title">
                   <a>Pool Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -86,7 +86,7 @@
                 <h6 class="title">
                   <a>Season Closing Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -100,7 +100,7 @@
                 <h6 class="title">
                   <a>Beer Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
             <!-- ITEM -->
@@ -114,7 +114,7 @@
                 <h6 class="title">
                   <a>Latin Dance Party</a>
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               </div>
             </div>
         </div>
