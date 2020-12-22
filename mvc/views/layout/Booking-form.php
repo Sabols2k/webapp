@@ -1,3 +1,8 @@
+<?php 
+  print_r($_SESSION['guest']);
+  print_r($data['booking']);
+  echo "name". $data['booking']['Name'];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -49,12 +54,15 @@
               </div>
               <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia deleniti fuga recusandae perferendis modi voluptate, ad ratione saepe voluptas nam provident reiciendis velit nulla repellendus illo consequuntur amet similique hic.</p>
               <!-- BOOKING FORM -->
-              <form class="booking-form-advanced" id="booking-form" method="POST">
+              <form  method="POST" class="booking-form-advanced" id="booking-form" >
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Your Name</label>
-                      <input name="booking-name" type="text" class="form-control" placeholder="Your Name">
+                      <input name="bookingname" type="text" class="form-control" placeholder="Your Name">
+                      <span>
+                        <?php echo $data['booking']['NameError'] ?>
+                      </span>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -173,7 +181,7 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" class="btn mt50 float-right">
+                    <button type="submit" name="bookingform" class="btn mt50 float-right">
                       <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                       BOOK A ROOM NOW
                     </button>
@@ -181,6 +189,9 @@
                 </div>
               </form>
             </div>
+
+
+
             <!-- SIDEBAR -->
             <div class="col-lg-3 col-12">
               <div class="sidebar">

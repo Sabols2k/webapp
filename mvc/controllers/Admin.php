@@ -94,20 +94,20 @@ class Admin extends Controller{
 
     public function createUserSession($user) {
         
-        $_SESSION['test'] = 'abc';
-        $_SESSION['user_id'] = $user['aAdminID '] ;
-        $_SESSION['username'] = $user['aUsername'];
-        $_SESSION['mail'] = $user['aEmail'];
-        $_SESSION['img'] = $user['aimg'];
+        $_SESSION['admin']['test'] = 'abc';
+        $_SESSION['admin']['user_id'] =  $user['aAdminID '] ;
+        $_SESSION['admin']['username'] = $user['aUsername'];
+        $_SESSION['admin']['mail'] = $user['aEmail'];
+        $_SESSION['admin']['img'] =imgAccount. $user['aimg'];
         
         header('Location:'.URLAdmin);
     }
 
     public function logout() {
-        unset($_SESSION['user_id']);
-        unset($_SESSION['username']);
-        unset($_SESSION['mail']);
-        unset($_SESSION['img']);
+        unset($_SESSION['admin']['user_id']);
+        unset($_SESSION['admin']['username']);
+        unset($_SESSION['admin']['mail']);
+        unset($_SESSION['admin']['img']);
 
         // $data['main']="Booking/view-booking";
         header('location:'.URLAdmin.'login');

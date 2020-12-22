@@ -11,7 +11,8 @@
 // }
 //  echo 'You are visitor number ' . $_SESSION['page_count']; -->
 <?php  
-    if(empty($_SESSION['username'])){
+    
+    if(empty($_SESSION['admin']['username'])){
         header('Location:'.URLAdmin.'login');
 
     }

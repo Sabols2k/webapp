@@ -31,7 +31,6 @@
                             <th>Email</th>
                             <th>NumberAdult</th>
                             <th>NumberChildren</th>
-                            <th>ReservationID</th>
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
                             <th>RoomCount</th>
@@ -47,7 +46,6 @@
                             <th>Email</th>
                             <th>NumberAdult</th>
                             <th>NumberChildren</th>
-                            <th>ReservationID</th>
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
                             <th>RoomCount</th>
@@ -61,15 +59,14 @@
                         <tr>
                             <td><?php echo $stt ?></td>
                             <td><?php echo $row['bBookingID'] ?></td>
-                            <td><?php echo $row['bGuestID'] ?></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><?php echo $row['bReservationAgentID'] ?></td>
+                            <td><?php echo $row['gGuestID'] ?></td>
+                            <td><?php echo $row['gName'] ?></td>
+                            <td><?php echo $row['gEmail'] ?></td>
+                            <td><?php echo $row['bNumberAdult'] ?></td>
+                            <td><?php echo $row['bNumberChildren'] ?></td>
                             <td><?php echo $row['bDateCheckIn'] ?></td>
                             <td><?php echo $row['bDateCheckOut'] ?></td>
-                            <td><?php echo $row['bRoomCount'] ?></td>
+                            <td><?php echo $row['SL_Room'] ?></td>
                             <td>
                                 <button class="btn btn-edit">
                                     <a href="<?php echo URLAdmin."editbooking/".$row['bBookingID']; ?>">
