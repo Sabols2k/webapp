@@ -98,6 +98,7 @@ class Admin extends Controller{
         $_SESSION['user_id'] = $user['aAdminID '] ;
         $_SESSION['username'] = $user['aUsername'];
         $_SESSION['mail'] = $user['aEmail'];
+        $_SESSION['img'] = $user['aimg'];
         
         header('Location:'.URLAdmin);
     }
@@ -106,6 +107,7 @@ class Admin extends Controller{
         unset($_SESSION['user_id']);
         unset($_SESSION['username']);
         unset($_SESSION['mail']);
+        unset($_SESSION['img']);
 
         // $data['main']="Booking/view-booking";
         header('location:'.URLAdmin.'login');

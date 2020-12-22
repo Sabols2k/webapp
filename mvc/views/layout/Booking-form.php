@@ -23,14 +23,14 @@
         require_once "general/header.php";
       ?> 
       <!-- ========== PAGE TITLE ========== -->
-      <div class="page-title gradient-overlay op6" style="background: url(images/breadcrumb.jpg); background-repeat: no-repeat;
+      <div class="page-title gradient-overlay op6" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>); background-repeat: no-repeat;
       background-size: cover;">
         <div class="container">
           <div class="inner">
             <h1>Booking Form</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="<?php echo URL?>">Home</a>
               </li>
               <li>Booking Form</li>
             </ol>
@@ -159,10 +159,10 @@
                     <div class="form-group">
                       <label>Room Type</label>
                       <select name="booking-roomtype" class="form-control" title="Select Room Type" data-header="Select Room Type">
-                        <option value="Single Room" data-subtext="<span class='badge badge-info'>€89 / night</span>">Single Room
+                        <option value="Single Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Single Room
                         </option>
-                        <option value="Double Room" data-subtext="<span class='badge badge-info'>€129 / night</span>">Double Room</option>
-                        <option value="Deluxe Room" data-subtext="<span class='badge badge-info'>€89 / night</span>">Deluxe Room</option>
+                        <option value="Double Room" data-subtext="<span class='badge badge-info'>$129 / night</span>">Double Room</option>
+                        <option value="Deluxe Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Deluxe Room</option>
                       </select>
                     </div>
                   </div>
@@ -192,7 +192,7 @@
                   <div class="offer-item sm mb50">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="#">
-                        <img src="images/offers/offer1.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/offers/offer1.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                     <div class="ribbon">
@@ -208,7 +208,7 @@
                   <div class="offer-item sm mb50">
                     <figure class="gradient-overlay-hover link">
                       <a href="#">
-                        <img src="images/offers/offer2.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/offers/offer2.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                     <div class="ribbon">
@@ -224,7 +224,7 @@
                   <div class="offer-item sm mb50">
                     <figure class="gradient-overlay-hover link">
                       <a href="#">
-                        <img src="images/offers/offer3.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/offers/offer3.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                     <div class="ribbon">

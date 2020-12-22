@@ -28,15 +28,15 @@ class Home extends Controller{
 
     }
 
-    function restaurant(){
+    function services(){
 
-        require_once "./mvc/views/layout/restaurant.php";
+        require_once "./mvc/views/layout/services.php";
 
     }
 
-    function spa(){
+    function restaurant(){
 
-        require_once "./mvc/views/layout/spa.php";
+        require_once "./mvc/views/layout/restaurant.php";
 
     }
 
@@ -46,9 +46,9 @@ class Home extends Controller{
 
     }
 
-    function event(){
+    function blogpost(){
 
-        require_once "./mvc/views/layout/events.php";
+        require_once "./mvc/views/layout/blog-post.php";
 
     }
 

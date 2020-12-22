@@ -3000,6 +3000,9 @@ footer .subfooter .social-media a i {
   padding: 10px 20px;
   width: 100%;
 }
+.horizontal-booking-form .inner .btn-book a{
+  color: #fff;
+}
 
 /* ===== VERTICAL BOOKING FORM ===== */
 

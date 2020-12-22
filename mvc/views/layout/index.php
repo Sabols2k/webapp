@@ -36,6 +36,10 @@
       <?php
         require_once "general/room.php";
       ?> 
+      <!-- ========== SERVICES ========== -->
+      <?php
+        require_once "general/services.php";
+      ?> 
       <!-- ========== GALLERY ========== -->
       <?php
         require_once "general/gallery.php";

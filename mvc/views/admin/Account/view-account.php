@@ -15,7 +15,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/admin/addaccount" class="btn btn-light btn-icon-split mb-3">
+                <a href="<?php echo URLAdmin ."addaccount"?>" class="btn btn-light btn-icon-split mb-3">
                     <span class="icon text-gray-600">
                         <i class="fas fa-arrow-right"></i>
                     </span>
@@ -37,25 +37,9 @@
                             <th>Phone</th>
                             <th>Gender</th>
                             <th>BirthDate</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                        <th>STT</th>
-                            <th>AccountID</th>
-                            <th>IMG</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Email</th>
-                            <th>FirstName</th>
-                            <th>LastName</th>
-                            <th>Address</th>
-                            <th>Country</th>
-                            <th>Phone</th>
-                            <th>Gender</th>
-                            <th>BirthDate</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                     <?php  
                         $stt=1;
@@ -64,7 +48,7 @@
                         <tr>
                             <td><?php echo $stt ?></td>
                             <td><?php echo $row['aAdminID'] ?></td>
-                            <td><img style="height: 100px" src="<?php echo imgAccount . $row['aimg'] ?>" alt=""></td> 
+                            <td><img style="height: 50px; width: 50px; border-radius:50%" src="<?php echo imgAccount . $row['aimg'] ?>" alt=""></td> 
                             <td><?php echo $row['aUsername'] ?></td>
                             <td><?php echo $row['aPassword'] ?></td>
                             <td><?php echo $row['aEmail'] ?></td>
@@ -75,7 +59,6 @@
                             <td><?php echo $row['aPhone'] ?></td>
                             <td><?php echo $row['aGender'] ?></td>
                             <td><?php echo $row['aBirthday'] ?></td>
-                            
                             <td>
                                 <button class="btn btn-edit">
                                     <a href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
@@ -83,7 +66,7 @@
                                     </a>
                                 </button>
                                 <button class="btn btn-delete">
-                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteAccount/'.$row['aAdminID']; ?>">
+                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteAccount/'.$row['aAdminID']; ?>" style="color: #fff;">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </button>

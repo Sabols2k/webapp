@@ -18,8 +18,8 @@
             <div class="row">
                 <div class="col-lg-12 p-t-20">
                     <div class="form-group">
-                        <input type='file' name='file' />
-                            <!-- <input type='submit' value='Save name' name='but_upload'> -->
+                    <label for="exampleFormControlInput1">Ảnh đại diện</label>
+                        <input type='file' name='file' class="form-control"/>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Username</label>
-                        <input name="username"  type="text" class="form-control">
+                        <input name="username" type="text" class="form-control">
                         <span class="invalidFeedback">
                             <?php echo $data['account']['usernameError']; ?>
                         </span>

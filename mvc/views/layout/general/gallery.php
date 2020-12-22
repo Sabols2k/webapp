@@ -3,14 +3,13 @@
           <div class="section-title">
             <h4>QUITE LUXURY GALLERY</h4>
             <p class="section-subtitle">Check out our image gallery</p>
-            <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/gallery-3columns.html" class="view-all">View gallery images</a>
           </div>
           <div class="gallery-owl owl-carousel image-gallery">
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery1.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery1.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery1.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery1.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Swimming Pool</figcaption>
               </figure>
@@ -18,8 +17,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery2.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery2.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery2.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery2.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Room View</figcaption>
               </figure>
@@ -27,8 +26,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery3.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery3.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery3.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery3.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Cocktail</figcaption>
               </figure>
@@ -36,8 +35,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery4.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery4.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery4.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery4.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Breakfast</figcaption>
               </figure>
@@ -45,8 +44,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery5.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery5.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery5.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery5.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Playground</figcaption>
               </figure>
@@ -54,8 +53,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery6.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery6.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery6.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery6.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Restaurant</figcaption>
               </figure>
@@ -63,8 +62,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery7.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery7.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery7.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery7.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Wedding Ceremony</figcaption>
               </figure>
@@ -72,8 +71,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery8.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery8.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery8.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery8.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Beach</figcaption>
               </figure>
@@ -81,8 +80,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery9.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery9.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery9.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery9.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Honeymoon Room</figcaption>
               </figure>
@@ -90,8 +89,8 @@
             <!-- ITEM -->
             <div class="gallery-item">
               <figure class="gradient-overlay image-icon">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery10.jpg">
-                  <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/gallery/gallery10.jpg" alt="Image">
+                <a href="<?php echo URL ."mvc/Assets/images/gallery/gallery10.jpg"?>">
+                  <img src="<?php echo URL ."mvc/Assets/images/gallery/gallery10.jpg"?>" alt="Image">
                 </a>
                 <figcaption>Sea</figcaption>
               </figure>
@@ -111,7 +110,7 @@
             <div class="item">
               <div class="testimonial-item">
                 <div class="author-img">
-                  <img alt="Image" class="img-fluid" src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/user1.jpg">
+                  <img alt="Image" class="img-fluid" src="<?php echo URL ."mvc/Assets/images/users/user1.jpg"?>">
                 </div>
                 <div class="author">
                   <h4 class="name">Marlene Simpson</h4>
@@ -131,7 +130,7 @@
             <div class="item">
               <div class="testimonial-item">
                 <div class="author-img">
-                  <img alt="Image" class="img-fluid" src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/user2.jpg">
+                  <img alt="Image" class="img-fluid" src="<?php echo URL ."mvc/Assets/images/users/user2.jpg"?>">
                 </div>
                 <div class="author">
                   <h4 class="name">Brad Knight</h4>
@@ -151,7 +150,7 @@
             <div class="item">
               <div class="testimonial-item">
                 <div class="author-img">
-                  <img alt="Image" class="img-fluid" src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/user3.jpg">
+                  <img alt="Image" class="img-fluid" src="<?php echo URL ."mvc/Assets/images/users/user3.jpg"?>">
                 </div>
                 <div class="author">
                   <h4 class="name">Daryl Phillips</h4>
@@ -171,7 +170,7 @@
             <div class="item">
               <div class="testimonial-item">
                 <div class="author-img">
-                  <img alt="Image" class="img-fluid" src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/user4.jpg">
+                  <img alt="Image" class="img-fluid" src="<?php echo URL ."mvc/Assets/images/users/user4.jpg"?>">
                 </div>
                 <div class="author">
                   <h4 class="name">Felecia Lawson</h4>
@@ -191,7 +190,7 @@
             <div class="item">
               <div class="testimonial-item">
                 <div class="author-img">
-                  <img alt="Image" class="img-fluid" src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/user5.jpg">
+                  <img alt="Image" class="img-fluid" src="<?php echo URL ."mvc/Assets/images/users/user5.jpg"?>">
                 </div>
                 <div class="author">
                   <h4 class="name">Joanne Robinson</h4>
@@ -211,7 +210,7 @@
             <div class="item">
               <div class="testimonial-item">
                 <div class="author-img">
-                  <img alt="Image" class="img-fluid" src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/images/users/user6.jpg">
+                  <img alt="Image" class="img-fluid" src="<?php echo URL ."mvc/Assets/images/users/user6.jpg"?>">
                 </div>
                 <div class="author">
                   <h4 class="name">Emily Hill</h4>
