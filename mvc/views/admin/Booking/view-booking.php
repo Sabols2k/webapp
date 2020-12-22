@@ -27,6 +27,10 @@
                             <th>STT</th>
                             <th>BookingID</th>
                             <th>GuestID</th>
+                            <th>FullName</th>
+                            <th>Email</th>
+                            <th>NumberAdult</th>
+                            <th>NumberChildren</th>
                             <th>ReservationID</th>
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
@@ -39,6 +43,10 @@
                             <th>STT</th>
                             <th>BookingID</th>
                             <th>GuestID</th>
+                            <th>FullName</th>
+                            <th>Email</th>
+                            <th>NumberAdult</th>
+                            <th>NumberChildren</th>
                             <th>ReservationID</th>
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
@@ -54,6 +62,10 @@
                             <td><?php echo $stt ?></td>
                             <td><?php echo $row['bBookingID'] ?></td>
                             <td><?php echo $row['bGuestID'] ?></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td><?php echo $row['bReservationAgentID'] ?></td>
                             <td><?php echo $row['bDateCheckIn'] ?></td>
                             <td><?php echo $row['bDateCheckOut'] ?></td>

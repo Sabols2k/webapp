@@ -19,8 +19,6 @@ class Admin extends Controller{
         $data['main'] = "home/main";
         // require_once "./mvc/views/admin/index.php";
         $this->viewadmin("index",$data);
-        
-
     }
 
     // function Login(){
@@ -473,8 +471,6 @@ class Admin extends Controller{
                     $data['account']['rolesID' ]
                     );
                
-                
-                
             }
 
         } 
