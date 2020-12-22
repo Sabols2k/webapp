@@ -51,18 +51,26 @@ class Booking extends Controller{
             if (empty($data['booking']['Name'])) {
                 $data['booking']['NameError'] = '* Please type your name. Please try again.';
               
+            }else{
+                $data['booking']['NameError']="";
             }
             if (empty($data['booking']['Mail'])) {
                 $data['booking']['MailError'] = '* Please type your mail. Please try again.';
               
+            }else{
+                $data['booking']['MailError']="";
             }
             if (empty($data['booking']['Phonenumber'])) {
                 $data['booking']['PhonenumberError'] = '* Please type your phone. Please try again.';
               
+            }else{
+                $data['booking']['PhonenumberError']="";
             }
             if (empty($data['booking']['Country'])) {
                 $data['booking']['CountryError'] = '* Please type your country. Please try again.';
               
+            }else{
+                $data['booking']['CountryError']="";
             }
             if (empty($data['booking']['DateCheckIn']) || empty($data['booking']['DateCheckOut'])) {
                 $data['booking']['DateCheckInOutError'] = '* Please type your date check in or check out. Please try again.';
@@ -71,13 +79,17 @@ class Booking extends Controller{
                 $data['booking']['DateCheckInOutError']="";
             }
             
-            if (empty($data['booking']['NumberAdult']) || empty($data['booking']['NumberChildren'])) {
+            if (empty($data['booking']['NumberAdult']) && empty($data['booking']['NumberChildren'])) {
                 $data['booking']['NumberPeopleError'] = '* Please type your number people. Please try again.';
               
+            }else{
+                $data['booking']['NumberPeopleError']="";
             }
             if (empty($data['booking']['RoomType'])) {
                 $data['booking']['RoomTypeError'] = '* Please type your roomtype. Please try again.';
               
+            }else{
+                $data['booking']['RoomTypeError']="";
             }
 
 
@@ -108,6 +120,7 @@ class Booking extends Controller{
 
     }
     function createGuestSession($guest){
+        $_SESSION['guest']['hotel']="Quite Luxury";
         $_SESSION['guest']['name'] =  $guest['Name'] ;
         $_SESSION['guest']['mail'] = $guest['Mail'];
         $_SESSION['guest']['phone'] = $guest['Phonenumber'];
@@ -119,7 +132,9 @@ class Booking extends Controller{
         $_SESSION['guest']['roomtype'] = $guest['RoomType'];
         $_SESSION['guest']['Decription'] = $guest['Description'];
     }
-   
+    function auth(){
+        $this->view('layout/customer-mail');
+    }
 
 }
 ?>
