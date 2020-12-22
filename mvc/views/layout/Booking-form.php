@@ -1,7 +1,9 @@
 <?php 
+  // echo "name". $data['booking']['Name'];
   print_r($_SESSION['guest']);
-  print_r($data['booking']);
-  echo "name". $data['booking']['Name'];
+  // print_r($data['booking']);
+  
+  // echo  $data['booking']['NameError'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -54,14 +56,14 @@
               </div>
               <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia deleniti fuga recusandae perferendis modi voluptate, ad ratione saepe voluptas nam provident reiciendis velit nulla repellendus illo consequuntur amet similique hic.</p>
               <!-- BOOKING FORM -->
-              <form  method="POST" class="booking-form-advanced" id="booking-form" >
+              <form  method="POST" class="booking-form-advanced" >
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Your Name</label>
                       <input name="bookingname" type="text" class="form-control" placeholder="Your Name">
-                      <span>
-                        <?php echo $data['booking']['NameError'] ?>
+                      <span style="color: red" >
+                           <?php echo  $data['booking']['NameError'] ?>
                       </span>
                     </div>
                   </div>
@@ -69,12 +71,18 @@
                     <div class="form-group">
                       <label>Email Address</label>
                       <input class="form-control" name="booking-email" type="email" placeholder="Your Email Address">
+                      <span style="color: red" >
+                           <?php echo  $data['booking']['MailError'] ?>
+                      </span>      
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Phone Number</label>
                       <input name="booking-phone" type="text" class="form-control" placeholder="Your Phone Number">
+                      <span style="color: red" >
+                           <?php echo  $data['booking']['PhonenumberError'] ?>
+                      </span>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -112,6 +120,9 @@
                         <option value="United States of America">United States of America</option>
                         <option value="Vietnam">Vietnam</option>
                       </select>
+                      <span style="color: red" >
+                           <?php echo  $data['booking']['CountryError'] ?>
+                      </span>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -122,6 +133,9 @@
                         </a>
                       </label>
                       <input type="text" class="datepicker form-control " name="booking-date" readonly="readonly">
+                      <span style="color: red" >
+                           <?php echo  $data['booking']['DateCheckInOutError'] ?>
+                      </span>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -144,6 +158,7 @@
                             <div class="guests-button">
                               <div class="minus"></div>
                               <input type="text" name="booking-adults" class="booking-guests" value="0">
+                               
                               <div class="plus"></div>
                             </div>
                           </div>
@@ -160,6 +175,9 @@
                             </div>
                           </div>
                         </div>
+                        <span style="color: red" >
+                           <?php echo  $data['booking']['NumberPeopleError'] ?>
+                      </span>
                       </div>
                     </div>
                   </div>
@@ -172,6 +190,9 @@
                         <option value="Double Room" data-subtext="<span class='badge badge-info'>$129 / night</span>">Double Room</option>
                         <option value="Deluxe Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Deluxe Room</option>
                       </select>
+                      <span style="color: red" >
+                           <?php echo  $data['booking']['RoomTypeError'] ?>
+                      </span>
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -181,7 +202,7 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" name="bookingform" class="btn mt50 float-right">
+                    <button type="submit" name="bookingform" class="btn mt50 float-right" id="bookingform">
                       <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                       BOOK A ROOM NOW
                     </button>
@@ -270,3 +291,23 @@
     ?>
   </body>
 </html>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  $("#bookingform").click(function(event) {
+    var html = `<h1 style="color: #fff; background: #000;" > xin chao </h1> <br/>`;
+    
+    // email = $("#inputEmail").val();
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "henrytranls2k@gmail.com",
+            Password: "Henry1234",
+            SecureToken: "Generate token here",
+            From: "henrytranls2k@gmail.com",
+            To: "dangducchau2000@gmail.com",
+            Subject: "You've booked from Quite Luxury!",
+            Body: html+ "xin chao bạn (khong co button)"
+        })
+      };
+
+</script>
