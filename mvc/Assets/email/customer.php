@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Details</title>
     <style type="text/css">
         body {
@@ -56,6 +56,24 @@
             text-align: center;
             font-size: 12px;
             color: #fff;
+        }
+        
+        .btn {
+            background: #edcb9a;
+            color: #fff;
+            letter-spacing: 0.5px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 50px;
+            outline: none;
+            border: none;
+        }
+
+        .btn:hover{
+            background: #d8ba8e;
+            cursor: pointer;
         }
 
         .h1 {
@@ -119,8 +137,7 @@
         @media screen and (max-width: 600px) { .main { padding: 0; } }
     </style>
 </head>
-
-<body yahoo bgcolor="#f5eddb">
+<body>
     <table width="100%" bgcolor="#f5eddb" class="main" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td>
@@ -247,14 +264,15 @@
                     <tr>
                         <td class="innerpadding bodycopy mssg">
                             Thank You,
-                            <br> %site_title% </td>
+                            <br> %site_title% <br><br>
+                            <button class="btn">booking confirmation</button></td>
                     </tr>
                     <tr>
                         <td class="footer" bgcolor="#f7f8f9">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td align="center" class="footercopy">
-                                      &#169; 2018 <a href="%site_url%">%site_title%</a> All Rights Reserved.
+                                      &#169; 2020 <a href="%site_url%">%site_title%</a> All Rights Reserved.
                                   </td>
                                 </tr>
                                 <tr>
@@ -284,5 +302,4 @@
         </tr>
     </table>
 </body>
-
 </html>

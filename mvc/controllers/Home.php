@@ -57,6 +57,5 @@ class Home extends Controller{
         require_once "./mvc/views/layout/contact.php";
 
     }
-
 }
 ?>

@@ -173,9 +173,11 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" class="btn mt50 float-right">
-                      <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                      BOOK A ROOM NOW
+                    <button type="submit" class="btn mt50 float-right" >
+                      <a href="<?php echo URL ."EmailCustomer.php"?>" style="color: #fff;">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        BOOK A ROOM NOW
+                      </a>
                     </button>
                   </div>
                 </div>
