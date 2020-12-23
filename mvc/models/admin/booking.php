@@ -39,8 +39,8 @@ class booking extends DB{
       $this->execute($sql);
      }
      public function getAllBooking(){
-      $sql ="SELECT * FROM bookings";
-    //   $sql= "CALL getAllRoom()";
+      // $sql ="SELECT * FROM bookings";
+      $sql= "CALL `viewbooking`();";
       $this->execute($sql);
       while($datas=$this->getData('bookings')){
           $data[]=$datas;

@@ -1,5 +1,5 @@
 <?php  
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['admin']['username'])){
         header('Location:'.URLAdmin);
     }
 ?>
