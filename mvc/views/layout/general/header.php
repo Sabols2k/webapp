@@ -20,7 +20,7 @@
               <li class="menu-item dropdown  active">
                 <a href="<?php echo URL_Layout."Home"?>">HOME</a>
               </li>
-              <li class="menu-item ">
+              <li class="menu-item">
                 <a href="<?php echo URL_Layout."aboutus"?>">About Us</a>
               </li>
               <li class="menu-item">

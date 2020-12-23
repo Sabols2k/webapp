@@ -3467,6 +3467,115 @@ footer .subfooter .social-media a i {
   background: #e3e3e3;
 }
 
+/* ===== 09.3 ROOMS BLOCK ===== */
+
+.room-block-item {
+  width: 100%;
+  border-radius: 2px;
+  float: left;
+  margin-bottom: 26px;
+  position: relative;
+  border: 1px solid #efefef;
+  top: 0px;
+  -webkit-transition: top .1s ease-out;
+  transition: top .1s ease-out;
+}
+
+.room-block-item figure a:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  bottom: 10px;
+  left: 10px;
+  border: 4px double rgba(255, 255, 255, 0.5);
+  z-index: 999;
+  border-right: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.room-block-item .room-info {
+  padding: 15px 0;
+}
+
+.room-block-item .room-info .room-title {
+  margin-bottom: 5px;
+}
+
+.room-block-item .room-info .room-title a {
+  font-size: 25px;
+  font-weight: 500;
+  color: #d7d8d9;
+  text-transform: uppercase;
+}
+
+.room-block-item .room-info .room-rates {
+  text-transform: uppercase;
+}
+
+.room-block-item .room-info .room-rates i {
+  font-size: 13px;
+  color: #ffb600;
+}
+
+.room-block-item .room-info .room-rates a {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.room-block-item .room-price .price {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: #edcb9a;
+}
+
+.room-block-item .room-price .price small {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.room-block-item .room-price .total {
+  display: block;
+  margin: 10px 0;
+}
+
+.room-block-item .room-price a {
+  margin-top: 40px;
+  padding: 5px 20px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.room-block-item .room-services {
+  position: relative;
+  margin-top: 30px;
+}
+
+.room-block-item .room-services i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e3e3e3;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 30px;
+  color: #afafaf;
+  border-radius: 1px;
+  font-size: 11px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.room-block-item .room-services i:hover {
+  cursor: pointer;
+  background: #e3e3e3;
+}
+
 /* ===== ROOMS GRID ===== */
 
 .room-grid-item {

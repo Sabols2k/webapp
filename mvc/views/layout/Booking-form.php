@@ -1,10 +1,3 @@
-<?php 
-  // echo "name". $data['booking']['Name'];
-  print_r($_SESSION['guest']);
-  // print_r($data['booking']);
-  
-  // echo  $data['booking']['NameError'];
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -202,25 +195,16 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-<<<<<<< HEAD
                     <button type="submit" class="btn mt50 float-right" >
-                      <a href="<?php echo URL ."EmailCustomer.php"?>" style="color: #fff;">
+                      <a href="<?php echo URL_Layout ."offerBooking"?>" style="color: #fff;">
                         <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                         BOOK A ROOM NOW
                       </a>
-=======
-                    <button type="submit" name="bookingform" class="btn mt50 float-right" id="bookingform">
-                      <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                      BOOK A ROOM NOW
->>>>>>> 7e7c826120742e06f59f06e9b255feef4fdbfca2
                     </button>
                   </div>
                 </div>
               </form>
             </div>
-
-
-
             <!-- SIDEBAR -->
             <div class="col-lg-3 col-12">
               <div class="sidebar">

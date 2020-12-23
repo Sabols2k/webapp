@@ -57,5 +57,12 @@ class Home extends Controller{
         require_once "./mvc/views/layout/contact.php";
 
     }
+
+    function offerBooking(){
+
+        require_once "./mvc/views/layout/offer-booking.php";
+
+    }
+
 }
 ?>
