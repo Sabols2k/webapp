@@ -135,6 +135,26 @@ class Booking extends Controller{
     function auth(){
         $this->view('layout/customer-mail');
     }
+    function suggestion(){
+        $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
+
+        print_r ($_SESSION['guest']);
+        // $name, $mail, $phone, $numberguest, $datecheckin, $datecheckout, 
+        switch($_SESSION['guest']['roomtype']){
+            case 'Single Room':
+                // echo $_SESSION['guest']['numberAdult'] . $_SESSION['guest']['numberChildren'];
+
+                echo $people;
+                
+                break;
+            case 'Double Room':
+                // echo $_SESSION['guest']['numberAdult'] . $_SESSION['guest']['numberChildren'];
+                echo $people;
+                break;
+            default:
+                echo "Your favorite color is neither red, blue, nor green!";
+        }
+    }
 
 }
 ?>
