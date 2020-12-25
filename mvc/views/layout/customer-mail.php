@@ -9,13 +9,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <?php 
+    <?php 
         require_once "general/meta.php";
         require_once "general/css.php";
     ?>
-    <title>Hotel Quite Luxury</title>
-    <!-- ========== FAVICON ========== -->
-    <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
     <style type="text/css">
         body {
             margin: 0;

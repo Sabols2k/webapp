@@ -1,10 +1,3 @@
-<?php 
-  // echo "name". $data['booking']['Name'];
-  print_r($_SESSION['guest']);
-  // print_r($data['booking']);
-  
-  // echo  $data['booking']['NameError'];
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,9 +5,6 @@
         require_once "general/meta.php";
         require_once "general/css.php";
     ?>
-    <title>Hotel Quite Luxury</title>
-    <!-- ========== FAVICON ========== -->
-    <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
   </head>
 <body>
     <!-- ========== MOBILE MENU ========== -->
@@ -202,17 +192,22 @@
                     </div>
                   </div>
                   <div class="col-md-12">
+<<<<<<< HEAD
+                    <button type="submit" class="btn mt50 float-right" >
+                      <a href="<?php echo URL_Layout ."offerBooking"?>" style="color: #fff;">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        BOOK A ROOM NOW
+                      </a>
+=======
                     <button type="submit" name="bookingform" class="btn mt50 float-right" id="booking1">
                       <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                       BOOK A ROOM NOW
+>>>>>>> 2ab044329d23a0ca8988fb183a82164ac10f8ffa
                     </button>
                   </div>
                 </div>
               </form>
             </div>
-
-
-
             <!-- SIDEBAR -->
             <div class="col-lg-3 col-12">
               <div class="sidebar">
