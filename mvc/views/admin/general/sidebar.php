@@ -11,18 +11,18 @@
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="<?php echo URLAdmin ?>">
+        <a class="nav-link" href="<?php echo URLAdmin?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Booking Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBooking"
+            aria-expanded="true" aria-controls="collapseBooking">
             <i class="fas fa-fw fa-briefcase"></i>
             <span>Booking</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseBooking" class="collapse" aria-labelledby="headingBooking" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Booking:</h6>
                 <a class="collapse-item" href="<?php echo URLAdmin."addbooking" ?>">New Booking</a>
@@ -32,12 +32,12 @@
     </li>
      <!-- Nav Item - Rooms Collapse Menu -->
      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRoom"
+            aria-expanded="true" aria-controls="collapseRoom">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Rooms</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+        <div id="collapseRoom" class="collapse" aria-labelledby="headingRoom"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">My Rooms:</h6>
@@ -46,18 +46,34 @@
             </div>
         </div>
     </li>
-    <!-- Nav Item - Rooms Collapse Menu -->
+    <!-- Nav Item - Accounts Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccount"
+            aria-expanded="true" aria-controls="collapseAccount">
             <i class="fas fa-fw fa-user"></i>
             <span>Accounts</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseAccount" class="collapse" aria-labelledby="headingAccount" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Accounts:</h6>
                 <a class="collapse-item" href="<?php echo URLAdmin."addaccount" ?>">Add Account Details</a>
                 <a class="collapse-item" href="<?php echo URLAdmin."viewaccount" ?>">View All Accounts</a>
+            </div>
+        </div>
+    </li>
+    </li>
+    <!-- Nav Item - Blogs Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
+            aria-expanded="true" aria-controls="collapseBlog">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Blogs</span>
+        </a>
+        <div id="collapseBlog" class="collapse" aria-labelledby="headingBlog" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Blogs:</h6>
+                <a class="collapse-item" href="<?php echo URLAdmin."addblog" ?>">Add Blog Details</a>
+                <a class="collapse-item" href="<?php echo URLAdmin."viewblog" ?>">View All BLogs</a>
             </div>
         </div>
     </li>

@@ -20,13 +20,6 @@ class Admin extends Controller{
         // require_once "./mvc/views/admin/index.php";
         $this->viewadmin("index",$data);
     }
-
-    // function Login(){
-    //    // require_once "./mvc/views/admin/login.php";
-    //    $this->viewadmin("login",[""]);
-    //    $ref = $this->modeladmin("login");
-    //    $ref->login();
-    // }
    
     public function login() {
         
@@ -537,6 +530,22 @@ class Admin extends Controller{
         $model->DeleteAccountById($id);
         header('Location:'.URLAdmin. 'viewaccount');
     }
+
+    public function addblog(){
+        $data['main'] ="Blogs/add-blog";
+        $this->viewadmin('index',$data);
+    }
+
+    public function viewblog(){
+        $data['main'] ="Blogs/view-blog";
+        $this->viewadmin('index',$data);
+    }
+
+    public function editblog(){
+        $data['main'] ="Blogs/edit-blog";
+        $this->viewadmin('index',$data);
+    }
+    
     
 }
 ?>

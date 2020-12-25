@@ -3,7 +3,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="<?php echo URL_Layout."Home"?>">
+              <a href="<?php echo URL_Layout?>">
                 <h1>Quite Luxury.</h1>
               </a>
             </div>
@@ -21,24 +21,24 @@
                 <a href="<?php echo URL_Layout?>">HOME</a>
               </li>
               <li class="menu-item <?php if($page=='aboutus'){echo 'active';}?>">
-                <a href="<?php echo URL_Layout."aboutus"?>">About Us</a>
+                <a href="<?php echo URL_Layout."AboutUs"?>">ABOUT US</a>
               </li>
               <li class="menu-item <?php if($page=='roomlist'){echo 'active';}?>">
-                <a href="<?php echo URL_Layout."roomlist"?>">ROOMS</a>
+                <a href="<?php echo URL_Layout."RoomList"?>">ROOMS</a>
               </li>
               <li class="menu-item dropdown <?php if($page=='service'){echo 'active';}?>">
                 <a href="#">SERVICES</a>
                 <ul class="submenu">
                   <li class="menu-item">
-                    <a href="<?php echo URL_Layout."restaurant"?>">Our Restaurant</a>
+                    <a href="<?php echo URL_Layout."Restaurant"?>">Our Restaurant</a>
                   </li>
                 </ul>
               </li>
               <li class="menu-item dropdown <?php if($page=='blog'){echo 'active';}?>">
-                <a href="<?php echo URL_Layout."blog"?>">Blog</a>
+                <a href="<?php echo URL_Layout."Blog"?>">BLOG</a>
               </li>
               <li class="menu-item <?php if($page=='contact'){echo 'active';}?>">
-                <a href="<?php echo URL_Layout."contact"?>">CONTACT US</a>
+                <a href="<?php echo URL_Layout."Contact"?>">CONTACT US</a>
               </li>
               <li class="menu-item menu-btn">
                 <a href="<?php echo URL.'Booking'?>" class="btn">

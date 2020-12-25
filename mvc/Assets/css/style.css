@@ -3502,12 +3502,13 @@ footer .subfooter .social-media a i {
 
 .room-block-item .room-info .room-title {
   margin-bottom: 5px;
+  color: #B6ADAD;
 }
 
 .room-block-item .room-info .room-title a {
   font-size: 25px;
   font-weight: 500;
-  color: #d7d8d9;
+  color: #B6ADAD;
   text-transform: uppercase;
 }
 

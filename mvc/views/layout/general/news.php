@@ -3,7 +3,7 @@
           <div class="section-title">
             <h4 class="title">LATEST NEWS</h4>
             <p class="section-subtitle">Check out our latest news</p>
-            <a href="<?php echo URL_Layout ."blog"?>" class="view-all">View all news</a>
+            <a href="<?php echo URL_Layout ."Blog"?>" class="view-all">View all news</a>
           </div>
           <div class="row">
             <!-- ITEM -->

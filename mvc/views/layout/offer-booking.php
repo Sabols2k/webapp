@@ -20,7 +20,7 @@
         require_once "general/header.php";
       ?> 
       <!-- ========== PAGE TITLE ========== -->
-      <div class="page-title gradient-overlay op6" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>); background-repeat: no-repeat;
+      <div class="page-title gradient-overlay op6" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>"); background-repeat: no-repeat;
       background-size: cover;">
         <div class="container">
           <div class="inner">
@@ -56,7 +56,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/single/single1.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -86,7 +86,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/double/double.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/double/double.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -127,7 +127,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/deluxe/deluxe.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/deluxe/deluxe.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -158,7 +158,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/family/family.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/family/family.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -199,7 +199,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/king/king.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/king/king.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -230,7 +230,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/honeymoon/honeymoon.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/honeymoon/honeymoon.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -271,7 +271,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/view/view.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/view/view.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
@@ -301,7 +301,7 @@
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
                       <a href="room.html">
-                        <img src="images/rooms/luxury/luxury.jpg" class="img-fluid" alt="Image">
+                        <img src="<?php echo URL ."mvc/Assets/images/rooms/luxury/luxury.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>

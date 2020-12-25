@@ -14,7 +14,6 @@
         </div>
         <div class="card-body">
             <div class="row">
-                
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Type</label>
@@ -25,19 +24,11 @@
                         </select>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Price</label>
                         <input name="RoomPrice" type="text" class="form-control">
                     </div>                               
-                </div>
-                <div class="col-lg-6 p-t-20">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Description</label>
-                        <input name="Description"type="text" class="form-control">
-                    </div>
                 </div>
             </div>
             <div class="row">
@@ -52,29 +43,17 @@
                         </select>
                     </div>
                 </div>
-                
             </div>
             
-            <!-- <div class="col-lg-12 p-t-20">
-                <label class="control-label col-md-3">Upload Photo</label>
-                <form id="id_dropzone" class="dropzone">
-                    <div class="dz-message">
-                        <div class="dropIcon p-4">
-                            <img src="http://localhost:8080/Web_App/Quite_Luxury/mvc/Assets/admin/img/baseline_backup_black.png">
-                        </div>
-                        <h3>Drop files here or click to upload.</h3>
-                        <em> ( This is just a demo. Selected files are <strong>not</strong>
-                            actually uploaded.)
-                        </em>
+            <div class="row">              
+                <div class="col-lg-12 p-t-20">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Description</label>
+                        <textarea name="Description"class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                </form>
-            </div> --> 
-            <!-- <div class="col-lg-12 p-t-20">
-                <div class="form-group mt-4">
-                    <label for="exampleFormControlTextarea1">Room Details</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
-            </div> -->
+            </div>
+            
             <div class="col-lg-12 p-t-20 text-center">
                 <button type="submit" name="addroom" class="mdl-button mdl-button--raised btn-yellow">Submit</button>
                 <button type="button" class="mdl-button mdl-button--raised btn-default">Cancel</button>
