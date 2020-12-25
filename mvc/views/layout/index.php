@@ -16,9 +16,7 @@
         require_once "general/topbar.php";
       ?> 
       <!-- ========== HEADER ========== -->
-      <?php
-        require_once "general/header.php";
-      ?> 
+      <?php $page = 'home'; include 'general/header.php';?>
       <!-- ========== REVOLUTION SLIDER ========== -->
       <?php
         require_once "general/slider.php";

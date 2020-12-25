@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <?php 
+    <?php
         require_once "general/meta.php";
         require_once "general/css.php";
     ?>
@@ -16,9 +16,7 @@
         require_once "general/topbar.php";
       ?> 
       <!-- ========== HEADER ========== -->
-      <?php
-        require_once "general/header.php";
-      ?> 
+      <?php $page = 'aboutus'; include 'general/header.php';?>
       <!-- ========== PAGE TITLE ========== -->
       <div class="page-title gradient-overlay op6" style="background: url(<?php echo URL ."mvc/Assets/images/breadcrumb.jpg"?>); background-repeat: no-repeat;
       background-size: cover;">

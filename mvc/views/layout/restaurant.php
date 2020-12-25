@@ -5,9 +5,6 @@
         require_once "general/meta.php";
         require_once "general/css.php";
     ?>
-    <title>Hotel Quite Luxury</title>
-    <!-- ========== FAVICON ========== -->
-    <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
   </head>
 <body>
     <!-- ========== MOBILE MENU ========== -->
@@ -19,9 +16,7 @@
         require_once "general/topbar.php";
       ?> 
       <!-- ========== HEADER ========== -->
-      <?php
-        require_once "general/header.php";
-      ?> 
+      <?php $page = 'service'; include 'general/header.php';?>
       <!-- ========== REVOLUTION SLIDER ========== -->
       <div id="rev-slider-restaurant" class="rev_slider gradient-slider" data-version="5.4.5">
         <ul>
