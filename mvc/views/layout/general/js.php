@@ -1,6 +1,5 @@
     <!-- ========== JAVASCRIPT ========== -->
     <script src="<?php echo URL ."mvc/Assets/js/jquery.min.js"?>"></script>
-    <script src="<?php echo URL ."mvc/Assets/http://maps.google.com/maps/api/js?key=YOUR_API_KEY"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/bootstrap.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/bootstrap-select.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/jquery.mmenu.js"?>"></script>
@@ -13,7 +12,6 @@
     <script src="<?php echo URL ."mvc/Assets/js/imagesloaded.pkgd.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/masonry.pkgd.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/wow.min.js"?>"></script>
-    <script src="<?php echo URL ."mvc/Assets/js/countup.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/moment.min.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/daterangepicker.js"?>"></script>
     <script src="<?php echo URL ."mvc/Assets/js/parallax.min.js"?>"></script>

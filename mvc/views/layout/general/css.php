@@ -1,3 +1,5 @@
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
     <!-- ========== STYLESHEETS ========== -->
     <link rel="stylesheet" href="<?php echo URL ."mvc/Assets/css/bootstrap.min.css" ?>">
     <link rel="stylesheet" href="<?php echo URL ."mvc/Assets/css/bootstrap-select.min.css" ?>">

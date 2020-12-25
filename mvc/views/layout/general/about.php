@@ -6,9 +6,7 @@
           <p class="section-subtitle">High quality accommodation services</p>
         </div>
         <div class="info-branding">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus deleniti nulla, hic voluptatibus eum voluptatum libero suscipit nemo voluptates cupiditate, ipsum provident facere modi tempora ducimus enim dicta laborum esse aliquam rem
-            assumenda dolores. Commodi, aperiam, blanditiis! Ipsum iure necessitatibus eaque, fuga. Excepturi facilis libero dicta soluta officiis, sint sit voluptatem, vero doloribus nesciunt suscipit dolores veritatis minus quam atque non autem quasi
-            consequatur quae sequi ex, ipsa facere qui ut recusandae. Quod earum cupiditate quaerat assumenda.</p>
+          <p>Quite Luxury Hotel is a hotel hostel established in 2020 with 163 rooms of different sizes to suit a variety of customers' needs. Modern equipment system, air conditioning, television, furniture made of wood, wifi waves and shuttle services to tourists. Designed and decorated in a very luxurious and noble Luxury style. The hotel's facilities and rooms are very comfortable and modern to bring satisfaction and comfort to customers during their stay in the hotel room.</p>
           <div class="providers">
             <span>Recommended on:</span>
             <!-- ITEM -->

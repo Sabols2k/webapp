@@ -5,9 +5,6 @@
         require_once "general/meta.php";
         require_once "general/css.php";
     ?>
-    <title>Hotel Quite Luxury</title>
-    <!-- ========== FAVICON ========== -->
-    <link rel="icon" href="<?php echo URL ."mvc/Assets/images/favicon-logo.png"?>">
 </head>
 <body>
     <!-- ========== MOBILE MENU ========== -->
@@ -50,7 +47,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-hotel"></i>
-                  <span class="number" data-count="50"></span>
+                  <span class="number">50</span>
                   <div class="text">Rooms</div>
                 </div>
               </div>
@@ -58,7 +55,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-tray"></i>
-                  <span class="number" data-count="2"></span>
+                  <span class="number">2</span>
                   <div class="text">Restaurants</div>
                 </div>
               </div>
@@ -66,7 +63,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-bell-boy"></i>
-                  <span class="number" data-count="18"></span>
+                  <span class="number">38</span>
                   <div class="text">Staffs</div>
                 </div>
               </div>
@@ -74,7 +71,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-sports"></i>
-                  <span class="number" data-count="3"></span>
+                  <span class="number">2</span>
                   <div class="text">Swim. Pools</div>
                 </div>
               </div>
@@ -82,7 +79,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-screen"></i>
-                  <span class="number" data-count="20"></span>
+                  <span class="number">10</span>
                   <div class="text">Conf. Rooms</div>
                 </div>
               </div>
@@ -90,7 +87,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-slider"></i>
-                  <span class="number" data-count="2"></span>
+                  <span class="number">2</span>
                   <div class="text">Playgrounds</div>
                 </div>
               </div>
@@ -98,7 +95,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-slider"></i>
-                  <span class="number" data-count="2"></span>
+                  <span class="number">2</span>
                   <div class="text">Playgrounds</div>
                 </div>
               </div>
@@ -106,7 +103,7 @@
               <div class="col-md-3 col-6">
                 <div class="countup-box box-shadow-005">
                   <i class="flaticon-slider"></i>
-                  <span class="number" data-count="2"></span>
+                  <span class="number">2</span>
                   <div class="text">Playgrounds</div>
                 </div>
               </div>
