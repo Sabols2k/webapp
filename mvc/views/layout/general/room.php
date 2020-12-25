@@ -3,14 +3,14 @@
           <div class="section-title">
             <h4>OUR ROOMS</h4>
             <p class="section-subtitle">Our favorite rooms</p>
-            <a href="<?php echo URL_Layout."roomlist"?>" class="view-all">View all rooms</a>
+            <a href="<?php echo URL_Layout."RoomList"?>" class="view-all">View all rooms</a>
           </div>
           <div class="row">
             <!-- ITEM -->
             <div class="col-md-4">
               <div class="room-grid-item">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="<?php echo URL_Layout ."room"?>">
+                  <a href="<?php echo URL_Layout."Room"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                   <div class="room-services">
@@ -22,7 +22,7 @@
                 </figure>
                 <div class="room-info">
                   <h2 class="room-title">
-                    <a href="<?php echo URL_Layout ."room"?>">Single Room</a>
+                    <a href="<?php echo URL_Layout."Room"?>">Single Room</a>
                   </h2>
                   <p>Enjoy our single room</p>
                 </div>
@@ -32,7 +32,7 @@
             <div class="col-md-4">
               <div class="room-grid-item">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="<?php echo URL_Layout ."room"?>">
+                  <a href="<?php echo URL_Layout."Room"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/rooms/double/double.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                   <div class="room-services">
@@ -44,7 +44,7 @@
                 </figure>
                 <div class="room-info">
                   <h2 class="room-title">
-                    <a href="<?php echo URL_Layout ."room"?>">Double Room</a>
+                    <a href="<?php echo URL_Layout."Room"?>">Double Room</a>
                   </h2>
                   <p>Enjoy our double room</p>
                 </div>
@@ -54,7 +54,7 @@
             <div class="col-md-4">
               <div class="room-grid-item">
                 <figure class="gradient-overlay-hover link-icon">
-                  <a href="<?php echo URL_Layout ."room"?>">
+                  <a href="<?php echo URL_Layout."Room"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/rooms/deluxe/deluxe.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                   <div class="room-services">
@@ -67,7 +67,7 @@
                 </figure>
                 <div class="room-info">
                   <h2 class="room-title">
-                    <a href="<?php echo URL_Layout ."room"?>">Deluxe Room</a>
+                    <a href="<?php echo URL_Layout."Room"?>">Deluxe Room</a>
                   </h2>
                   <p>Enjoy our delux room</p>
                 </div>

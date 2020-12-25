@@ -3,62 +3,54 @@
 class Home extends Controller{
 
     public function index(){
-        // header("Location:". URL_Layout."index");
-         
-        // header('Location:'.URL_Layout.'index');
+
         require_once "./mvc/views/layout/index.php";
 
     }
 
-    function aboutus(){
+    function AboutUs(){
 
         require_once "./mvc/views/layout/about-us.php";
 
     }
 
-    function roomlist(){
+    function RoomList(){
 
         require_once "./mvc/views/layout/rooms-list.php";
 
     }
 
-    function room(){
+    function Room(){
 
         require_once "./mvc/views/layout/room.php";
 
     }
 
-    function services(){
-
-        require_once "./mvc/views/layout/services.php";
-
-    }
-
-    function restaurant(){
+    function Restaurant(){
 
         require_once "./mvc/views/layout/restaurant.php";
 
     }
 
-    function blog(){
+    function Blog(){
 
         require_once "./mvc/views/layout/blog.php";
 
     }
 
-    function blogpost(){
+    function Blogpost(){
 
         require_once "./mvc/views/layout/blog-post.php";
 
     }
 
-    function contact(){
+    function Contact(){
 
         require_once "./mvc/views/layout/contact.php";
 
     }
 
-    function offerBooking(){
+    function OfferBooking(){
 
         require_once "./mvc/views/layout/offer-booking.php";
 

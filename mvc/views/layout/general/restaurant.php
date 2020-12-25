@@ -3,7 +3,7 @@
           <div class="section-title">
             <h4>QUITE LUXURY RESTAURANT</h4>
             <p class="section-subtitle">Live a gourmet dining experience</p>
-            <a href="<?php echo URL_Layout ."restaurant"?>" class="view-all uppercase">More About Our Restaurant</a>
+            <a href="<?php echo URL_Layout ."Restaurant"?>" class="view-all uppercase">More About Our Restaurant</a>
           </div>
           <div class="row">
             <!-- ITEM -->
