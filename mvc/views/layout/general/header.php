@@ -3,7 +3,7 @@
           <!-- BRAND -->
           <div class="brand">
             <div class="logo">
-              <a href="<?php echo URL_Layout."Home"?>">
+              <a href="<?php echo URL_Layout?>">
                 <h1>Quite Luxury.</h1>
               </a>
             </div>

@@ -192,17 +192,11 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-<<<<<<< HEAD
                     <button type="submit" class="btn mt50 float-right" >
                       <a href="<?php echo URL_Layout ."offerBooking"?>" style="color: #fff;">
                         <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                         BOOK A ROOM NOW
                       </a>
-=======
-                    <button type="submit" name="bookingform" class="btn mt50 float-right" id="booking1">
-                      <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                      BOOK A ROOM NOW
->>>>>>> 2ab044329d23a0ca8988fb183a82164ac10f8ffa
                     </button>
                   </div>
                 </div>
