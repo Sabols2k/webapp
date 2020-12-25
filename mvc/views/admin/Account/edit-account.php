@@ -14,15 +14,6 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-12 p-t-20">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Ảnh đại diện</label>
-                        <input value="<?php echo $data['account']['aimg']; ?>" name="aimg" type="file" class="form-control">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">AdminID</label>
@@ -103,10 +94,15 @@
                             <input value="<?php echo $data['account']['aBirthday']; ?>" name="aBirthday"type="date" class="form-control">
                     </div>
                 </div>
-               
-                
             </div>
-            
+            <div class="row">
+                <div class="col-lg-12 p-t-20">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Ảnh đại diện</label>
+                        <input value="<?php echo $data['account']['aimg']; ?>" name="aimg" type="file" class="form-control" style="height: 100px">
+                    </div>
+                </div>
+            </div>
            
             <div class="col-lg-12 p-t-20 text-center">
                 <button type="submit" name="editAccount" value="Update" class="mdl-button mdl-button--raised btn-yellow" href="<?php echo URLAdmin.'viewaccount'?>">Submit</button>

@@ -1,5 +1,3 @@
-
-
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -15,14 +13,6 @@
             <h6 class="m-0 font-weight-bold text-secondary">Add Account Details</h6>
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-lg-12 p-t-20">
-                    <div class="form-group">
-                    <label for="exampleFormControlInput1">Ảnh đại diện</label>
-                        <input type='file' name='file' class="form-control"/>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
@@ -122,6 +112,14 @@
                         <span class="invalidFeedback">
                             <?php echo $data['account']['passwordError']; ?>
                         </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 p-t-20">
+                    <div class="form-group">
+                    <label for="exampleFormControlInput1">Ảnh đại diện</label>
+                    <input type='file' name='file' class="form-control"  style="height: 100px">
                     </div>
                 </div>
             </div>
