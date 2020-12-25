@@ -21,7 +21,7 @@
                 <a href="<?php echo URL_Layout?>">HOME</a>
               </li>
               <li class="menu-item <?php if($page=='aboutus'){echo 'active';}?>">
-                <a href="<?php echo URL_Layout."aboutus"?>">About Us</a>
+                <a href="<?php echo URL_Layout."aboutus"?>">ABOUT US</a>
               </li>
               <li class="menu-item <?php if($page=='roomlist'){echo 'active';}?>">
                 <a href="<?php echo URL_Layout."roomlist"?>">ROOMS</a>
@@ -35,7 +35,7 @@
                 </ul>
               </li>
               <li class="menu-item dropdown <?php if($page=='blog'){echo 'active';}?>">
-                <a href="<?php echo URL_Layout."blog"?>">Blog</a>
+                <a href="<?php echo URL_Layout."blog"?>">BLOGS</a>
               </li>
               <li class="menu-item <?php if($page=='contact'){echo 'active';}?>">
                 <a href="<?php echo URL_Layout."contact"?>">CONTACT US</a>
