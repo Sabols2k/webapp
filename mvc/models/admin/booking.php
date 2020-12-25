@@ -46,6 +46,6 @@ class booking extends DB{
           $data[]=$datas;
       }
       return $data;
-  }
+    }
 }
 ?>
