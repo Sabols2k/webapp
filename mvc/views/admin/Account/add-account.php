@@ -118,8 +118,8 @@
             <div class="row">
                 <div class="col-lg-12 p-t-20">
                     <div class="form-group">
-                    <label for="exampleFormControlInput1">Ảnh đại diện</label>
-                    <input type='file' name='file' class="form-control"  style="height: 100px">
+                        <label for="exampleFormControlInput1">Ảnh đại diện</label>
+                        <input type='file' name='file' class="form-control"  style="height: 100px">
                     </div>
                 </div>
             </div>

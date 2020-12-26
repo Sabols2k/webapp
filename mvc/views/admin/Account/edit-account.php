@@ -7,7 +7,7 @@
     </div>
 
     <!-- New account Form Example -->
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-secondary">Edit Account Details</h6>
@@ -99,8 +99,14 @@
                 <div class="col-lg-12 p-t-20">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Ảnh đại diện</label>
-                        <input value="<?php echo $data['account']['aimg']; ?>" name="aimg" type="file" class="form-control" style="height: 100px">
+                        <?php $_FILES['aimg']['name'] =$data['account']['aimg'];  ?>
+                        <input value="<?php echo $data['account']['aimg']; ?>"  type="file" name="aimg"  class="form-control" style="height: 100px">
+                        
                     </div>
+                    
+                    <!-- <label for="exampleFormControlInput1">Ảnh đại diện</label>
+                    <input type='file' name='file' class="form-control"  style="height: 100px"> -->
+                    
                 </div>
             </div>
            

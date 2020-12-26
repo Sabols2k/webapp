@@ -331,6 +331,8 @@ class Admin extends Controller{
         $model->DeleteRoomById($id);
         header('Location:'.URLAdmin. 'viewroom');
     }
+
+
     //view account admin
     
     public function viewaccount(){
@@ -386,6 +388,7 @@ class Admin extends Controller{
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $file = $_FILES['file']['name'];
+            // echo $file; die();
             $target_dir = imgAdmin."account/";
             $path=$target_dir.$file;
             
@@ -473,11 +476,12 @@ class Admin extends Controller{
         $this->viewadmin('index',$data);
     }
     public function editAccount($id){
-       
+        
         $account = [
             'aAdminID'=> '',
             'aUsername' => '',
             'aPassword' => '',
+            'aimg' => '',
             'aEmail' => '',
             'aFirstName' => '',
             'aLastName'=> '',
@@ -497,10 +501,15 @@ class Admin extends Controller{
                 //Sanitize post data
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
+                $file = $_FILES['aimg']['name']; 
+                $target_dir = imgAdmin."account/";
+                $path=$target_dir.$file; 
+
                 $account = [
                     'aAdminID'=> trim($_POST['aAdminID']),
                     'aUsername' => trim($_POST['aUsername']),
                     'aPassword' =>  trim($_POST['aPassword']),
+                    'aimg' =>$_FILES['aimg']['name'],
                     'aEmail' =>  trim($_POST['aEmail']),
                     'aFirstName' =>  trim($_POST['aFirstName']),
                     'aLastName'=>  trim($_POST['aLastName']),
@@ -512,9 +521,23 @@ class Admin extends Controller{
                     
 
                 ];
+                // echo $path; die();
+                if(isset($path)){
+
+                    $target_dir = $target_dir."(1)";
+                    $path=$target_dir.$file;
+                    
+                    
+                    move_uploaded_file($_FILES['aimg']['tmp_name'], $path);
+                    $account['img']="(1)".$file;
+                }else{
+                    move_uploaded_file($_FILES['aimg']['tmp_name'], $path);
+                    $account['img']= $file;
+                }
+
                 // print_r ($room);
                 $model=$this->modeladmin("account");
-                $model->updateAccount($id,$account['aAdminID'], $account['aUsername' ], $account['aPassword'], $account['aEmail'],$account['aFirstName' ],$account['aLastName' ],$account['aAddress' ],$account['aCountry' ],$account['aPhone' ],$account['aGender' ],$account['aBirthday' ] );
+                $model->updateAccount($id,$account['aAdminID'], $account['aUsername' ], $account['aPassword'],$account['img'], $account['aEmail'],$account['aFirstName' ],$account['aLastName' ],$account['aAddress' ],$account['aCountry' ],$account['aPhone' ],$account['aGender' ],$account['aBirthday' ] );
                 
                 $data['account'] =  $model->getAllAccount();
                 $data['main']="Account/view-account";
