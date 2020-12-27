@@ -23,23 +23,31 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>STT</th>
                             <th>RoomID</th>
+                            <th>Image</th>
+                            <th>RoomNumber</th>
                             <th>Type</th>
                             <th>Price</th>
-                            <th>Description</th>
                             <th>Status</th>
+                            <th>Name Guest</th>
+                            <th>Email Guest</th>
+                            <th>DateCheckIn</th>
+                            <th>DateCheckOut</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>STT</th>
                             <th>RoomID</th>
+                            <th>Image</th>
+                            <th>RoomNumber</th>
                             <th>Type</th>
                             <th>Price</th>
-                            <th>Description</th>
                             <th>Status</th>
+                            <th>Name Guest</th>
+                            <th>Email Guest</th>
+                            <th>DateCheckIn</th>
+                            <th>DateCheckOut</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -62,31 +70,35 @@
         array = JSON.parse(xmlhttp.responseText);
         console.log(array);
 
-    var stt=1;
-    html= array.map(item=>
-        `<tr>`+
-        `<td>`+stt+`</td>`+
-        `<td>`+item['RoomID']+`</td>`+
-        `<td>`+item['RoomTypeID']+`</td>`+
-        `<td>`+item['RoomPrice']+`</td>`+
-        `<td>`+item['Description']+`</td>`+
-        `<td>`+item['RoomstatusID']+`</td>`+
-        `<td> <button class="btn btn-edit">`+
-            `<a href="<?php echo URLAdmin ?>.'editroom/'.`+item['RoomID']+ `">`+
-               ` <i class="fas fa-pencil-alt"></i>`+
-           ` </a>`+
-            `</button>
-            <button class="btn btn-delete">
-                <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin?>.'deleteroom/'.`+item['RoomID']+` ">
-                    <i style="color: #ffff" class="fas fa-trash-alt"></i>
-                </a>
-            </button>`+
-        `</td>`+
-        `</tr>`
+        var stt=1;
+        html= array.map(item=>
+            `<tr>`+
+            `<td>`+item['RoomID']+`</td>`+
+            `<td><img style="height: 50px; width: 50px; border-radius:50%" src=" <?php echo imgRoomtype?>`+ item['rImg']+`" alt=""></td>`+
+            `<td>`+item['RoomNumber']+`</td>`+
+            `<td>`+item['rRoomType']+`</td>`+
+            `<td>`+item['rRoomPrice']+`</td>`+
+            `<td>`+item['RoomstatusID']+`</td>`+
+            `<td>`+item['gName']+`</td>`+
+            `<td>`+item['gEmail']+`</td>`+
+            `<td>`+item['bDateCheckIn']+`</td>`+
+            `<td>`+item['bDateCheckOut']+`</td>`+
+            `<td> <button class="btn btn-edit">`+
+                `<a href="<?php echo URLAdmin ?>editroom/`+item['RoomID']+ `">`+
+                ` <i class="fas fa-pencil-alt"></i>`+
+            ` </a>`+
+                `</button>
+                <button class="btn btn-delete">
+                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin?>deleteroom/` +item['RoomID']+` ">
+                        <i style="color: #ffff" class="fas fa-trash-alt"></i>
+                    </a>
+                </button>`+
+            `</td>`+
+            `</tr>`
+             
 
-
-                    );
-                        $('#allroom').html(html);
+                        );
+        $('#allroom').html(html);
     }
     
     };

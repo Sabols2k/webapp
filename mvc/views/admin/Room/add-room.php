@@ -16,34 +16,22 @@
             <div class="row">
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Type</label>
-                        <select name="RoomTypeID" class="form-control" id="exampleFormControlSelect1">
-                            <option>SingleRoom</option>
-                            <option>DoubleRoom</option>
-                            <option>FamilyRoom</option>
-                        </select>
-                    </div>
+                        <label for="exampleFormControlInput1">Room Number</label>
+                        <input name="Roomnumber" type="text" class="form-control">
+                    </div>                               
                 </div>
                 <div class="col-lg-6 p-t-20">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Price</label>
-                        <input name="RoomPrice" type="text" class="form-control">
-                    </div>                               
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 p-t-20">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Status</label>
-                        <select name="RoomstatusID" class="form-control" id="exampleFormControlSelect1">
-                            <option></option>
-                            <option>Trống</option>
-                            <option>Chờ</option>
-                            <option>Đầy</option>
+                        <label for="exampleFormControlSelect1">Type</label>
+                        <select name="RoomType" class="form-control" id="exampleFormControlSelect1">
+                            <option>Single Room</option>
+                            <option>Double Room</option>
                         </select>
                     </div>
                 </div>
+                
             </div>
+            
             
             <div class="row">              
                 <div class="col-lg-12 p-t-20">
