@@ -10812,17 +10812,12 @@ a:focus {
   background-size: cover;
 }
 
-.bg-register-image {
-  background: url("../img/register.png");
+.bg-reserve-image {
+  background: url("../img/reserve.png");
   background-position: center;
   background-size: cover;
 }
 
-.bg-password-image {
-  background: url("../img/forgotpassword.png");
-  background-position: center;
-  background-size: cover;
-}
 
 form.user .custom-checkbox.small label {
   line-height: 1.5rem;
