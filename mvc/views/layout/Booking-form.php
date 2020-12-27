@@ -514,10 +514,10 @@
     `;
     Email.send({
             Host: "smtp.gmail.com",
-            Username: "henrytranls2k@gmail.com",
-            Password: "Henry1234",
+            Username: "quiteluxuryhotel@gmail.com",
+            Password: "Chau1234",
             SecureToken: "Generate token here",
-            From: "henrytranls2k@gmail.com",
+            From: "quiteluxuryhotel@gmail.com",
             To: "dangducchau2000@gmail.com",
             Subject: "You've booked from Quite Luxury!",
             Body: html

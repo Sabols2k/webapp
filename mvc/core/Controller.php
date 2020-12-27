@@ -18,5 +18,12 @@ class Controller{
         require_once "./mvc/models/admin/".$model.".php";
         return new $model;    
     }
+
+    //layout 
+    public function modellayout($model){
+        require_once "./mvc/models/layout/".$model.".php";
+        return new $model;    
+    }
+    
 }
 ?>
