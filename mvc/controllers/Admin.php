@@ -578,6 +578,9 @@ class Admin extends Controller{
         $this->viewadmin('index',$data);
     }
     
-    
+    public function Reservation(){
+        $data['main'] ="Reservation/Reservation";
+        $this->viewadmin('index',$data);
+    }
 }
 ?>
