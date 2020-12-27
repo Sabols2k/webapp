@@ -16,6 +16,7 @@ class Admin extends Controller{
     function index(){
         // $this->viewadmin("index");
         $_SESSION['function']= "index";
+        
         $data['main'] = "home/main";
         // require_once "./mvc/views/admin/index.php";
         $this->viewadmin("index",$data);
@@ -578,7 +579,14 @@ class Admin extends Controller{
         $this->viewadmin('index',$data);
     }
     
+
     public function Reservation(){
+        $_SESSION['function']='reservation';
+       
+
+        $model=$this->modeladmin("reservation");
+        $data['reservation'] =  $model->getAllReservation();
+        
         $data['main'] ="Reservation/Reservation";
         $this->viewadmin('index',$data);
     }

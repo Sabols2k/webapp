@@ -39,7 +39,7 @@
                     <tbody>
                     <?php  
                         $stt=1;
-                        foreach($data['booking'] as $row){
+                        foreach($data['reservation'] as $row){
                     ?>
                         <tr>
                             <td><?php echo $stt ?></td>
