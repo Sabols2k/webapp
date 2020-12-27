@@ -22,13 +22,18 @@
                     </div>
                     <div class="col-lg-6 p-t-20">
                         <div class="form-group">
+                            <label for="exampleFormControlInput1">RoomNumber</label>
+                            <input value="<?php echo $data['room']['RoomNumber']; ?>" name="RoomNumber" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 p-t-20">
+                        <div class="form-group">
                             <label for="exampleFormControlSelect1">Type</label>
-                            <select name="RoomTypeID" class="form-control" id="exampleFormControlSelect1">
-                                
-                                <option><?php echo $data['room']['RoomTypeID']; ?></option>
+                            <select name="RoomTypeID" class="form-control" id="exampleFormControlSelect1" value="<?php echo $data['room']['rRoomType']; ?>">
                                 <option>SingleRoom</option>
                                 <option>DoubleRoom</option>
-                                <option>FamilyRoom</option>
                             </select>
                         </div>
                     </div>
@@ -36,9 +41,12 @@
                 <div class="row">
                     <div class="col-lg-6 p-t-20">
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Price</label>
-                            <input value="<?php echo $data['room']['RoomPrice']; ?>" name="RoomPrice" type="text" class="form-control">
-                        </div>                               
+                            <label for="exampleFormControlSelect1">Status</label>
+                            <select name="RoomstatusID" class="form-control" id="exampleFormControlSelect1" value="<?php if($data['room']['RoomstatusID'] == '1')  { echo "Full";} else {echo "Null";}; ?>">
+                                <option>Full</option>
+                                <option>Null</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-lg-6 p-t-20">
                         <div class="form-group">
@@ -47,22 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 p-t-20">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Status</label>
-                            <select name="RoomstatusID" class="form-control" id="exampleFormControlSelect1">
-                                <option><?php echo $data['room']['RoomstatusID']; ?></option>
-                                <option>Trống</option>
-                                <option>Chờ</option>
-                                <option>Đầy</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            
+               
                 <div class="col-lg-12 p-t-20 text-center">
                     <button type="submit" name="editRoom" value="Update" class="mdl-button mdl-button--raised btn-yellow" href="">Submit</button>
                     <button type="button" class="mdl-button mdl-button--raised btn-default">Cancel</button>

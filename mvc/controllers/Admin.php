@@ -15,7 +15,7 @@ class Admin extends Controller{
     }
     function index(){
         // $this->viewadmin("index");
-        
+        $_SESSION['function']= "index";
         $data['main'] = "home/main";
         // require_once "./mvc/views/admin/index.php";
         $this->viewadmin("index",$data);
@@ -181,6 +181,7 @@ class Admin extends Controller{
 //admin booking
 
     function ViewBooking(){
+        $_SESSION['function'] = 'booking';
         $model=$this->modeladmin("booking");
         $data['booking'] =  $model->getAllBooking();
 
@@ -189,6 +190,7 @@ class Admin extends Controller{
     }
     
     public function Addbooking() {
+        $_SESSION['function'] = 'booking';
         $data['booking'] = [
             'bBookingID' =>'',
             'bGuestID' => '',
@@ -227,7 +229,7 @@ class Admin extends Controller{
         $this->viewadmin('index',$data);
     }
     public function editbooking($id){
-       
+        $_SESSION['function'] = 'booking';
         $booking = [
             'BookingID'=> '',
             'GuestID' => '',
@@ -270,6 +272,7 @@ class Admin extends Controller{
 
     }
     public function deleteBooking($id){
+        $_SESSION['function'] = 'booking';
         $model= $this->modeladmin("booking");
         $model->DeleteBookingById($id);
         header('Location:'.URLAdmin. 'viewbooking');
@@ -278,6 +281,7 @@ class Admin extends Controller{
 
 // admin room
     function ViewRoom(){
+        $_SESSION['function'] = 'room';
         $model=$this->modeladmin("room");
         $data['room'] =  $model->getAllRoom();
         
@@ -286,7 +290,7 @@ class Admin extends Controller{
     }
 
     public function AddRoom() {
-          
+        $_SESSION['function'] = 'room';
            $data = [
             'RoomTypeID' => '',
             'RoomPrice' => '',
@@ -306,36 +310,34 @@ class Admin extends Controller{
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data['room'] = [
-                'RoomTypeID' => trim($_POST['RoomTypeID']),
-                'RoomPrice' => trim($_POST['RoomPrice']),
+                'Roomnumber' => trim($_POST['Roomnumber']),
+                'RoomType' => trim($_POST['RoomType']),
                 'Description' => trim($_POST['Description']),
-                'RoomstatusID' => trim($_POST['RoomstatusID']),
-                'RoomTypeIDError' => '',
-                'RoomPriceError' => '',
-                'DescriptionError' => '',
-                'RoomstatusIDError' => ''
+                'RoomnumberError' => '',
+                'RoomTypeError' => ''
 
             ];
+            
             //Validate username
-            if (empty($data['RoomTypeID'])) {
-                $data['RoomTypeIDError'] = 'Please enter roomtype.';
+            if (empty($data['room']['Roomnumber'])) {
+                $data['room']['RoomnumberError'] = 'Please enter Roomnumber.';
             }
 
             //Validate password
-            if (empty($data['RoomPrice'])) {
-                $data['RoomPriceError'] = 'Please enter RoomPriceError.';
+            if (empty($data['room']['RoomType'])) {
+                $data['RoomTypeError'] = 'Please enter RoomTypeError.';
             }
 
             //Check if all errors are empty
-            if (empty($data['RoomPriceError']) && empty($data['RoomTypeIDError'])) {
+            if (empty($data['room']['RoomTypeError']) && empty($data['room']['RoomnumberError'])) {
                 $model=$this->modeladmin("room");
-                $model->InsertRoom($data['RoomTypeID' ],
-                        $data['RoomPrice'],
-                        $data['Description' ],
-                        $data['RoomstatusID' ]
-                    );
+                $model->InsertRoom($data['room']['Roomnumber'],
+                        $data['room']['RoomType'],
+                        $data['room']['Description' ] );
                 
             }
+            $data['main']= "Room/view-room";
+            $this->viewadmin("index",$data);
 
         } 
         $data['main']= "Room/add-room";
@@ -343,7 +345,7 @@ class Admin extends Controller{
     }
 
     public function editroom($id){
-       
+        $_SESSION['function'] = 'room';
         $room = [
             'RoomID'=> '',
             'RoomTypeID' => '',
@@ -368,16 +370,16 @@ class Admin extends Controller{
 
                 $room = [
                     'RoomID' => trim($_POST['RoomID']),
+                    'RoomNumber' => trim($_POST['RoomNumber']),
                     'RoomTypeID' => trim($_POST['RoomTypeID']),
-                    'RoomPrice' => trim($_POST['RoomPrice']),
-                    'Description' => trim($_POST['Description']),
                     'RoomstatusID' => trim($_POST['RoomstatusID']),
+                    'Description' => trim($_POST['Description']),
                     
 
                 ];
-                // print_r ($room);
+                // print_r ($room); die();
                 $model=$this->modeladmin("room");
-                $model->updateRoom($id,$room['RoomID'],   $room['RoomTypeID' ], $room['RoomPrice'], $room['Description' ],$room['RoomstatusID' ] );
+                $model->updateRoom($id,$room['RoomID'], $room['RoomNumber'], $room['RoomTypeID'],$room['Description' ], $room['RoomstatusID'] );
                 
                 $data['room'] =  $model->getAllRoom();
                 $data['main']="Room/view-room";
@@ -390,13 +392,17 @@ class Admin extends Controller{
     }
 
     public function deleteRoom($id){
+        $_SESSION['function'] = 'room';
         $model= $this->modeladmin("room");
         $model->DeleteRoomById($id);
         header('Location:'.URLAdmin. 'viewroom');
     }
+
+
     //view account admin
     
     public function viewaccount(){
+        $_SESSION['function'] = 'account';
         $table = "admin";
         // $model=$this->modeladmin("account");
         
@@ -410,6 +416,7 @@ class Admin extends Controller{
     }
     
     public function AddAccount() {
+        $_SESSION['function'] = 'account';
         $data['account'] = [
             'img' =>'',
             'username' =>'',
@@ -449,6 +456,7 @@ class Admin extends Controller{
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $file = $_FILES['file']['name'];
+            // echo $file; die();
             $target_dir = imgAdmin."account/";
             $path=$target_dir.$file;
             
@@ -536,11 +544,12 @@ class Admin extends Controller{
         $this->viewadmin('index',$data);
     }
     public function editAccount($id){
-       
+        $_SESSION['function'] = 'account';
         $account = [
             'aAdminID'=> '',
             'aUsername' => '',
             'aPassword' => '',
+            'aimg' => '',
             'aEmail' => '',
             'aFirstName' => '',
             'aLastName'=> '',
@@ -560,10 +569,15 @@ class Admin extends Controller{
                 //Sanitize post data
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
+                $file = $_FILES['aimg']['name']; 
+                $target_dir = imgAdmin."account/";
+                $path=$target_dir.$file; 
+
                 $account = [
                     'aAdminID'=> trim($_POST['aAdminID']),
                     'aUsername' => trim($_POST['aUsername']),
                     'aPassword' =>  trim($_POST['aPassword']),
+                    'aimg' =>$_FILES['aimg']['name'],
                     'aEmail' =>  trim($_POST['aEmail']),
                     'aFirstName' =>  trim($_POST['aFirstName']),
                     'aLastName'=>  trim($_POST['aLastName']),
@@ -575,9 +589,23 @@ class Admin extends Controller{
                     
 
                 ];
+                // echo $path; die();
+                if(isset($path)){
+
+                    $target_dir = $target_dir."(1)";
+                    $path=$target_dir.$file;
+                    
+                    
+                    move_uploaded_file($_FILES['aimg']['tmp_name'], $path);
+                    $account['img']="(1)".$file;
+                }else{
+                    move_uploaded_file($_FILES['aimg']['tmp_name'], $path);
+                    $account['img']= $file;
+                }
+
                 // print_r ($room);
                 $model=$this->modeladmin("account");
-                $model->updateAccount($id,$account['aAdminID'], $account['aUsername' ], $account['aPassword'], $account['aEmail'],$account['aFirstName' ],$account['aLastName' ],$account['aAddress' ],$account['aCountry' ],$account['aPhone' ],$account['aGender' ],$account['aBirthday' ] );
+                $model->updateAccount($id,$account['aAdminID'], $account['aUsername' ], $account['aPassword'],$account['img'], $account['aEmail'],$account['aFirstName' ],$account['aLastName' ],$account['aAddress' ],$account['aCountry' ],$account['aPhone' ],$account['aGender' ],$account['aBirthday' ] );
                 
                 $data['account'] =  $model->getAllAccount();
                 $data['main']="Account/view-account";
@@ -589,22 +617,26 @@ class Admin extends Controller{
 
     }
     public function deleteAccount($id){
+        $_SESSION['function'] = 'account';
         $model= $this->modeladmin("account");
         $model->DeleteAccountById($id);
         header('Location:'.URLAdmin. 'viewaccount');
     }
 
     public function addblog(){
+        $_SESSION['function'] = 'blog';
         $data['main'] ="Blogs/add-blog";
         $this->viewadmin('index',$data);
     }
 
     public function viewblog(){
+        $_SESSION['function'] = 'blog';
         $data['main'] ="Blogs/view-blog";
         $this->viewadmin('index',$data);
     }
 
     public function editblog(){
+        $_SESSION['function'] = 'blog';
         $data['main'] ="Blogs/edit-blog";
         $this->viewadmin('index',$data);
     }

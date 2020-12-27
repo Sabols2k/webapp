@@ -10,7 +10,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item <?php if($_SESSION['function']=='index'){echo "active";}else{echo "";} ?>">
         <a class="nav-link" href="<?php echo URLAdmin?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -21,7 +21,7 @@
             <span>Reservation Details</span></a>
     </li>
     <!-- Nav Item - Booking Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item <?php if($_SESSION['function']=='booking'){echo "active";}else{echo "";} ?>">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBooking"
             aria-expanded="true" aria-controls="collapseBooking">
             <i class="fas fa-fw fa-briefcase"></i>
@@ -36,7 +36,7 @@
         </div>
     </li>
      <!-- Nav Item - Rooms Collapse Menu -->
-     <li class="nav-item">
+     <li class="nav-item <?php if($_SESSION['function']=='room'){echo "active";}else{echo "";} ?>">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRoom"
             aria-expanded="true" aria-controls="collapseRoom">
             <i class="fas fa-fw fa-hotel"></i>
@@ -52,7 +52,7 @@
         </div>
     </li>
     <!-- Nav Item - Accounts Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item <?php if($_SESSION['function']=='account'){echo "active";}else{echo "";} ?>">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccount"
             aria-expanded="true" aria-controls="collapseAccount">
             <i class="fas fa-fw fa-user"></i>
@@ -68,7 +68,7 @@
     </li>
     </li>
     <!-- Nav Item - Blogs Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item <?php if($_SESSION['function']=='blog'){echo "active";}else{echo "";} ?>">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
             aria-expanded="true" aria-controls="collapseBlog">
             <i class="fas fa-fw fa-blog"></i>
@@ -89,3 +89,4 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 </ul>
+
