@@ -15,6 +15,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo URLAdmin."Reservation"?>">
+        <i class="fas fa-fw fa-address-book"></i>
+            <span>Reservation Details</span></a>
+    </li>
     <!-- Nav Item - Booking Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBooking"
@@ -66,7 +71,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
             aria-expanded="true" aria-controls="collapseBlog">
-            <i class="fas fa-fw fa-user"></i>
+            <i class="fas fa-fw fa-blog"></i>
             <span>Blogs</span>
         </a>
         <div id="collapseBlog" class="collapse" aria-labelledby="headingBlog" data-parent="#accordionSidebar">
