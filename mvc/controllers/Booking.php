@@ -512,17 +512,22 @@ class Booking extends Controller{
             $this->view("layout/offer-booking1",$data);
         }
         else if($countoffer == 3){
-            // require_once "./mvc/views/layout/offer-booking2.php";
             $this->view("layout/offer-booking2",$data);
+            // $this->view("layout/offer-booking2",$data);
         }
         else{
             echo "het phong";
             // require 1 view thông báo hết phòng.
             // nội dung: Xin lỗi + đề nghị khách hàng chọn phòng lại
         }
+        // if(isset($_POST['bookingoffer'])){
+        //     // echo  URL. 'Booking/Confirm';
+        //     header('Location:'.URL. 'Booking');
+        //     // $this->view('layout/customer');
+
+        // }
         print_r($data['offer']);
 
-        
     }
     function auth(){
         // print_r($_SESSION['guest']);
@@ -539,6 +544,7 @@ class Booking extends Controller{
         print_r ($_SESSION['offer']['offer3']); 
         echo "Số offer". count($_SESSION['offer']);
         // $this->view('layout/customer-mail');
+        
     }
     function confirm(){
         $this->view('layout/customer');

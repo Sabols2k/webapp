@@ -41,10 +41,10 @@ class reservation extends DB{
       $this->execute($sql);
      }
      public function getAllReservation(){
-      $sql ="CALL `viewreservation`()";
-    //   $sql= "CALL getAllRoom()";
+    //   $sql ="CALL `viewreservation`()";
+      $sql= "SELECT * FROM reservationsagents";
       $this->execute($sql);
-      while($datas=$this->getData('admin')){
+      while($datas=$this->getData('reservationsagents')){
           $data[]=$datas;
       }
       return $data;
