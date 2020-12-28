@@ -34,7 +34,7 @@
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
                             <th>RoomCount</th>
-                            
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -49,6 +49,7 @@
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
                             <th>RoomCount</th>
+                            <th>Action</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -84,7 +85,6 @@
                         $stt++;
                         }
                     ?>   
-                        
                     </tbody>
                 </table>
             </div>

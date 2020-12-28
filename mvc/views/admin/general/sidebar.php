@@ -15,6 +15,8 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
     <li class="nav-item <?php if($_SESSION['function']=='reservation'){echo "active";}else{echo "";} ?>">
         <a class="nav-link" href="<?php echo URLAdmin."Reservation"?>">
         <i class="fas fa-fw fa-address-book"></i>
@@ -66,7 +68,8 @@
             </div>
         </div>
     </li>
-    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
     <!-- Nav Item - Blogs Collapse Menu -->
     <li class="nav-item <?php if($_SESSION['function']=='blog'){echo "active";}else{echo "";} ?>">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
