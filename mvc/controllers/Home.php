@@ -50,11 +50,7 @@ class Home extends Controller{
 
     }
 
-    function OfferBooking(){
-
-        require_once "./mvc/views/layout/offer-booking.php";
-
-    }
+    
 
 }
 ?>

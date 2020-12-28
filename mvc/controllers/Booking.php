@@ -97,6 +97,7 @@ class Booking extends Controller{
             if(empty($data['booking']['NameError'])){
                 $this->createGuestSession($data['booking']);
                 $data['booking']['NameError']="";
+
             }
             else  {
                 $data['booking']['NameError'] = '* Please type your name. Please try again.';
@@ -112,7 +113,8 @@ class Booking extends Controller{
             //     $data['booking']['bRoomCount' ]
             // );
             // echo "da booking"; die();
-          
+            header('Location:'.URL. 'Booking/OfferBooking');
+            // $this->view("layout/offer-booking");
         } 
         // $data['main'] ="Booking/add-booking";
         $this->view('layout/Booking-form', $data);
@@ -132,9 +134,7 @@ class Booking extends Controller{
         $_SESSION['guest']['roomtype'] = $guest['RoomType'];
         $_SESSION['guest']['Decription'] = $guest['Description'];
     }
-    function auth(){
-        $this->view('layout/customer-mail');
-    }
+    
 
     //ham dem so phong 
     function SL_Room($people, $maxguest){
@@ -157,36 +157,42 @@ class Booking extends Controller{
         $data =  $model->demphongtrong();
         switch($roomtype){
             case 'Single Room':
-                $kq['guest'] = 2;
+                $kq['guest'] = $data['0']['rtMaxGuest'];
                 $kq['roomremain']= $data['0']['SL_PhongTrong'];
+                $kq['price'] = $data['0']['rRoomPrice'];
+                $kq['img'] = $data['0']['rImg'];
                 return $kq;
                 break;
             case 'Double Room':
-                $kq['guest'] = 4;
+                $kq['guest'] = $data['1']['rtMaxGuest'];
                 $kq['roomremain']= $data['1']['SL_PhongTrong'];
+                $kq['price'] = $data['1']['rRoomPrice'];
+                $kq['img'] = $data['1']['rImg'];
                 return $kq;
                 break;
             default:
                 return $kq = NULL;
         }
     }
-    function suggestion1(){
-        // $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
-        $people = 20;
+    function offer1(){
+        $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
+        // $people = 20;
+        
         $model=$this->modellayout("bookingform");
-        $data['room'] =  $model->demphongtrong();
-
-
+        // Đếm số lượng phòng trống và maxguest của mỗi loại phòng 
+        // $data['room'] =  $model->demphongtrong(); 
+        // print_r($data['room']);
         $guest= $this->maxguest($_SESSION['guest']['roomtype']);
         
 
         // print_r($data['room']);
-        print_r ($_SESSION['guest']);
-        echo "Số người: " . $people;
-        echo "max guest: " .$guest['guest'];
-        echo "So phong con lai: " .$guest['roomremain'];
-        // print_r($guest);
-        echo "Ket qua:";
+        // print_r ($_SESSION['guest']);
+
+        // echo "Số người: " . $people;
+        // echo "max guest: " .$guest['guest'];
+        // echo "So phong con lai: " .$guest['roomremain'];
+        // // print_r($guest);
+        // echo "Ket qua:";
 
        
         // echo "ket qua: ". ((int)$people / (int)$maxguest);
@@ -196,32 +202,50 @@ class Booking extends Controller{
         {
             // echo "du phong". $people;
             // viet ham dem so phong
-            echo $_SESSION['guest']['roomtype'];
-            echo $sl_room = $this->SL_Room($people,$guest['guest'] );
-            echo "...";
+            unset($_SESSION['offer']['offer1']);
+            $roomtype= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offermain']['roomtype']= $roomtype;
+            $sl_room = $this->SL_Room($people,$guest['guest'] );
+            $_SESSION['offer']['offermain']['roomcount']= $sl_room;
+            $_SESSION['offer']['offermain']['price']= $guest['price'];
+            $_SESSION['offer']['offermain']['img']= $guest['img'];
+
+
+            $roomtype2= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offersub']['roomtype']= $roomtype;
+            $sl_room2 = $this->SL_Room($people,($guest['guest']/2) );
+            $_SESSION['offer']['offersub']['roomcount']= $sl_room2;
+            $_SESSION['offer']['offersub']['price']= $guest['price'];
+            $_SESSION['offer']['offersub']['img']= $guest['img'];
+
         }
         else{
-
+            unset($_SESSION['offer']['offermain']);
+            unset($_SESSION['offer']['offersub']);
             $peopleremain = ((int)$people - (int)($guest['guest'] * $guest['roomremain']));
-            echo $_SESSION['guest']['roomtype'];
-            echo  $sl_room1 = $guest['roomremain'];
-            echo "thieu phong cho:" . $peopleremain;
+            $roomtype= $_SESSION['guest']['roomtype'];
+             $_SESSION['offer']['offer1']['roomtype1'] = $roomtype;
+            $sl_room1 = $guest['roomremain'];
+            $_SESSION['offer']['offer1']['roomcount1']= $sl_room1;
+            $_SESSION['offer']['offer1']['price1']= $guest['price'];
+            $_SESSION['offer']['offer1']['img1']= $guest['img'];
+            // echo "thieu phong cho:" . $peopleremain;
             switch($_SESSION['guest']['roomtype']){
                 case 'Single Room':
                     // echo $_SESSION['guest']['numberAdult'] . $_SESSION['guest']['numberChildren'];
                     $guest1= $this->maxguest('Double Room');
                     if($peopleremain  <= ($guest1['guest'] * $guest1['roomremain']  )  )
                     {
-                        // echo "du phong". $people;
-                        // viet ham dem so phong
-                        echo 'Double Room';
-                        // echo "" $peoplere; 
 
-                        echo $sl_room = $this->SL_Room($peopleremain,$guest1['guest'] );
-                        echo "...";
+                         $_SESSION['offer']['offer1']['roomtype2'] = 'Double Room';
+                      
+                        $sl_room2 = $this->SL_Room($peopleremain,$guest1['guest'] );
+                         $_SESSION['offer']['offer1']['roomcount2']= $sl_room2;
+                         $_SESSION['offer']['offer1']['price2']= $guest1['price'];
+                         $_SESSION['offer']['offer1']['img2']= $guest1['img'];
                     }
                     else{
-                        echo "het phong. CUT";
+                        unset($_SESSION['offer']['offer1']);
                     }
                     
                     break;
@@ -230,30 +254,29 @@ class Booking extends Controller{
                     $guest1= $this->maxguest('Single Room');
                     if($peopleremain  <= ($guest1['guest'] * $guest1['roomremain']  )  )
                     {
-                        // echo "du phong". $people;
-                        // viet ham dem so phong
-                        echo 'Single Room';
-                        // echo "" $peoplere; 
 
-                        echo $sl_room = $this->SL_Room($peopleremain,$guest1['guest'] );
-                        echo "...";
+                         $_SESSION['offer']['offer1']['roomtype2'] = 'Single Room';
+                        $sl_room2 = $this->SL_Room($peopleremain,$guest1['guest'] );
+                        $_SESSION['offer']['offer1']['roomcount2']= $sl_room2;
+                        $_SESSION['offer']['offer1']['price2']= $guest1['price'];
+                        $_SESSION['offer']['offer1']['img2']= $guest1['img'];
                     }
                     else{
-                        echo "het phong. CUT";
+                        unset($_SESSION['offer']['offer1']);
                     }
                     
                     break;
                 default:
-                    echo "Your favorite color is neither red, blue, nor green!";
+                    echo "Please choose another room type!";
             }
            
 
         }
        
     }
-    function suggestion2(){
-        // $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
-        $people = 25;
+    function offer2(){
+        $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
+        // $people = 17;
         $model=$this->modellayout("bookingform");
         $data['room'] =  $model->demphongtrong();
 
@@ -262,12 +285,12 @@ class Booking extends Controller{
         
 
         // print_r($data['room']);
-        print_r ($_SESSION['guest']);
-        echo "Số người: " . $people;
-        echo "max guest: " .$guest['guest'];
-        echo "So phong con lai: " .$guest['roomremain'];
-        // print_r($guest);
-        echo "Ket qua:";
+        // print_r ($_SESSION['guest']);
+        // echo "Số người: " . $people;
+        // echo "max guest: " .$guest['guest'];
+        // echo "So phong con lai: " .$guest['roomremain'];
+        // // print_r($guest);
+        // echo "Ket qua:";
 
        
         // echo "ket qua: ". ((int)$people / (int)$maxguest);
@@ -275,81 +298,31 @@ class Booking extends Controller{
         // // echo $data['room']['0']['rtMaxGuest'];
         if($people  <= ($guest['guest'] * $guest['roomremain']  )  )
         {
-            // echo "du phong". $people;
-            // viet ham dem so phong
-            echo $_SESSION['guest']['roomtype'];
-            echo $sl_room = $this->SL_Room($people,$guest['guest'] );
-            echo "...";
+            unset($_SESSION['offer']['offer2']);
+            $roomtype= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offermain']['roomtype']= $roomtype;
+            $sl_room = $this->SL_Room($people,$guest['guest'] );
+            $_SESSION['offer']['offermain']['roomcount']= $sl_room;
+            $_SESSION['offer']['offermain']['price']= $guest['price'];
+            $_SESSION['offer']['offermain']['img']= $guest['img'];
+
+            $roomtype2= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offersub']['roomtype']= $roomtype;
+            $sl_room2 = $this->SL_Room($people,($guest['guest']/2) );
+            $_SESSION['offer']['offersub']['roomcount']= $sl_room2;
+            $_SESSION['offer']['offersub']['price']= $guest['price'];
+            $_SESSION['offer']['offersub']['img']= $guest['img'];
         }
         else{
-
-            // $peopleremain = ((int)$people - (int)($guest['guest'] * $guest['roomremain']));
-            // echo $_SESSION['guest']['roomtype'];
-            // echo  $sl_room1 = $guest['roomremain'];
-            // echo "thieu phong cho:" . $peopleremain;
-            
-             $guestdouble= $this->maxguest('Double Room');
-             print_r($guestdouble);
-             if( $people <= ($guestdouble['roomremain'] * $guestdouble['guest']) ){
-                echo "so phong double room" . $slRoomDouble = $this->SL_Room2($people, $guestdouble['guest']);
-                $guestsingle = $people - $slRoomDouble * $guestdouble['guest'];
-                echo "so phong single room" .  $slroomSingle = $this->SL_Room($guestsingle,$guest['guest'] );
-             }
-             else{
-                $peopleremain = ((int)$people - (int)($guestdouble['guest'] * $guestdouble['roomremain']));
-                echo "so phong double room" . $slRoomDouble = $guestdouble['roomremain'];
-                if($peopleremain  <= ($guest['guest'] * $guest['roomremain']  )  ){
-                    echo "so phong single room" . $slroomSingle = $this->SL_Room($peopleremain,$guest['guest'] );
-                }
-                else{
-                    echo "het phong. CUT";
-                }
-             }
-            
-
-            
-           
-
-        }
-       
-    }
-
-    function suggestion3(){
-        // $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
-        $people = 17;
-        $model=$this->modellayout("bookingform");
-        $data['room'] =  $model->demphongtrong();
-
-
-        $guest= $this->maxguest($_SESSION['guest']['roomtype']);
-        
-
-        // print_r($data['room']);
-        print_r ($_SESSION['guest']);
-        echo "Số người: " . $people;
-        echo "max guest: " .$guest['guest'];
-        echo "So phong con lai: " .$guest['roomremain'];
-        // print_r($guest);
-        echo "Ket qua:";
-
-       
-        // echo "ket qua: ". ((int)$people / (int)$maxguest);
-        // // $maxguest = 
-        // // echo $data['room']['0']['rtMaxGuest'];
-        if($people  <= ($guest['guest'] * $guest['roomremain']  )  )
-        {
-            // echo "du phong". $people;
-            // viet ham dem so phong
-            echo $_SESSION['guest']['roomtype'];
-            echo $sl_room = $this->SL_Room($people,$guest['guest'] );
-            echo "...";
-        }
-        else{
-
+            unset($_SESSION['offer']['offermain']);
+            unset($_SESSION['offer']['offersub']);
             $peopleremain = ((int)$people - (int)($guest['guest'] * $guest['roomremain']));
-            echo $_SESSION['guest']['roomtype'];
-            echo  $sl_room1 = $guest['roomremain'];
-            echo "thieu phong cho:" . $peopleremain;
+            $roomtype1= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offer2']['roomtype1']= $roomtype1;
+            $sl_room1 = $guest['roomremain'];
+            $_SESSION['offer']['offer2']['roomcount1']= $sl_room1;
+            
+            // echo "thieu phong cho:" . $peopleremain;
             switch($_SESSION['guest']['roomtype']){
                 case 'Single Room':
                     // echo $_SESSION['guest']['numberAdult'] . $_SESSION['guest']['numberChildren'];
@@ -358,19 +331,26 @@ class Booking extends Controller{
                     {
                         // echo "du phong". $people;
                         // viet ham dem so phong
-                        echo 'Double Room';
+                        // echo 'Double Room';
                         // echo "" $peoplere; 
-
-                        echo $sl_room2 = $this->SL_Room($peopleremain,$guest2['guest'] );
+                         $_SESSION['offer']['offer2']['roomtype2'] = 'Double Room';
+                         $sl_room2 = $this->SL_Room($peopleremain,$guest2['guest'] );
+                         $_SESSION['offer']['offer2']['roomcount2']= $sl_room2;
+                         $_SESSION['offer']['offer2']['price2']= $guest2['price'];
+                         $_SESSION['offer']['offer2']['img2']= $guest2['img'];
                         
-                        echo "...";
-                        echo $guestroom2 = $sl_room2 * $guest2['guest'];
-                        echo $guestroom1 = (int)($people - $guestroom2);
-                        echo $sl_room1 = $this->SL_Room($guestroom1,$guest['guest'] );
+                         $guestroom2 = $sl_room2 * $guest2['guest'];
+                         $guestroom1 = (int)($people - $guestroom2);
+                         
+                        $_SESSION['offer']['offer2']['roomtype1'] = 'Single Room';
+                        $sl_room1 = $this->SL_Room($guestroom1,$guest['guest'] );
+                        $_SESSION['offer']['offer2']['roomcount1']= $sl_room1;
+                        $_SESSION['offer']['offer2']['price1']= $guest['price'];
+                        $_SESSION['offer']['offer2']['img1']= $guest['img'];
 
                     }
                     else{
-                        echo "het phong. CUT";
+                        unset($_SESSION['offer']['offer2']);
                     }
                     
                     break;
@@ -381,29 +361,187 @@ class Booking extends Controller{
                      {
                          // echo "du phong". $people;
                          // viet ham dem so phong
-                         echo 'Single Room';
+                        //  echo 'Single Room';
                          // echo "" $peoplere; 
- 
-                         echo $sl_room2 = $this->SL_Room($peopleremain,$guest2['guest'] );
-                         
-                         echo "...";
-                         echo $guestroom2 = $sl_room2 * $guest2['guest'];
-                         echo $guestroom1 = (int)($people - $guestroom2);
-                         echo $sl_room1 = $this->SL_Room($guestroom1,$guest['guest'] );
+                         //type 2
+                         $_SESSION['offer']['offer2']['roomtype2'] = 'Single Room';
+                         $sl_room2 = $this->SL_Room($peopleremain,$guest2['guest'] );
+                         $_SESSION['offer']['offer2']['roomcount2']= $sl_room2;
+                         $_SESSION['offer']['offer2']['price2']= $guest2['price'];
+                         $_SESSION['offer']['offer2']['img2']= $guest2['img'];
+                         // type 1
+                        $guestroom2 = $sl_room2 * $guest2['guest'];
+                        $guestroom1 = (int)($people - $guestroom2);
+                        $_SESSION['offer']['offer2']['roomtype1'] = 'Double Room';
+                        $sl_room1 = $this->SL_Room($guestroom1,$guest['guest'] );
+                        $_SESSION['offer']['offer2']['roomcount1']= $sl_room1;
+                        $_SESSION['offer']['offer2']['price1']= $guest['price'];
+                        $_SESSION['offer']['offer2']['img1']= $guest['img'];
  
                      }
                      else{
-                         echo "het phong. CUT";
+                        unset($_SESSION['offer']['offer2']);
                      }
                     
                     break;
                 default:
-                    echo "Your favorite color is neither red, blue, nor green!";
+                    echo "Please choose another room type!";
             }
            
 
         }
        
+    }
+    function offer3(){
+        $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
+        // $people = 25;
+        $model=$this->modellayout("bookingform");
+        $data['room'] =  $model->demphongtrong();
+
+
+        $guest= $this->maxguest($_SESSION['guest']['roomtype']);
+        
+
+        // print_r($data['room']);
+        // print_r ($_SESSION['guest']);
+        // echo "Số người: " . $people;
+        // echo "max guest: " .$guest['guest'];
+        // echo "So phong con lai: " .$guest['roomremain'];
+        // // print_r($guest);
+        // echo "Ket qua:";
+
+       
+        // echo "ket qua: ". ((int)$people / (int)$maxguest);
+        // // $maxguest = 
+        // // echo $data['room']['0']['rtMaxGuest'];
+        if($people  <= ($guest['guest'] * $guest['roomremain']  )  )
+        {
+            // echo "du phong". $people;
+            // viet ham dem so phong
+            unset($_SESSION['offer']['offer3']);
+            $roomtype= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offermain']['roomtype']= $roomtype;
+            $sl_room = $this->SL_Room($people,$guest['guest'] );
+            $_SESSION['offer']['offermain']['roomcount']= $sl_room;
+            $_SESSION['offer']['offermain']['price']= $guest['price'];
+            $_SESSION['offer']['offermain']['img']= $guest['img'];
+
+            $roomtype2= $_SESSION['guest']['roomtype'];
+            $_SESSION['offer']['offersub']['roomtype']= $roomtype;
+            $sl_room2 = $this->SL_Room($people,($guest['guest']/2) );
+            $_SESSION['offer']['offersub']['roomcount']= $sl_room2;
+            $_SESSION['offer']['offersub']['price']= $guest['price'];
+            $_SESSION['offer']['offersub']['img']= $guest['img'];
+
+        }
+        else{
+
+            // $peopleremain = ((int)$people - (int)($guest['guest'] * $guest['roomremain']));
+            // echo $_SESSION['guest']['roomtype'];
+            // echo  $sl_room1 = $guest['roomremain'];
+            // echo "thieu phong cho:" . $peopleremain;
+            unset($_SESSION['offer']['offermain']);
+            unset($_SESSION['offer']['offersub']);
+             $guestdouble= $this->maxguest('Double Room');
+            //  print_r($guestdouble);
+             if( $people <= ($guestdouble['roomremain'] * $guestdouble['guest']) ){
+                // Double room
+                $slRoomDouble = $this->SL_Room2($people, $guestdouble['guest']);
+                $_SESSION['offer']['offer3']['roomtype1'] = 'Double Room';
+                $_SESSION['offer']['offer3']['roomcount1']= $slRoomDouble;
+                $_SESSION['offer']['offer3']['price1']= $data['room']['1']['rRoomPrice'];
+                $_SESSION['offer']['offer3']['img1']= $data['room']['1']['rImg'];
+                // Single room
+                $guestsingle = $people - $slRoomDouble * $guestdouble['guest'];
+                $slroomSingle = $this->SL_Room($guestsingle,$guest['guest'] );
+                $_SESSION['offer']['offer3']['roomtype2'] = 'Single Room';
+                $_SESSION['offer']['offer3']['roomcount2']= $slroomSingle;
+                $_SESSION['offer']['offer3']['price2']= $guest['price'];
+                $_SESSION['offer']['offer3']['price2']= $data['room']['0']['rRoomPrice'];
+                $_SESSION['offer']['offer3']['img2']= $data['room']['0']['rImg'];
+             }
+             else{
+                $peopleremain = ((int)$people - (int)($guestdouble['guest'] * $guestdouble['roomremain']));
+                $slRoomDouble = $guestdouble['roomremain'];
+                $_SESSION['offer']['offer3']['roomtype1'] = 'Double Room';
+                $_SESSION['offer']['offer3']['roomcount1']= $slRoomDouble;
+                $_SESSION['offer']['offer3']['price1']= $data['room']['1']['rRoomPrice'];
+                $_SESSION['offer']['offer3']['img1']= $data['room']['1']['rImg'];
+
+                if($peopleremain  <= ($guest['guest'] * $guest['roomremain']  )  ){
+                     $slroomSingle = $this->SL_Room($peopleremain,$guest['guest'] );
+                    $_SESSION['offer']['offer3']['roomtype2'] = 'Single Room';
+                     $_SESSION['offer']['offer3']['roomcount2']= $slroomSingle;
+                     $_SESSION['offer']['offer3']['price2']= $data['room']['0']['rRoomPrice'];
+                     $_SESSION['offer']['offer3']['img2']= $data['room']['0']['rImg'];
+                }
+                else{
+                    // $_SESSION['offer']['offer3']=NULL;
+                    unset($_SESSION['offer']['offer3']);
+                }
+             }
+            
+
+            
+           
+
+        }
+       
+    }
+
+    
+    function OfferBooking(){
+        if(empty($_SESSION['guest']['name'])){
+            header('Location:'.URL. 'Booking');
+        }
+
+        $this->offer1();
+        $this->offer2();
+        $this->offer3();
+        
+        $stt= 1;
+        foreach($_SESSION['offer'] as $row){
+            
+           $data['offer'][$stt]=$row;
+           $stt++;
+        }
+
+        $countoffer = count($_SESSION['offer']);
+        if($countoffer == 2){
+            // require_once "./mvc/views/layout/offer-booking1.php";
+            $this->view("layout/offer-booking1",$data);
+        }
+        else if($countoffer == 3){
+            // require_once "./mvc/views/layout/offer-booking2.php";
+            $this->view("layout/offer-booking2",$data);
+        }
+        else{
+            echo "het phong";
+            // require 1 view thông báo hết phòng.
+            // nội dung: Xin lỗi + đề nghị khách hàng chọn phòng lại
+        }
+        print_r($data['offer']);
+
+        
+    }
+    function auth(){
+        // print_r($_SESSION['guest']);
+        echo  $people= (int)$_SESSION['guest']['numberAdult'] + (int)$_SESSION['guest']['numberChildren'];
+        echo "offermain";
+        print_r ($_SESSION['offer']['offermain']);
+        echo "offersub";
+        print_r ($_SESSION['offer']['offersub']);
+        echo "offer1";
+        print_r ($_SESSION['offer']['offer1']);
+        echo "offer2";
+        print_r ($_SESSION['offer']['offer2']);
+        echo "offer3";
+        print_r ($_SESSION['offer']['offer3']); 
+        echo "Số offer". count($_SESSION['offer']);
+        // $this->view('layout/customer-mail');
+    }
+    function confirm(){
+        $this->view('layout/customer');
     }
 
 }

@@ -50,7 +50,7 @@
               </a>
             </div>
             <!-- ITEM -->
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <div class="room-block-item">
                 <div class="row">
                   <div class="col-md-6">
@@ -79,36 +79,7 @@
                 </div>
               </div>
             </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/double/double.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">DOUBLE ROOM</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <!-- ITEM OFFER -->
             <div class="col-lg-6 mt10">
               <h3 class="room-title">

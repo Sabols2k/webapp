@@ -1,3 +1,6 @@
+<?php
+
+print_r($_SESSION['guest']) ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -192,11 +195,9 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" class="btn mt50 float-right" >
-                      <a href="<?php echo URL_Layout ."offerBooking"?>" style="color: #fff;">
+                    <button type="submit" name="bookingform" class="btn mt50 float-right" >
                         <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                         BOOK A ROOM NOW
-                      </a>
                     </button>
                   </div>
                 </div>

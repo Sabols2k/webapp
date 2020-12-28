@@ -581,9 +581,9 @@ class Admin extends Controller{
     
 
     public function Reservation(){
+        
         $_SESSION['function']='reservation';
        
-
         $model=$this->modeladmin("reservation");
         $data['reservation'] =  $model->getAllReservation();
         
