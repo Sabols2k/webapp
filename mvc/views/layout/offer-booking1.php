@@ -17,6 +17,7 @@
     <?php
     require_once "general/topbar.php";
     ?>
+
     <!-- ========== HEADER ========== -->
     <?php
     require_once "general/header.php";
@@ -49,6 +50,7 @@
           ?>
             <!-- ITEM OFFER -->
             <div class="col-lg-12">
+
               <div class="row">
                 <div class="col-lg-6 mt10">
                   <h3 class="room-title">
@@ -94,6 +96,43 @@
                             <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
                           </div>
                         </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+          <?php
+            $stt++;
+          }
+          ?>
+
+
+
+        </div>
+        <div class="load-more">
+          LOAD MORE ROOMS
+        </div>
+      </div>
+    </main>
+    <!-- ========== FOOTER ========== -->
+    <?php
+    require_once "general/footer.php";
+    ?>
+  </div>
+  <!-- ========== CONTACT NOTIFICATION ========== -->
+  <div id="contact-notification" class="notification fixed"></div>
+  <!-- ========== BACK TO TOP ========== -->
+  <div class="back-to-top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </div>
+  <!-- ========== JAVASCRIPT ========== -->
+  <?php
+  require_once('general/js.php');
+  ?>
 </body>
 
 </html>
