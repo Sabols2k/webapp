@@ -653,5 +653,13 @@ class Admin extends Controller{
         $data['main'] ="Reservation/Reservation";
         $this->viewadmin('index',$data);
     }
+    public function viewreservation(){
+        $_SESSION['function'] = 'reservation';
+        $model=$this->modeladmin("reservation");
+        $data['reservation'] =  $model->getAllReservation();
+        
+        $data['main']="Room/view-room";
+        $this->viewadmin('index',$data);
+    }
 }
 ?>

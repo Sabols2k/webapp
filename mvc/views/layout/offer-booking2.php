@@ -117,7 +117,7 @@
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
+
               </div>
             </div>
 
@@ -133,17 +133,7 @@
 
         <div class="load-more">
           LOAD MORE ROOMS
-=======
-              </div>      
-            <?php
-              $stt++;
-                }
-            ?> 
-          </div>
-          <div class="load-more">
-            LOAD MORE ROOMS
-          </div>
->>>>>>> 7af01e186c45f27ed440f0ac17c40eddabc7ae20
+
         </div>
       </div>
     </main>
