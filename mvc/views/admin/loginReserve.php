@@ -1,21 +1,16 @@
-<?php  
-    if(isset($_SESSION['admin']['username'])){
-        header('Location:'.URLAdmin);
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin - Login</title>
+    <title>Reservationist - Login</title>
     <?php
     require_once('general/css.php');
     ?>
 </head>
 
-<body class="bg-gradient-light">
+<body class="bg-gradient-warning">
 
     <div class="container">
 
@@ -28,11 +23,11 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-reserve-image"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome back Admin!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome back Reservationist!</h1>
                                     </div>
                                     <form class="user" action="<?php echo URLAdmin ."/login"?>" method="POST">
                                         <div class="form-group">
@@ -50,11 +45,11 @@
                                                 <?php echo $data['passwordError']; ?>
                                             </span>
                                         </div>
-                                        <button class="btn btn-info btn-user btn-block" id="submit" type="submit" value="submit">LOGIN</button>
+                                        <button class="btn btn-danger btn-user btn-block" id="submit" type="submit" value="submit">LOGIN</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="large" href="<?php echo URLAdmin."loginReserve"?>">Are you a receptionist?</a>
+                                        <a class="large" href="<?php echo URLAdmin."login"?>">Are you an admin?</a>
                                     </div>
                                 </div>
                             </div>
