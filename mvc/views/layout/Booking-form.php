@@ -1,6 +1,6 @@
 <?php
 
-print_r($_SESSION['guest']) ?>
+// print_r($_SESSION['guest']) ?>
 <!doctype html>
 <html lang="en">
   <head>
