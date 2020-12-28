@@ -123,11 +123,6 @@
                 }
             ?> 
           </div>
-          
-
-          
-
-
           <div class="load-more">
             LOAD MORE ROOMS
           </div>

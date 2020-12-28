@@ -29,7 +29,7 @@
               <li>
                 <a href="<?php echo URL?>">Home</a>
               </li>
-              <li>Contact</li>
+              <li>Booking Offer</li>
             </ol>
           </div>
         </div>
@@ -55,235 +55,19 @@
                 <div class="row">
                   <div class="col-md-6">
                     <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
+                      <a href="#">
                         <img src="<?php echo URL ."mvc/Assets/images/rooms/single/single1.jpg"?>" class="img-fluid" alt="Image">
                       </a>
                     </figure>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mt10">
                     <div class="room-info">
                       <h3 class="room-title">
-                        <a href="room.html">SINGLE ROOM</a>
+                        <a href="#" style="font-size: 40px;">SINGLE ROOM</a>
                       </h3>
                       <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 2</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- ITEM OFFER -->
-            <div class="col-lg-6 mt10">
-              <h3 class="room-title">
-                <a href="#">OFFERS 2</a>
-              </h3>
-            </div>
-            <div class="col-lg-6 mb30 mt10">
-              <a href="#" class="btn btn-dark" style="float: right;">
-                <i class="fa fa-bed"></i>BOOK NOW
-              </a>
-            </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/deluxe/deluxe.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">DELUXE ROOM</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-bath" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="2 Bathrooms" data-original-title="Bathroom"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/family/family.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">FAMILY ROOM</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ITEM OFFER -->
-            <div class="col-lg-6 mt10">
-              <h3 class="room-title">
-                <a href="#">OFFERS 3</a>
-              </h3>
-            </div>
-            <div class="col-lg-6 mb30 mt10">
-              <a href="#" class="btn btn-dark" style="float: right;">
-                <i class="fa fa-bed"></i>BOOK NOW
-              </a>
-            </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/king/king.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">KING ROOM</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-bath" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="2 Bathrooms" data-original-title="Bathroom"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/honeymoon/honeymoon.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">HONEYMOON ROOM</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ITEM OFFER -->
-            <div class="col-lg-6 mt10">
-              <h3 class="room-title">
-                <a href="#">OFFERS 4</a>
-              </h3>
-            </div>
-            <div class="col-lg-6 mb30 mt10">
-              <a href="#" class="btn btn-dark" style="float: right;">
-                <i class="fa fa-bed"></i>BOOK NOW
-              </a>
-            </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/view/view.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">ROOM WITH VIEW</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
-                      </span>
-                      <div class="room-services">
-                        <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
-                        <i class="fa fa-wifi" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Free WiFi" data-original-title="WiFi"></i>
-                        <i class="fa fa-television" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Plasma TV with cable channels" data-original-title="TV"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ITEM -->
-            <div class="col-lg-6">
-              <div class="room-block-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <figure class="gradient-overlay-hover link-icon">
-                      <a href="room.html">
-                        <img src="<?php echo URL ."mvc/Assets/images/rooms/luxury/luxury.jpg"?>" class="img-fluid" alt="Image">
-                      </a>
-                    </figure>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="room-info">
-                      <h3 class="room-title">
-                        <a href="room.html">LUXURY ROOM</a>
-                      </h3>
-                      <span class="room-rates">
-                        <i class="fa fa-check"></i>
-                        <a href="#">Number of rooms: 8</a>
+                        <i class="fa fa-check" style="font-size: 20px;"></i>
+                        <a href="#" style="font-size: 20px;">Number of rooms: 2</a>
                       </span>
                       <div class="room-services">
                         <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
