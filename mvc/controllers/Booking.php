@@ -582,9 +582,15 @@ class Booking extends Controller{
         print_r ($_SESSION['finaloffer']);
         print_r ($_SESSION['guest']);
         $this->view('layout/customer');
+
+        // Sự kiện 'finalBooking' để hoàn tất việc booking và gửi mail cho Khách hàng
+        if(isset($_POST['finalBooking'])){
+            echo "abc "; die();
+        }
         
 
     }
+
 
 }
 ?>

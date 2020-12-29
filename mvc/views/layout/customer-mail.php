@@ -1,11 +1,5 @@
 
-<?php 
-  // echo "name". $data['booking']['Name'];
-  print_r($_SESSION['guest']);
-  // print_r($data['booking']);
-  
-  // echo  $data['booking']['NameError'];
-?>
+
 <!doctype html>
 <html lang="en">
 <head>
