@@ -52,8 +52,8 @@
                     <a href="#">OFFERS <?php echo $stt; ?></a>
                   </h3>
                 </div>
-                <div class="col-lg-6 mb30 mt10">
-                  <a href="<?php echo URL . "Booking/Confirm" ?>" class="btn btn-dark" style="float: right;">
+                <div class="col-lg-3 mb30 mt10">
+                  <a type="submit" name="bookingoffer<?php echo $stt ?>" href="<?php echo URL . "Booking/Confirm" ?>" class="btn btn-dark" style="float: right;">
                     <i class="fa fa-bed"> </i>BOOK NOW
                   </a>
                 </div>

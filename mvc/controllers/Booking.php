@@ -491,6 +491,7 @@ class Booking extends Controller{
 
     
     function OfferBooking(){
+        ob_start();
         if(empty($_SESSION['guest']['name'])){
             header('Location:'.URL. 'Booking');
         }
@@ -510,22 +511,46 @@ class Booking extends Controller{
         if($countoffer == 2){
             // require_once "./mvc/views/layout/offer-booking1.php";
             $this->view("layout/offer-booking1",$data);
+            $stt= 1;
+            foreach($_SESSION['offer'] as $row){
+                if(isset($_POST['bookingoffer'.$stt])){
+                    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                    print_r( $data['offer'][$stt]);
+                    $_SESSION['finaloffer'] = $data['offer'][$stt];
+                    header('Location:'.URL. 'Booking/confirm');
+                    ob_end_flush(); // dùng để chạy câu lệnh phía trên 
+                    // $this->view('layout/customer');
+                    
+                }
+                
+                $stt++;
+            }
         }
         else if($countoffer == 3){
             $this->view("layout/offer-booking2",$data);
             // $this->view("layout/offer-booking2",$data);
+            $stt= 1;
+            foreach($_SESSION['offer'] as $row){
+                if(isset($_POST['bookingoffer'.$stt])){
+                    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                    print_r( $data['offer'][$stt]);
+                    unset( $_SESSION['finaloffer']);
+                    $_SESSION['finaloffer'] = $data['offer'][$stt];
+                    header('Location:'.URL. 'Booking/confirm');
+                    ob_end_flush(); // dùng để chạy câu lệnh phía trên 
+                    // $this->view('layout/customer');
+                    
+                }
+                
+                $stt++;
+            }
         }
         else{
             echo "het phong";
             // require 1 view thông báo hết phòng.
             // nội dung: Xin lỗi + đề nghị khách hàng chọn phòng lại
         }
-        // if(isset($_POST['bookingoffer'])){
-        //     // echo  URL. 'Booking/Confirm';
-        //     header('Location:'.URL. 'Booking');
-        //     // $this->view('layout/customer');
-
-        // }
+       
         print_r($data['offer']);
 
     }
@@ -547,7 +572,18 @@ class Booking extends Controller{
         
     }
     function confirm(){
+        if(empty($_SESSION['finaloffer'])){
+            if(empty($_SESSION['guest']['name'])){
+                header('Location:'.URL. 'Booking');
+            }
+            header('Location:'.URL. 'Booking/OfferBooking');
+            
+        }
+        print_r ($_SESSION['finaloffer']);
+        print_r ($_SESSION['guest']);
         $this->view('layout/customer');
+        
+
     }
 
 }

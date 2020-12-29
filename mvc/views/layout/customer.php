@@ -152,7 +152,7 @@
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <td class="title" style="padding: 5px 0 0 0;">
-                                                    <a href="%site_url%">%site_title%</a>
+                                                    <a href="#">QUITE LUXURY Hotel</a>
                                                 </td>
                                             </tr>
 
@@ -174,10 +174,10 @@
                         <td class="innerpadding borderbottom">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td class="h2">Hello %customer_name%,</td>
+                                    <td class="h2">Hello <?php echo $_SESSION['guest']['name']; ?> ,</td>
                                 </tr>
                                 <tr>
-                                    <td class="bodycopy">your reservation has been submitted to us and we'll contact you as quickly as possible to complete your booking. If you have any question please don't hesitate to contact us via email %admin_email% or via phone number %admin_phone%</td>
+                                    <td class="bodycopy">Your reservation has been submitted to us and we'll contact you as quickly as possible to complete your booking. If you have any question please don't hesitate to contact us via email <span style="font-size: 18px; color: green;">quiteluxuryhotel@gmail.com</span > or via phone number <span style="font-size: 18px; color: green;"> 012345678</span></td>
                                 </tr>
                             </table>
                         </td>
@@ -202,52 +202,61 @@
 
                                             <tr>
                                                 <td>Name</td>
-                                                <td>%customer_name%</td>
+                                                <td><?php echo $_SESSION['guest']['name']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Email</td>
-                                                <td>%customer_email%</td>
+                                                <td><?php echo $_SESSION['guest']['mail']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Phone</td>
-                                                <td>%customer_phone%</td>
+                                                <td><?php echo $_SESSION['guest']['phone']; ?></td>
+                                            </tr>
+                                          
+                                            <tr>
+                                                <td>Room Type</td>
+                                                <td><?php echo $_SESSION['finaloffer']['roomtype']; ?></td>
                                             </tr>
 
                                             <tr>
-                                                <td>Room Type</td>
-                                                <td>%roomtype%</td>
+                                                <td>Number of rooms</td>
+                                                <td><?php echo $_SESSION['finaloffer']['roomcount']; ?> Phòng</td>
                                             </tr>
 
                                             <tr>
                                                 <td>Adults</td>
-                                                <td>%adults%</td>
+                                                <td><?php echo $_SESSION['guest']['numberAdult']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Children</td>
-                                                <td>%children%</td>
+                                                <td><?php echo $_SESSION['guest']['numberChildren']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Arrival</td>
-                                                <td>%checkin%</td>
+                                                <td><?php echo $_SESSION['guest']['dateCheckIn']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Departure</td>
-                                                <td>%checkout%</td>
+                                                <td><?php echo $_SESSION['guest']['dateCheckOut']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Country</td>
-                                                <td>%country%</td>
+                                                <td><?php echo $_SESSION['guest']['country']; ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td>Comments</td>
-                                                <td>%comments%</td>
+                                                <td><?php echo $_SESSION['guest']['Decription']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 18px" class="h3">Total price: </td>
+                                                <td><?php echo $_SESSION['finaloffer']['price']; ?> $</td>
                                             </tr>
 
                                         </table>
@@ -255,6 +264,7 @@
                                     </td>
 
                                 </tr>
+                               
 
                             </table>
 
@@ -263,8 +273,7 @@
 
                     <tr>
                         <td class="innerpadding bodycopy mssg">
-                            Thank You,
-                            <br> %site_title% <br><br>
+                            
                             <button class="btn">booking confirmation</button></td>
                     </tr>
                     <tr>
@@ -272,7 +281,7 @@
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td align="center" class="footercopy">
-                                      &#169; 2020 <a href="%site_url%">%site_title%</a> All Rights Reserved.
+                                      &#169; 2020 <a href="http://localhost:8080/Web_App/Quite_Luxury/Home">QUITE LUXURY Hotel</a> All Rights Reserved.
                                   </td>
                                 </tr>
                                 <tr>
