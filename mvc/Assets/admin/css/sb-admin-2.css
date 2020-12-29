@@ -11264,17 +11264,12 @@ body.sidebar-toggled footer.sticky-footer {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 /* --- View Booking Form --- */
-.btn-edit {
+.btn-edit{
   font-size: 12px;
   background-color: #888;
   border-radius: 50% !important;
   padding: 7px !important;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
   line-height: 10px;
-  color: #fff;
-  margin-right: 5px;
-}
-.btn-edit, .btn-delete i{
   color: #fff;
 }
 .btn-delete {
@@ -11282,7 +11277,30 @@ body.sidebar-toggled footer.sticky-footer {
   background-color: #f96332;
   border-radius: 50% !important;
   padding: 7px !important;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+  line-height: 10px;
+  color: #fff;
+}
+.btn-confirm {
+  font-size: 12px;
+  background-color: rgb(0, 89, 255);
+  border-radius: 50% !important;
+  padding: 7px !important;
+  line-height: 10px;
+  color: #fff;
+}
+.btn-view {
+  font-size: 12px;
+  background-color: #00b894;
+  border-radius: 50% !important;
+  padding: 7px !important;
+  line-height: 10px;
+  color: #fff;
+}
+.btn-checkin{
+  font-size: 12px;
+  background-color: #f9ca24;
+  border-radius: 50% !important;
+  padding: 7px !important;
   line-height: 10px;
   color: #fff;
 }

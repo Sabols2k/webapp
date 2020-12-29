@@ -66,28 +66,28 @@
                             <td><?php echo $row['raGender'] ?></td>
                             <td><?php echo $row['raRolesID'] ?></td>
                             <td>
-                                <button class="btn btn-edit">
-                                    <a href="<?php echo URLAdmin."editbooking/".$row['bBookingID']; ?>">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </a>
-                                </button>
-                                <button class="btn btn-delete">
-                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteBooking/'.$row['bBookingID']; ?>">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
-                                </button>
-                                <button class="btn btn-confirm">
-                                    <a href="<?php echo URLAdmin.'/'.$row['']; ?>">
-                                        <i class="fad fa-check-circle"></i>
-                                    </a>
-                                </button>
+                                <a class="btn btn-view" href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a class="btn btn-confirm" href="<?php echo URLAdmin.'/'.$row['']; ?>">
+                                    <i class="fas fa-check-circle"></i>
+                                </a>
+                                <a class="btn btn-checkin" href="<?php echo URLAdmin.'/'.$row['']; ?>">
+                                    <i class="fas fa-key"></i>
+                                </a>
+                                <a class="btn btn-edit" href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                                <a class="btn btn-delete" onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteAccount/'.$row['aAdminID']; ?>" style="color: #fff;">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                                
                             </td>
                         </tr>
                     <?php
                         $stt++;
                         }
                     ?>   
-                        
                     </tbody>
                 </table>
             </div>
