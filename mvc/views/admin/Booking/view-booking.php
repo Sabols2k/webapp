@@ -69,16 +69,16 @@
                             <td><?php echo $row['bDateCheckOut'] ?></td>
                             <td><?php echo $row['SL_Room'] ?></td>
                             <td>
-                                <button class="btn btn-edit">
-                                    <a href="<?php echo URLAdmin."editbooking/".$row['bBookingID']; ?>">
+                               
+                                    <a class="btn btn-edit" href="<?php echo URLAdmin."editbooking/".$row['bBookingID']; ?>">
                                         <i class="fas fa-pencil-alt"></i>
                                     </a>
-                                </button>
-                                <button class="btn btn-delete">
-                                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteBooking/'.$row['bBookingID']; ?>">
+                                
+                                
+                                    <a class="btn btn-delete" onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteBooking/'.$row['bBookingID']; ?>">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
-                                </button>
+                               
                             </td>
                         </tr>
                     <?php

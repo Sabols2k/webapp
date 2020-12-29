@@ -19,20 +19,32 @@
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Guest</th>
-                            <th>Total Rooms</th>
-                            <th>Total Price</th>
-                            <th>Status</th>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Address</th>
+                            <th>Country</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>RolesID</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>STT</th>
-                            <th>Guest</th>
-                            <th>Total Rooms</th>
-                            <th>Total Price</th>
-                            <th>Status</th>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Address</th>
+                            <th>Country</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>RolesID</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -43,10 +55,16 @@
                     ?>
                         <tr>
                             <td><?php echo $stt ?></td>
-                            <td><?php echo $row['bBookingID'] ?></td>
-                            <td><?php echo $row['gGuestID'] ?></td>
-                            <td><?php echo $row['gName'] ?></td>
-                            <td><?php echo $row['gEmail'] ?></td>
+                            <td><?php echo $row['raReservationAgentID'] ?></td>
+                            <td><?php echo $row['raUsername'] ?></td>
+                            <td><?php echo $row['raPassword'] ?></td>
+                            <td><?php echo $row['raFirstName'] ?></td>
+                            <td><?php echo $row['raLastName'] ?></td>
+                            <td><?php echo $row['raAddress'] ?></td>
+                            <td><?php echo $row['raCountry'] ?></td>
+                            <td><?php echo $row['raPhone'] ?></td>
+                            <td><?php echo $row['raGender'] ?></td>
+                            <td><?php echo $row['raRolesID'] ?></td>
                             <td>
                                 <button class="btn btn-edit">
                                     <a href="<?php echo URLAdmin."editbooking/".$row['bBookingID']; ?>">

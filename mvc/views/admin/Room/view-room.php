@@ -1,5 +1,4 @@
 <!-- Begin Page Content -->
-<!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -14,7 +13,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <a href="http://localhost:8080/Web_App/Quite_Luxury/admin/addroom" class="btn btn-light btn-icon-split mb-3">
+                <a href="<?php echo URLAdmin."addroom"?>" class="btn btn-light btn-icon-split mb-3">
                     <span class="icon text-gray-600">
                         <i class="fas fa-arrow-right"></i>
                     </span>
@@ -73,36 +72,35 @@
         var stt=1;
         html= array.map(item=>
             `<tr>`+
-            `<td>`+item['RoomID']+`</td>`+
-            `<td><img style="height: 50px; width: 50px; border-radius:50%" src=" <?php echo imgRoomtype?>`+ item['rImg']+`" alt=""></td>`+
-            `<td>`+item['RoomNumber']+`</td>`+
-            `<td>`+item['rRoomType']+`</td>`+
-            `<td>`+item['rRoomPrice']+`</td>`+
-            `<td>`+item['RoomstatusID']+`</td>`+
-            `<td>`+item['gName']+`</td>`+
-            `<td>`+item['gEmail']+`</td>`+
-            `<td>`+item['bDateCheckIn']+`</td>`+
-            `<td>`+item['bDateCheckOut']+`</td>`+
-            `<td> <button class="btn btn-edit">`+
-                `<a href="<?php echo URLAdmin ?>editroom/`+item['RoomID']+ `">`+
-                ` <i class="fas fa-pencil-alt"></i>`+
-            ` </a>`+
-                `</button>
-                <button class="btn btn-delete">
-                    <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin?>deleteroom/` +item['RoomID']+` ">
-                        <i style="color: #ffff" class="fas fa-trash-alt"></i>
-                    </a>
-                </button>`+
-            `</td>`+
+                `<td>`+item['RoomID']+`</td>`+
+                `<td><img style="height: 50px; width: 50px; border-radius:50%" src=" <?php echo imgRoomtype?>`+ item['rImg']+`" alt=""></td>`+
+                `<td>`+item['RoomNumber']+`</td>`+
+                `<td>`+item['rRoomType']+`</td>`+
+                `<td>`+item['rRoomPrice']+`</td>`+
+                `<td>`+item['RoomstatusID']+`</td>`+
+                `<td>`+item['gName']+`</td>`+
+                `<td>`+item['gEmail']+`</td>`+
+                `<td>`+item['bDateCheckIn']+`</td>`+
+                `<td>`+item['bDateCheckOut']+`</td>`+
+                `<td> 
+                    <button class="btn btn-edit">`+
+                        `<a href="<?php echo URLAdmin ?>editroom/`+item['RoomID']+ `">`+
+                            ` <i style="color: #ffff" class="fas fa-pencil-alt"></i>`+
+                        `</a>`+
+                    `</button>
+                    <button class="btn btn-delete">
+                        <a onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin?>deleteroom/` +item['RoomID']+` ">
+                            <i style="color: #ffff" class="fas fa-trash-alt"></i>
+                        </a>
+                    </button>`+
+                `</td>`+
             `</tr>`
-             
-
                         );
         $('#allroom').html(html);
     }
     
     };
-    xmlhttp.open("GET", "http://localhost:8080/Web_App/Quite_Luxury/api/AllRoomtype", true);
+    xmlhttp.open("GET", "<?php echo URL."/api/AllRoomtype"?>", true);
     xmlhttp.send();
 
 </script>
