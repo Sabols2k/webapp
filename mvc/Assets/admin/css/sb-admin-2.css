@@ -11274,6 +11274,9 @@ body.sidebar-toggled footer.sticky-footer {
   color: #fff;
   margin-right: 5px;
 }
+.btn-edit, .btn-delete i{
+  color: #fff;
+}
 .btn-delete {
   font-size: 12px;
   background-color: #f96332;
