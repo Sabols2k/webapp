@@ -5,6 +5,7 @@
         header('Location:'.URLAdmin.'login');
 
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,11 @@
 
         <!-- Sidebar -->
         <?php
+            if($_SESSION['admin']['type']== 'reserve'){
+                require_once('general/sidebarReserve.php');
+            }else{
             require_once('general/sidebar.php');
+            }
         ?>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->

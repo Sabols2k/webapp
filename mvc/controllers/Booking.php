@@ -583,8 +583,8 @@ class Booking extends Controller{
             
         }
         
-        print_r ($_SESSION['finaloffer']);
-        echo $countoffer = count($_SESSION['offer']);
+        
+         $countoffer = count($_SESSION['offer']);
         // print_r ($_SESSION['guest']);
         $this->view('layout/customer');
 
@@ -605,7 +605,7 @@ class Booking extends Controller{
                $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
                 unset($_SESSION['guest']);
                 if(empty($_SESSION['guest'])){
-                    header('Location:'.URL);
+                    header('Location:'.URL."Home");
                 }
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
@@ -614,11 +614,11 @@ class Booking extends Controller{
                 $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
                 unset($_SESSION['guest']);
                 if(empty($_SESSION['guest'])){
-                    header('Location:'.URL);
+                    header('Location:'.URL."Home");
                 }
             }
             ob_end_flush();
-            print_r($data);
+            // print_r($data);
                 
         }
         

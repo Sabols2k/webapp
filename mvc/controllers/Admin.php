@@ -189,7 +189,7 @@ class Admin extends Controller{
 
 //admin booking
 
-    function ViewBooking(){
+    public function ViewBooking(){
         $_SESSION['function'] = 'booking';
         $model=$this->modeladmin("booking");
         $data['booking'] =  $model->getAllBooking();
