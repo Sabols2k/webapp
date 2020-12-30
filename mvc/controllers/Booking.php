@@ -97,7 +97,7 @@ class Booking extends Controller{
             if(empty($data['booking']['NameError'])){
                 $this->createGuestSession($data['booking']);
                 $data['booking']['NameError']="";
-
+                header('Location:'.URL. 'Booking/OfferBooking');
             }
             else  {
                 $data['booking']['NameError'] = '* Please type your name. Please try again.';
@@ -113,7 +113,7 @@ class Booking extends Controller{
             //     $data['booking']['bRoomCount' ]
             // );
             // echo "da booking"; die();
-            header('Location:'.URL. 'Booking/OfferBooking');
+           
             // $this->view("layout/offer-booking");
         } 
         // $data['main'] ="Booking/add-booking";
@@ -571,6 +571,10 @@ class Booking extends Controller{
         
     }
     function confirm(){
+        ob_start();
+        if(empty($_SESSION['guest'])){
+            header('Location:'.URL);
+        }
         if(empty($_SESSION['finaloffer'])){
             if(empty($_SESSION['guest']['name'])){
                 header('Location:'.URL. 'Booking');
@@ -597,14 +601,23 @@ class Booking extends Controller{
                $data['roomcount']=  $_SESSION['finaloffer']['roomcount1'];
                $data['roomtype2']= $_SESSION['finaloffer']['roomtype2'];
                $data['roomcount2']=  $_SESSION['finaloffer']['roomcount2'];
-               $model->insertbookingfull1($data);
-
+               print_r($data);
+               $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
+                unset($_SESSION['guest']);
+                if(empty($_SESSION['guest'])){
+                    header('Location:'.URL);
+                }
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
                 $data['roomcount']=  $_SESSION['finaloffer']['roomcount'];
-                $model->insertbookingfull2($data);
+                print_r($data);
+                $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
+                unset($_SESSION['guest']);
+                if(empty($_SESSION['guest'])){
+                    header('Location:'.URL);
+                }
             }
-
+            ob_end_flush();
             print_r($data);
                 
         }

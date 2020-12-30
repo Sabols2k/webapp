@@ -14,12 +14,15 @@ class bookingform extends DB{
         return $data;
       }
 
-      public function insertbookingfull1(){
-        $sql="CALL ";
+      public function insertbookingfull1($name, $mail,$phone, $country, $dateCheckIn, $dateCheckOut, $numberAdult, $numberChildren, $roomtype, $Decription, $roomcount){
+        $sql="CALL `insertbookingfull1`('$name', '$mail', '$phone','$country', '$dateCheckIn', '$dateCheckOut', '$numberAdult', '$numberChildren', '$roomtype', '$Decription', '$roomcount');";
+        
         return $this->execute($sql);
       }
-      public function insertbookingfull2(){
-        
+      public function insertbookingfull2($name, $mail,$phone, $country, $dateCheckIn, $dateCheckOut, $numberAdult, $numberChildren, $roomtype, $Decription, $roomcount, $roomtype2,$roomcount2 ){
+        $sql="CALL `insertbookingfull2`('$name', '$mail','$phone', '$country', '$dateCheckIn', '$dateCheckOut', '$numberAdult', '$numberChildren', '$roomtype', '$Decription', '$roomcount','$roomtype2', '$roomcount2');";
+        // echo $sql; die();
+        return $this->execute($sql);
       }
 
 }
