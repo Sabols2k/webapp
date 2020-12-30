@@ -11,6 +11,14 @@ class login extends DB{
 		return mysqli_fetch_array($kq);
 		
 	}
+	
+	public function loginReserve($username, $password) {
+		$sql="SELECT * FROM `reservationsagents` WHERE 	raUsername='$username' AND 	raPassword='$password'";
+		
+		$kq= $this->execute($sql);
+		return mysqli_fetch_array($kq);
+		
+	}
 
 }
 ?>

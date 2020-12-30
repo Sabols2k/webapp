@@ -1,15 +1,4 @@
-<!-- // session_start(); //start the PHP_session function  -->
-<!-- // echo "hfdjf";
-// if(isset($_SESSION['user_id']))
-// {
-//     //  $_SESSION['page_count'] += 1;
-//      echo 'You are visitor number ' . $_SESSION['user_id'];
-// }
-// else
-// {
-//      $_SESSION['page_count'] = 1;
-// }
-//  echo 'You are visitor number ' . $_SESSION['page_count']; -->
+
 <?php  
     
     if(empty($_SESSION['admin']['username'])){

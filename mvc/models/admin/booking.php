@@ -9,12 +9,12 @@ class booking extends DB{
         // $sql="CALL insertRoom($RoomTypeID,$RoomPrice,$Description,$RoomstatusID)";
         return $this->execute($sql);
     }
-    public function editbyId($id){
+    // public function editbyId($id){
 
-        $table= "room";
-        $sql="UPDATE $table set RoomTypeID='$RoomTypeID',RoomPrice='$RoomPrice',RoomstatusID='$RoomStatus' WHERE RoomID='$id'";
-      return $this->execute($sql);
-    }
+    //     $table= "room";
+    //     $sql="UPDATE $table set RoomTypeID='$RoomTypeID',RoomPrice='$RoomPrice',RoomstatusID='$RoomStatus' WHERE RoomID='$id'";
+    //   return $this->execute($sql);
+    // }
     public function getDataBookingById( $id){
         $sql="SELECT * from bookings where bBookingID='$id'";
         $this->execute($sql);
@@ -47,5 +47,8 @@ class booking extends DB{
       }
       return $data;
     }
+
+    
+    
 }
 ?>

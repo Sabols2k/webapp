@@ -122,7 +122,6 @@ class Booking extends Controller{
 
     }
     function createGuestSession($guest){
-        $_SESSION['guest']['hotel']="Quite Luxury";
         $_SESSION['guest']['name'] =  $guest['Name'] ;
         $_SESSION['guest']['mail'] = $guest['Mail'];
         $_SESSION['guest']['phone'] = $guest['Phonenumber'];
@@ -491,6 +490,7 @@ class Booking extends Controller{
 
     
     function OfferBooking(){
+        ob_start();
         if(empty($_SESSION['guest']['name'])){
             header('Location:'.URL. 'Booking');
         }
@@ -505,28 +505,52 @@ class Booking extends Controller{
            $data['offer'][$stt]=$row;
            $stt++;
         }
-
-        $countoffer = count($_SESSION['offer']);
+       
+       echo $countoffer = count($_SESSION['offer']);
         if($countoffer == 2){
             // require_once "./mvc/views/layout/offer-booking1.php";
             $this->view("layout/offer-booking1",$data);
+            $stt= 1;
+            foreach($data['offer'] as $row){
+                if(isset($_POST['bookingoffer'.$stt])){
+                    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                   
+                    $_SESSION['finaloffer'] = $data['offer'][$stt];
+                    
+                    header('Location:'.URL. 'Booking/confirm');
+                    ob_end_flush(); // dùng để chạy câu lệnh phía trên 
+                    // $this->view('layout/customer');
+                    
+                }
+                
+                $stt++;
+            }
         }
         else if($countoffer == 3){
             $this->view("layout/offer-booking2",$data);
-            // $this->view("layout/offer-booking2",$data);
+            $stt= 1;
+            foreach($data['offer'] as $row){
+                if(isset($_POST['bookingoffer'.$stt])){
+                    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                   
+                    $_SESSION['finaloffer'] = $data['offer'][$stt];
+                    
+                    header('Location:'.URL. 'Booking/confirm');
+                    ob_end_flush(); // dùng để chạy câu lệnh phía trên 
+                    // $this->view('layout/customer');
+                    
+                }
+                
+                $stt++;
+            }
         }
         else{
             echo "het phong";
             // require 1 view thông báo hết phòng.
             // nội dung: Xin lỗi + đề nghị khách hàng chọn phòng lại
         }
-        // if(isset($_POST['bookingoffer'])){
-        //     // echo  URL. 'Booking/Confirm';
-        //     header('Location:'.URL. 'Booking');
-        //     // $this->view('layout/customer');
-
-        // }
-        print_r($data['offer']);
+       
+        // print_r($data['offer']);
 
     }
     function auth(){
@@ -547,8 +571,47 @@ class Booking extends Controller{
         
     }
     function confirm(){
+        if(empty($_SESSION['finaloffer'])){
+            if(empty($_SESSION['guest']['name'])){
+                header('Location:'.URL. 'Booking');
+            }
+            header('Location:'.URL. 'Booking/OfferBooking');
+            
+        }
+        
+        print_r ($_SESSION['finaloffer']);
+        echo $countoffer = count($_SESSION['offer']);
+        // print_r ($_SESSION['guest']);
         $this->view('layout/customer');
+
+        // Sự kiện 'finalBooking' để hoàn tất việc booking và gửi mail cho Khách hàng
+        if(isset($_POST['finalBooking'])){
+            // print_r($_SESSION['finaloffer']);
+            // echo "guest";
+            // print_r ($_SESSION['guest']);
+            $data = $_SESSION['guest'];
+            $data['roomtype']= NULL;
+            $model=$this->modellayout("bookingform");
+            if($countoffer == 3){
+               $data['roomtype']= $_SESSION['finaloffer']['roomtype1'];
+               $data['roomcount']=  $_SESSION['finaloffer']['roomcount1'];
+               $data['roomtype2']= $_SESSION['finaloffer']['roomtype2'];
+               $data['roomcount2']=  $_SESSION['finaloffer']['roomcount2'];
+               $model->insertbookingfull1($data);
+
+            }else{
+                $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
+                $data['roomcount']=  $_SESSION['finaloffer']['roomcount'];
+                $model->insertbookingfull2($data);
+            }
+
+            print_r($data);
+                
+        }
+        
+
     }
+
 
 }
 ?>

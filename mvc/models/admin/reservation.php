@@ -41,8 +41,8 @@ class reservation extends DB{
       $this->execute($sql);
      }
      public function getAllReservation(){
-    //   $sql ="CALL `viewreservation`()";
-      $sql= "SELECT * FROM reservationsagents";
+      $sql ="CALL `viewreservation`()";
+    //   $sql= "SELECT * FROM reservationsagents";
       $this->execute($sql);
       while($datas=$this->getData('reservationsagents')){
           $data[]=$datas;

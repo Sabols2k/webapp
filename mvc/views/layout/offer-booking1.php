@@ -48,6 +48,7 @@
           foreach ($data['offer'] as $row) {
 
           ?>
+           <form method="POST" enctype="multipart/form-data">
             <!-- ITEM OFFER -->
             <div class="col-lg-12">
 
@@ -59,13 +60,15 @@
                 </div>
                 <div class="col-lg-3 mb30 mt10">
                   <span>Total Bill</span>
-                  <span name="bill" > <?php echo $row['price']?> </span>
+                  <span name="bill" > <?php $total= $row['price'] *$row['roomcount'] ;
+                                                    echo $total;?> </span>
                 </div>
                 <div class="col-lg-3 mb30 mt10">
-                  <a onclick="myBooking()" id="booknow" href="<?php echo URL . "Booking/Confirm" ?>" class="btn btn-dark" style="float: right;">
+                  <button type="submit" name="bookingoffer<?php echo $stt ?>"  class="btn btn-dark" style="float: right;">
                     <i class="fa fa-bed"> </i>BOOK NOW
-                  </a>
+                  </button>
                 </div>
+
                 <!-- ITEM -->
                 <div class="col-lg-12">
                   <div class="room-block-item">
@@ -104,7 +107,7 @@
                 
               </div>
             </div>
-
+          </form>
           <?php
             $stt++;
           }
@@ -136,10 +139,3 @@
 </body>
 
 </html>
-<script type="text/javascript" >
-  function myBooking() {
-    alert( <?php print_r($_SESSION['offer']) ?> );
-  }
-   
-   
-</script>

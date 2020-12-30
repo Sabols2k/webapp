@@ -14,6 +14,14 @@ class bookingform extends DB{
         return $data;
       }
 
+      public function insertbookingfull1(){
+        $sql="CALL ";
+        return $this->execute($sql);
+      }
+      public function insertbookingfull2(){
+        
+      }
+
 }
 
 ?>
