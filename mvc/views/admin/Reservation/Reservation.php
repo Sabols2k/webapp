@@ -53,9 +53,9 @@
                         $stt=1;
                         foreach($data['reservation'] as $row){
                     ?>
-                        <tr>
+                        <tr id="<?php echo 'reservation' .$stt; ?>">
                             <td><?php echo $stt ?></td>
-                            <td><?php echo $row['raReservationAgentID'] ?></td>
+                            <td id="<?php echo 'reserv' .$stt;?>"><?php echo $row['raReservationAgentID'] ?></td>
                             <td><?php echo $row['raUsername'] ?></td>
                             <td><?php echo $row['raPassword'] ?></td>
                             <td><?php echo $row['raFirstName'] ?></td>
@@ -78,10 +78,9 @@
                                 <a class="btn btn-edit" href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <a class="btn btn-delete" onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteAccount/'.$row['aAdminID']; ?>" style="color: #fff;">
+                                <a class="btn btn-delete" onclick="return window.confirm('Bạn muốn xóa không');"  href="<?php echo URLAdmin.'deleteBooking/'.$row['bBookingID']; ?>">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
-                                
                             </td>
                         </tr>
                     <?php

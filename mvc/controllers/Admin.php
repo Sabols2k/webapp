@@ -661,5 +661,10 @@ class Admin extends Controller{
         $data['main']="Room/view-room";
         $this->viewadmin('index',$data);
     }
+    public function deleteReservSinglePage($id)
+    {
+        unset($_SESSION['function'][$id]);
+        echo "Xóa thành công";
+    }
 }
 ?>

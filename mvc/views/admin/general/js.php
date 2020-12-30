@@ -36,5 +36,28 @@
             console.log( error );
         } );
     </script>
+
+    <!-- Sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    //   --- Delete Single Page ---
+    $('a.deleteReservById').click(function(event){
+        event.preventDefault();
+        var href=$(this).attr("href");
+        // var stt=$(this).attr("data-id");
+        // var temp='reserv'+stt;
+        // var reserv=$('#'+temp).val();
+
+        $.ajax({
+            url:href,
+            type:'POST',
+            // data:{reserv:reserv},
+            success:function(res){
+                $.trim(res)=='Xóa thành công'
+                    swal(res,"","success");
+            }
+        });
+    });
+    </script>
     
 
