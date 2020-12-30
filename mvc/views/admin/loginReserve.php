@@ -1,3 +1,8 @@
+<?php  
+    if(isset($_SESSION['admin']['username'])){
+        header('Location:'.URLAdmin);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +34,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome back Reservationist!</h1>
                                     </div>
-                                    <form class="user" action="<?php echo URLAdmin ."/login"?>" method="POST">
+                                    <form class="user"  method="POST">
                                         <div class="form-group">
                                             <input name="username" type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -45,7 +50,7 @@
                                                 <?php echo $data['passwordError']; ?>
                                             </span>
                                         </div>
-                                        <button class="btn btn-danger btn-user btn-block" id="submit" type="submit" value="submit">LOGIN</button>
+                                        <button class="btn btn-danger btn-user btn-block" name="loginReserve" id="submit" type="submit" value="submit">LOGIN</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">

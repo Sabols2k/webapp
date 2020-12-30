@@ -50,7 +50,7 @@
                                                 <?php echo $data['passwordError']; ?>
                                             </span>
                                         </div>
-                                        <button class="btn btn-info btn-user btn-block" id="submit" type="submit" value="submit">LOGIN</button>
+                                        <button class="btn btn-info btn-user btn-block" id="submit" name="login" type="submit" value="submit">LOGIN</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">

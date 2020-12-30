@@ -60,7 +60,8 @@
                 </div>
                 <div class="col-lg-3 mb30 mt10">
                   <span>Total Bill</span>
-                  <span name="bill" > <?php echo $row['price']?> </span>
+                  <span name="bill" > <?php $total= $row['price'] *$row['roomcount'] ;
+                                                    echo $total;?> </span>
                 </div>
                 <div class="col-lg-3 mb30 mt10">
                   <button type="submit" name="bookingoffer<?php echo $stt ?>"  class="btn btn-dark" style="float: right;">

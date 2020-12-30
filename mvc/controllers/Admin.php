@@ -33,7 +33,7 @@ class Admin extends Controller{
         ];
         
         //Check for post
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if(isset($_POST['login'])) {
             //Sanitize post data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -96,7 +96,7 @@ class Admin extends Controller{
         ];
         
         //Check for post
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if(isset($_POST['loginReserve'])) {
             //Sanitize post data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -115,24 +115,25 @@ class Admin extends Controller{
             if (empty($data['password'])) {
                 $data['passwordError'] = 'Please enter a password.';
             }
-
+            
             //Check if all errors are empty
             if (empty($data['usernameError']) && empty($data['passwordError'])) {
                 $model=$this->modeladmin("login");
-                $user =  $model->login($data['username'], $data['password']);
+                $user =  $model->loginReserve($data['username'], $data['password']);
                 
-                // print_r($user);
+                // print_r($user); die();
                 // echo mysqli_num_rows($data['user']);
                 // print_r( $data['user']); die();
                 // die();
                 
-                if(isset($user['aUsername'])){
-                    $this->createUserSession($user);
+                if(isset($user['raUsername'])){
+
+                    $this->createReserveSession($user);
                 }
                 else {
                     $data['passwordError'] = 'Password or username is incorrect. Please try again.';
 
-                    $this->view('admin/login', $data);
+                    $this->view('admin/loginReserve', $data);
             
                 }
                
@@ -150,12 +151,19 @@ class Admin extends Controller{
     }
 
     public function createUserSession($user) {
-        
-        $_SESSION['admin']['test'] = 'abc';
-        $_SESSION['admin']['user_id'] =  $user['aAdminID '] ;
+        $_SESSION['admin']['type']= 'admin';
+        $_SESSION['admin']['user_id'] =  $user['aAdminID'] ;
         $_SESSION['admin']['username'] = $user['aUsername'];
         $_SESSION['admin']['mail'] = $user['aEmail'];
         $_SESSION['admin']['img'] =imgAccount. $user['aimg'];
+        header('Location:'.URL);
+    }
+    public function createReserveSession($user) {
+        $_SESSION['admin']['type']= 'reserve';
+        $_SESSION['admin']['user_id'] =  $user['raReservationAgentID'] ;
+        $_SESSION['admin']['username'] = $user['raUsername'];
+        $_SESSION['admin']['mail'] = $user['raEmail'];
+        $_SESSION['admin']['img'] =imgAccount. $user['raImg'];
         
         header('Location:'.URLAdmin);
     }
