@@ -38,15 +38,15 @@
                                         <div class="form-group">
                                             <input name="username" type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Username...">
-                                                <span class="invalidFeedback">
+                                                placeholder="Enter Username..."  maxlength=15 >
+                                                <span class="invalidFeedback" style="color:red">
                                                     <?php echo $data['usernameError']; ?>
                                                 </span>
                                         </div>
                                         <div class="form-group">
                                             <input name="password" type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
-                                            <span class="invalidFeedback">
+                                                id="exampleInputPassword" placeholder="Password" maxlength=15 >
+                                            <span class="invalidFeedback" style="color:red">
                                                 <?php echo $data['passwordError']; ?>
                                             </span>
                                         </div>

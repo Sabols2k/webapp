@@ -20,6 +20,7 @@ class Admin extends Controller{
         $data['main'] = "home/main";
         // require_once "./mvc/views/admin/index.php";
         $this->viewadmin("index",$data);
+        
     }
    
     public function login() {
@@ -34,7 +35,7 @@ class Admin extends Controller{
         
         //Check for post
         if(isset($_POST['login'])) {
-            //Sanitize post data
+            
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data = [
@@ -43,6 +44,7 @@ class Admin extends Controller{
                 'usernameError' => '',
                 'passwordError' => '',
             ];
+            // print_r($data); die();
             //Validate username
             if (empty($data['username'])) {
                 $data['usernameError'] = 'Please enter a username.';
@@ -57,11 +59,6 @@ class Admin extends Controller{
             if (empty($data['usernameError']) && empty($data['passwordError'])) {
                 $model=$this->modeladmin("login");
                 $user =  $model->login($data['username'], $data['password']);
-                
-                // print_r($user);
-                // echo mysqli_num_rows($data['user']);
-                // print_r( $data['user']); die();
-                // die();
                 
                 if(isset($user['aUsername'])){
                     $this->createUserSession($user);
@@ -97,8 +94,8 @@ class Admin extends Controller{
         
         //Check for post
         if(isset($_POST['loginReserve'])) {
-            //Sanitize post data
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            // //Sanitize post data
+            // $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data = [
                 'username' => trim($_POST['username']),
@@ -291,11 +288,13 @@ class Admin extends Controller{
 // admin room
     function ViewRoom(){
         $_SESSION['function'] = 'room';
+        $this->search();
         $model=$this->modeladmin("room");
         $data['room'] =  $model->getAllRoom();
         
         $data['main']="Room/view-room";
         $this->viewadmin('index',$data);
+        
     }
 
     public function AddRoom() {
@@ -674,5 +673,46 @@ class Admin extends Controller{
         unset($_SESSION['function'][$id]);
         echo "Xóa thành công";
     }
+
+
+    // Chức năng Search
+    public function search(){
+
+        echo $hint = "abc";
+        if(isset($_POST['search'])) {
+            $data['value'] = trim($_POST['value']);
+            $model=$this->modeladmin("room");
+            
+        
+            // print_r($a); die();
+            // echo $data['value']; die();
+            if ($data['value'] !== "") {
+                $data['value'] = strtolower($data['value']);
+                $len=strlen($data['value']);
+                $a =  $model->searchRoombyNumb($data['value']);
+                //   print_r($a); die();
+                foreach($a as $name) {
+                    if ($hint === "") {
+                        $hint = $name['0'];
+                    } else {
+                        $hint .= ", ". $name['0'];
+                    }
+
+                    // echo "hello world";
+                    // print_r($name['0']); 
+                    
+                }
+            }
+    
+            // Output "no suggestion" if no hint was found or output correct values
+            echo $hint === "" ? "no suggestion" : $hint;
+        }
+        
+        // require_once "./test.php";
+        // lookup all hints from array if $q is different from ""
+       
+       
+    }
+   
 }
 ?>

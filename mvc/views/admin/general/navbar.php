@@ -1,4 +1,8 @@
+<?php 
 
+    echo $_SESSION['function'];
+
+?>
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -29,13 +33,13 @@
              <!-- Dropdown - Messages -->
              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                  aria-labelledby="searchDropdown">
-                 <form class="form-inline mr-auto w-100 navbar-search">
+                 <form class="form-inline mr-auto w-100 navbar-search" method="POST">
                      <div class="input-group">
-                         <input type="text" class="form-control bg-light border-0 small"
+                         <input name="value" type="text" class="form-control bg-light border-0 small"
                              placeholder="Search for..." aria-label="Search"
                              aria-describedby="basic-addon2">
                          <div class="input-group-append">
-                             <button class="btn btn-info" type="button">
+                             <button type="submit" name="search" class="btn btn-info" >
                                  <i class="fas fa-search fa-sm"></i>
                              </button>
                          </div>

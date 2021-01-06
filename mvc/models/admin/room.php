@@ -48,6 +48,15 @@ class room extends DB{
           $data[]=$datas;
       }
       return $data;
-  }
+    }
+    public function searchRoombyNumb($value){
+      $sql ="CALL `searchRoombyNumb`('%$value%');";
+      // echo $sql; die();
+      $this->execute($sql);
+      while($datas=$this->getData('room')){
+          $data[]=$datas;
+      }
+      return $data;
+    }
 }
 ?>
