@@ -4,9 +4,26 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">All Accounts</h1>
-    </div>
+    <div class="row">
+     <!-- Page Heading -->
+        <div class="col-lg-6 d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">All Accounts</h1>
+        </div>
+        <div class="col-lg-6">
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 " method="GET">
+                <div class="input-group">
+                    <input name="value" type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-info"  type="submit"  >
+                            <i class="fas fa-search fa-sm"></i>
+                        </button> 
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+   </div>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">

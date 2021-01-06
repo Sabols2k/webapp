@@ -49,6 +49,14 @@ class account extends DB{
       }
       return $data;
     }
+    public function searchAccountbyUsername($value){
+        $sql="CALL `searchAccountbyUsername`('%$value%');";
+        $this->execute($sql);
+        while($datas=$this->getData('room')){
+            $data[]=$datas;
+        }
+        return $data;
+    }
 }
 ?>
 

@@ -11,13 +11,13 @@ class Api extends Controller{
         $this->accountModel= $this->modeladmin("account");
         
     }
-    function index(){
-        $this->getView("Product", [
-            "product" => $this->productModel->getProduct(),
-            "cookies" => $this->item_data,
-        ]);
+    // function index(){
+    //     $this->getView("Product", [
+    //         "product" => $this->productModel->getProduct(),
+    //         "cookies" => $this->item_data,
+    //     ]);
 
-    }
+    // }
 
 
     // function RoomTypeDetail($id)

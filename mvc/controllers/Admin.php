@@ -1,5 +1,5 @@
 <?php
-
+use App\Request as RequestLib;
 class Admin extends Controller{
     // function __construct() {
 	// 	parent::__construct();
@@ -286,14 +286,58 @@ class Admin extends Controller{
 
 
 // admin room
-    function ViewRoom(){
+    function ViewRoom() {
+        // if ( RequestLib::get('test') ) {
+        //     var_dump(RequestLib::get('test'));
+        // }
+        // rồi đó, giờ ông làm tiếp đi nha :3 tks oong! ok
+        // exit;
         $_SESSION['function'] = 'room';
-        $this->search();
+        
+        if(isset($_GET['value'])) {
+            // echo "Welcome ". $_GET['value']. "<br />"; 
+            $data['value'] = trim($_GET['value']);
+            $model=$this->modeladmin("room");
+            
+            // print_r($a); die();
+            // echo $data['value']; die();
+            if ($data['value'] !== "") {
+                $data['value'] = strtolower($data['value']);
+                $len=strlen($data['value']);
+                $a =  $model->searchRoombyNumb($data['value']);
+                //   print_r($a); die();
+                  $stt=0;
+                foreach($a as $name) {
+                    // if ($hint === "") {
+                    //     $hint = $name['0'];
+                    // } else {
+                    //     $hint .= ", ". $name['0'];
+                    // }
+                    $model= $this->modeladmin("room");
+
+                    $data['room'][$stt]= $model->getDataRoomById($name['0']);
+                    $stt++;
+                }
+                // print_r($data); die();
+                $data['main']="Room/view-room";
+                $this->viewadmin('index',$data);
+                // die();
+                // print_r($data['room']); die();
+            }else{
+                $model=$this->modeladmin("room");
+                $data['room'] =  $model->getAllRoom();
+
+            }
+    
+            // Output "no suggestion" if no hint was found or output correct values
+            // echo $hint === "" ? "no suggestion" : $hint;
+        }
         $model=$this->modeladmin("room");
         $data['room'] =  $model->getAllRoom();
-        
         $data['main']="Room/view-room";
         $this->viewadmin('index',$data);
+        
+       
         
     }
 
@@ -411,16 +455,50 @@ class Admin extends Controller{
     
     public function viewaccount(){
         $_SESSION['function'] = 'account';
-        $table = "admin";
-        // $model=$this->modeladmin("account");
-        
-        $data['account'] = $this->adminModel->getAllData($table);
+
+        if(isset($_GET['value'])) {
+            // echo "Welcome ". $_GET['value']. "<br />"; 
+            $data['value'] = trim($_GET['value']);
+            $model=$this->modeladmin("account");
+            $data['value'] = strtolower($data['value']);
+            $a =  $model->searchAccountbyUsername($data['value']);
+            // print_r($a); die();
+            // echo $data['value']; die();
+            if (($data['value'] !== "")) {
+               if(isset($a)){
+                    $stt=0;
+                    foreach($a as $name) {
+                        $model= $this->modeladmin("account");
+
+                        $data['account'][$stt]= $model->getDataAccountById($name['0']);
+                        $stt++;
+                    }
+                    $data['main'] = 'Account/view-account';
+                    $this->viewadmin('index',$data);
+                    
+               }
+               else{
+                    $model=$this->modeladmin("account");
+                    $data['account'] =  NULL;
+                    $data['main'] = 'Account/view-account';
+                    $this->viewadmin('index',$data);
+               }
+                // $len=strlen($data['value']);
+               
+                // print_r($a); die();
+                
+            }else{
+                $model=$this->modeladmin("account");
+                $data['account'] =  $model-> getAllAccount();
+                $data['main'] = 'Account/view-account';
+                $this->viewadmin('index',$data);
+            }
+        }
+
+        $model=$this->modeladmin("account");
+        $data['account'] =  $model-> getAllAccount();
         $data['main'] = 'Account/view-account';
-
-        // $data=$db->getAllData($table);
-        
-
-        $this->viewadmin("index",$data);
+        $this->viewadmin('index',$data);
     }
     
     public function AddAccount() {
@@ -677,38 +755,9 @@ class Admin extends Controller{
 
     // Chức năng Search
     public function search(){
-
-        echo $hint = "abc";
-        if(isset($_POST['search'])) {
-            $data['value'] = trim($_POST['value']);
-            $model=$this->modeladmin("room");
-            
         
-            // print_r($a); die();
-            // echo $data['value']; die();
-            if ($data['value'] !== "") {
-                $data['value'] = strtolower($data['value']);
-                $len=strlen($data['value']);
-                $a =  $model->searchRoombyNumb($data['value']);
-                //   print_r($a); die();
-                foreach($a as $name) {
-                    if ($hint === "") {
-                        $hint = $name['0'];
-                    } else {
-                        $hint .= ", ". $name['0'];
-                    }
-
-                    // echo "hello world";
-                    // print_r($name['0']); 
-                    
-                }
-            }
-    
-            // Output "no suggestion" if no hint was found or output correct values
-            echo $hint === "" ? "no suggestion" : $hint;
-        }
         
-        // require_once "./test.php";
+        require_once "./test.php";
         // lookup all hints from array if $q is different from ""
        
        

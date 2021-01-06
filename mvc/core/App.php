@@ -34,9 +34,10 @@ class App{
 
     function UrlProcess(){
         if( isset($_GET["url"]) ){
-            return explode("/", filter_var(trim($_GET["url"], "/")));
+            return explode("/", filter_var(trim($_GET["url"], "/"))); // nó bỏ hết mấy thứ linh tinh và chỉ nhận các từ giữa dấu / còn lại bỏ hết mịa r nên ko có đâu
+            // từ từu tui coi lại
         }
     }
-
+// reverse hết mấy file luôn hay mỗi file này ! 
 }
 ?>

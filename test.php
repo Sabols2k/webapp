@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <title> PHP MYSQL - Search</title>
 <head>
 </head>
@@ -16,4 +16,24 @@
 </form>
 </body>
 
+</html> -->
+
+<?php
+   if( $_GET["name"]) {
+      echo "Welcome ". $_GET['name']. "<br />";
+      echo "You are ". $_GET['age']. " years old.";
+      
+      exit();
+   }
+?>
+<html>
+   <body>
+   
+      <form  method = "GET">
+         Name: <input type = "text" name = "name" />
+         Age: <input type = "text" name = "age" />
+         <input type = "submit" />
+      </form>
+      
+   </body>
 </html>
