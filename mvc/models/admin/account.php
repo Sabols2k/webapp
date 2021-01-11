@@ -44,17 +44,22 @@ class account extends DB{
       $sql ="CALL `viewaccount`()";
     //   $sql= "CALL getAllRoom()";
       $this->execute($sql);
-      while($datas=$this->getData('admin')){
+      while($datas=$this->getData()){
           $data[]=$datas;
       }
       return $data;
+      
     }
     public function searchAccountbyUsername($value){
-        $sql="CALL `searchAccountbyUsername`('%$value%');";
+        $sql = "SELECT a.aAdminID FROM admin as a WHERE a.aUsername like '%$value%'; ";
+        
         $this->execute($sql);
-        while($datas=$this->getData('room')){
+        // echo "1";
+        while($datas=$this->getData()){
+            // echo "2";
             $data[]=$datas;
         }
+        // echo "3";
         return $data;
     }
 }

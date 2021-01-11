@@ -459,8 +459,9 @@ class Admin extends Controller{
         if(isset($_GET['value'])) {
             // echo "Welcome ". $_GET['value']. "<br />"; 
             $data['value'] = trim($_GET['value']);
+            // echo $data['value']; die();
             $model=$this->modeladmin("account");
-            $data['value'] = strtolower($data['value']);
+            // $data['value'] = strtolower($data['value']);
             $a =  $model->searchAccountbyUsername($data['value']);
             // print_r($a); die();
             // echo $data['value']; die();

@@ -712,7 +712,7 @@
     function myFunction() {
     //   document.getElementById("demo").innerHTML = "Hello World";
         //cần 1 thông báo "Are you sure?"
-        alert("Are you sure?");
+        // alert("Are you sure?");
 
         Email.send({
         Host: "smtp.gmail.com",
@@ -723,7 +723,13 @@
         To: "<?php echo $_SESSION['guest']['mail']; ?>",
         Subject: "You've booked from Quite Luxury!",
         Body: html
-        })
+        }).then(function(response){
+        if (response == 'OK') {
+            alert("Bọn tui đã gửi email xác nhận rồi nha!, bạn check lại nhé");
+            } else {
+                alert("Bạn vui lòng nhập đúng định dạng email!");
+            }
+        });
     }
     </script>
 </body>

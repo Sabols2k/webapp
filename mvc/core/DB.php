@@ -7,7 +7,7 @@ class DB{
     protected $username = "root";
     protected $password = "";
     protected $dbname = "quite_luxury";
-    protected $result =NULL;
+    protected $result = NULL;
 
     function __construct(){
         $this->con = mysqli_connect($this->servername, $this->username, $this->password);
@@ -17,7 +17,7 @@ class DB{
     }
     public function execute($sql){
         $this->result =mysqli_query($this->con, $sql);
-        // echo "abc1234".$this->result;
+        //echo "abc1234".$this->result;
         return $this->result;
     }
 
