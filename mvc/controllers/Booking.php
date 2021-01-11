@@ -577,20 +577,20 @@ class Booking extends Controller{
                $data['roomtype2']= $_SESSION['finaloffer']['roomtype2'];
                $data['roomcount2']=  $_SESSION['finaloffer']['roomcount2'];
                print_r($data);
-               $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
-                unset($_SESSION['guest']);
-                if(empty($_SESSION['guest'])){
-                    header('Location:'.URL."Home");
-                }
+            //    $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
+            //     unset($_SESSION['guest']);
+            //     if(empty($_SESSION['guest'])){
+            //         header('Location:'.URL."Home");
+            //     }
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
                 $data['roomcount']=  $_SESSION['finaloffer']['roomcount'];
                 print_r($data);
-                $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
-                unset($_SESSION['guest']);
-                if(empty($_SESSION['guest'])){
-                    header('Location:'.URL."Home");
-                }
+                // $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
+                // unset($_SESSION['guest']);
+                // if(empty($_SESSION['guest'])){
+                //     header('Location:'.URL."Home");
+                // }
             }
             ob_end_flush();
             // print_r($data);

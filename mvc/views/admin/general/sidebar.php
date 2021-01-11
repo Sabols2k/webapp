@@ -69,23 +69,6 @@
         </div>
     </li>
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-    <!-- Nav Item - Blogs Collapse Menu -->
-    <li class="nav-item <?php if($_SESSION['function']=='blog'){echo "active";}else{echo "";} ?>">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
-            aria-expanded="true" aria-controls="collapseBlog">
-            <i class="fas fa-fw fa-blog"></i>
-            <span>Blogs</span>
-        </a>
-        <div id="collapseBlog" class="collapse" aria-labelledby="headingBlog" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Blogs:</h6>
-                <a class="collapse-item" href="<?php echo URLAdmin."addblog" ?>">Add Blog Details</a>
-                <a class="collapse-item" href="<?php echo URLAdmin."viewblog" ?>">View All BLogs</a>
-            </div>
-        </div>
-    </li>
-    <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Details</title>
+    <link rel="stylesheet" href="<?php echo URL ."mvc/Assets/css/bootstrap.min.css" ?>">
+    <link rel="stylesheet" href="<?php echo URL ."mvc/Assets/css/bootstrap-select.min.css" ?>">
+    <link rel="stylesheet" href="<?php echo URL ."mvc/Assets/css/jquery.mmenu.css" ?>">
     <style type="text/css">
         body {
             margin: 0;
@@ -174,7 +177,7 @@
                         <td class="innerpadding borderbottom">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td class="h2">Hello <?php echo $_SESSION['guest']['name']; ?> ,</td>
+                                    <td class="h2">Hello <?php echo $_SESSION['guest']['name']; ?>,</td>
                                 </tr>
                                 <tr>
                                     <td class="bodycopy">Your reservation has been submitted to us and we'll contact you as quickly as possible to complete your booking. If you have any question please don't hesitate to contact us via email <span style="font-size: 18px; color: green;">quiteluxuryhotel@gmail.com</span > or via phone number <span style="font-size: 18px; color: green;"> 012345678</span></td>
@@ -311,15 +314,16 @@
                     <tr>
                         <td class="innerpadding bodycopy mssg">
                             <form method="POST">
-                                <button  id="submit" name="finalBooking" class="btn">booking confirmation</button></td>
+                                <button class="btn" type="button" data-toggle="modal" data-target="#confirmModal">booking confirmation</button>
                             </form>
+                        </td>
                     </tr>
                     <tr>
                         <td class="footer" bgcolor="#f7f8f9">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td align="center" class="footercopy">
-                                      &#169; 2020 <a href="http://localhost:8080/Web_App/Quite_Luxury/Home">QUITE LUXURY Hotel</a> All Rights Reserved.
+                                      &#169; 2020 <a href="#">QUITE LUXURY Hotel</a> All Rights Reserved.
                                   </td>
                                 </tr>
                                 <tr>
@@ -348,6 +352,26 @@
             </td>
         </tr>
     </table>
+</div>
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Confirm?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Confirm" below If you want to confirm the reservation and then please check your email. Thank you!</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <form method="POST">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal" id="submit" name="finalBooking">Confirm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="sweetalert2.all.min.js"></script>
     <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
@@ -710,28 +734,22 @@
         `;
     document.getElementById("submit").addEventListener("click", myFunction);
     function myFunction() {
-    //   document.getElementById("demo").innerHTML = "Hello World";
-        //cần 1 thông báo "Are you sure?"
-        // alert("Are you sure?");
-
+        alert('OK?');
         Email.send({
         Host: "smtp.gmail.com",
-        Username: "henrytranls2k@gmail.com",
-        Password: "Henry1234",
+        Username: "minhchuong.org@gmail.com",
+        Password: "mchuong145",
         SecureToken: "Generate token here",
-        From: "henrytranls2k@gmail.com",
+        From: "minhchuong.org@gmail.com",
         To: "<?php echo $_SESSION['guest']['mail']; ?>",
         Subject: "You've booked from Quite Luxury!",
         Body: html
-        }).then(function(response){
-        if (response == 'OK') {
-            alert("Bọn tui đã gửi email xác nhận rồi nha!, bạn check lại nhé");
-            } else {
-                alert("Bạn vui lòng nhập đúng định dạng email!");
-            }
-        });
+        })
     }
     </script>
+    <?php 
+        require_once('general/js.php');
+    ?>
 </body>
 </html>
 

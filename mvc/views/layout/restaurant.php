@@ -204,7 +204,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant7.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant7.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant7.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -212,7 +212,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant8.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant8.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant8.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -220,7 +220,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant9.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant9.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant9.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -228,7 +228,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant10.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant10.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant10.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -236,7 +236,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant11.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant11.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant11.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -244,7 +244,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant12.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant12.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant12.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -252,7 +252,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant13.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant13.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant13.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>
@@ -260,7 +260,7 @@
               <!-- ITEM -->
               <div class="col-md-3">
                 <figure class="gradient-overlay-hover image-icon">
-                  <a href="images/restaurant/restaurant14.jpg"?>">
+                  <a href="<?php echo URL ."mvc/Assets/images/restaurant/restaurant14.jpg"?>">
                     <img src="<?php echo URL ."mvc/Assets/images/restaurant/restaurant14.jpg"?>" class="img-fluid" alt="Image">
                   </a>
                 </figure>

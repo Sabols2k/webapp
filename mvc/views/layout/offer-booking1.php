@@ -58,12 +58,7 @@
                     <a href="#">OFFERS <?php echo $stt; ?></a>
                   </h3>
                 </div>
-                <div class="col-lg-3 mb30 mt10">
-                  <span>Total Bill</span>
-                  <span name="bill" > <?php $total= $row['price'] *$row['roomcount'] ;
-                                                    echo $total;?> </span>
-                </div>
-                <div class="col-lg-3 mb30 mt10">
+                <div class="col-lg-6 mb30 mt10">
                   <button type="submit" name="bookingoffer<?php echo $stt ?>"  class="btn btn-dark" style="float: right;">
                     <i class="fa fa-bed"> </i>BOOK NOW
                   </button>
@@ -73,14 +68,14 @@
                 <div class="col-lg-12">
                   <div class="room-block-item">
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-5">
                         <figure class="gradient-overlay-hover link-icon">
                           <a href="room.html">
                             <img src="<?php echo imgRoomtype . $row['img'] ?>" class="img-fluid" alt="Image">
                           </a>
                         </figure>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-7">
                         <div class="room-info">
                           <h3 class="room-title">
                             <a href="room.html"><?php echo $row['roomtype'] ?></a>
@@ -88,10 +83,18 @@
                           <span class="room-rates">
                             <i class="fa fa-check"></i>
                             <a href="#">Number of rooms: <?php echo $row['roomcount'] ?></a>
-                          </span> <br>
+                          </span><br>
                           <span class="room-rates">
                             <i class="fa fa-check"></i>
-                            <a href="#">Price: <span><?php echo $row['price'] ?></span></a>
+                            <a href="#">Price: 
+                              <span><?php echo $row['price'] ?></span>
+                            </a>
+                          </span><br>
+                          <span class="room-rates" style="font-weight:bold">
+                            <a href="#">Total Bill:
+                              <span name="bill"><?php $total= $row['price'] *$row['roomcount'];
+                                              echo $total;?> $</span>
+                            </a>
                           </span>
                           <div class="room-services">
                             <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i>
