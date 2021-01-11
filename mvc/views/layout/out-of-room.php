@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col-md-5">
               <div>
-                <img src="<?php echo URL ."mvc/Assets/images/out-of-room.jpg"?>" width="100%" height="100%">
+                <img src="<?php echo URL ."mvc/Assets/images/out-of-room.jpg"?>" width="100%">
               </div>
             </div>
             <div class="col-md-7">
