@@ -48,6 +48,21 @@ class booking extends DB{
       }
       return $data;
     }
+    public function confirm($id){
+      $sql="CALL `ConfirmBookingById`($id); ";
+      // echo $sql; die();
+      $this->execute($sql);
+    }
+    public function checkin($id){
+      $sql="CALL `CheckInBookingById`($id); ";
+      // echo $sql; die();
+      $this->execute($sql);
+    }
+    public function checkout($id){
+      $sql="CALL `CheckOutBookingById`($id); ";
+      // echo $sql; die();
+      $this->execute($sql);
+    }
 
     
     

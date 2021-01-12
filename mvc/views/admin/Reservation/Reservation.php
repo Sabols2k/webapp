@@ -66,15 +66,7 @@
                             <td><?php echo $row['raGender'] ?></td>
                             <td><?php echo $row['raRolesID'] ?></td>
                             <td>
-                                <a class="btn btn-view" href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a class="btn btn-confirm" href="<?php echo URLAdmin.'/'.$row['']; ?>">
-                                    <i class="fas fa-check-circle"></i>
-                                </a>
-                                <a class="btn btn-checkin" href="<?php echo URLAdmin.'/'.$row['']; ?>">
-                                    <i class="fas fa-key"></i>
-                                </a>
+                                
                                 <a class="btn btn-edit" href="<?php echo URLAdmin.'editaccount/'.$row['aAdminID']; ?>">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>

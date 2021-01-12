@@ -48,6 +48,7 @@
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
                             <th>RoomCount</th>
+                            <th>RoomStatus</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -63,6 +64,7 @@
                             <th>DateCheckIn</th>
                             <th>DateCheckOut</th>
                             <th>RoomCount</th>
+                            <th>RoomStatus</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -82,7 +84,37 @@
                             <td><?php echo $row['bDateCheckIn'] ?></td>
                             <td><?php echo $row['bDateCheckOut'] ?></td>
                             <td><?php echo $row['SL_Room'] ?></td>
+                            <td><?php 
+                                    
+                                    switch ($row['bBookingStatus'] ) {
+                                        case "0":
+                                            echo "Unconfimred";
+                                            break;
+                                        case "1":
+                                            echo "Confimred";
+                                            break;
+                                        case "2":
+                                            echo "CheckedIn";
+                                            break;
+                                        case "3":
+                                            echo "CheckedOut";
+                                            break;
+                                        default: 
+                                            echo "Unconfimred";
+                                    }
+                                ?>
+                            </td>
                             <td>
+
+                                <a class="btn btn-confirm" href="<?php echo URLAdmin.'confirm/'.$row['bBookingID']; ?>">
+                                    <i class="fas fa-check-circle"></i>
+                                </a>
+                                <a class="btn btn-checkin" href="<?php echo URLAdmin.'checkin/'.$row['bBookingID']; ?>">
+                                    <i class="fas fa-key"></i>
+                                </a>
+                                <a class="btn btn-checkout" href="<?php echo URLAdmin.'checkout/'.$row['bBookingID']; ?>">
+                                    <i class="fas fa-key"></i>
+                                </a>
                                 <a class="btn btn-edit" href="<?php echo URLAdmin."editbooking/".$row['bBookingID']; ?>">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>

@@ -288,6 +288,27 @@ class Admin extends Controller{
         // header('Location:'.URLAdmin. 'viewbooking');
         echo "<script>window.location.href= '".URLAdmin. 'viewbooking'."'</script>";
     }
+    public function confirm($id){
+        $_SESSION['function'] = 'booking';
+        $model= $this->modeladmin("booking");
+        $model->confirm($id);
+        // header('Location:'.URLAdmin. 'viewbooking');
+        echo "<script>window.location.href= '".URLAdmin. 'viewbooking'."'</script>";
+    }
+    public function checkin($id){
+        $_SESSION['function'] = 'booking';
+        $model= $this->modeladmin("booking");
+        $model->checkin($id);
+        // header('Location:'.URLAdmin. 'viewbooking');
+        echo "<script>window.location.href= '".URLAdmin. 'viewbooking'."'</script>";
+    }
+    public function checkout($id){
+        $_SESSION['function'] = 'booking';
+        $model= $this->modeladmin("booking");
+        $model->checkout($id);
+        // header('Location:'.URLAdmin. 'viewbooking');
+        echo "<script>window.location.href= '".URLAdmin. 'viewbooking'."'</script>";
+    }
 
 
 // admin room
