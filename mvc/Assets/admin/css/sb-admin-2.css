@@ -11304,6 +11304,14 @@ body.sidebar-toggled footer.sticky-footer {
   line-height: 10px;
   color: #fff;
 }
+.btn-checkout{
+  font-size: 12px;
+  background-color: #2ecc71;
+  border-radius: 50% !important;
+  padding: 7px !important;
+  line-height: 10px;
+  color: #fff;
+}
 .label{
   color: #fff;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
