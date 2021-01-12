@@ -103,18 +103,7 @@ class Booking extends Controller{
                 $data['booking']['NameError'] = '* Please type your name. Please try again.';
                 //  $this->view('layout/Booking-form', $data);
             }
-            // print_r($_SESSION['guest']);
-            // $model=$this->modeladmin("booking");
-            // $model->InsertBooking($data['booking']['bBookingID'],
-            //     $data['booking']['bGuestID' ],
-            //     $data['booking']['bReservationAgentID' ],
-            //     $data['booking']['bDateCheckIn' ],
-            //     $data['booking']['bDateCheckOut' ],
-            //     $data['booking']['bRoomCount' ]
-            // );
-            // echo "da booking"; die();
-           
-            // $this->view("layout/offer-booking");
+            
         } 
         // $data['main'] ="Booking/add-booking";
         $this->view('layout/Booking-form', $data);
@@ -183,20 +172,6 @@ class Booking extends Controller{
         // print_r($data['room']);
         $guest= $this->maxguest($_SESSION['guest']['roomtype']);
         
-
-        // print_r($data['room']);
-        // print_r ($_SESSION['guest']);
-
-        // echo "Số người: " . $people;
-        // echo "max guest: " .$guest['guest'];
-        // echo "So phong con lai: " .$guest['roomremain'];
-        // // print_r($guest);
-        // echo "Ket qua:";
-
-       
-        // echo "ket qua: ". ((int)$people / (int)$maxguest);
-        // // $maxguest = 
-        // // echo $data['room']['0']['rtMaxGuest'];
         if($people  <= ($guest['guest'] * $guest['roomremain']  )  )
         {
             // echo "du phong". $people;
@@ -545,7 +520,7 @@ class Booking extends Controller{
             }
         }
         else{
-            echo "het phong";
+            $this->view('layout/out-of-room');
             // require 1 view thông báo hết phòng.
             // nội dung: Xin lỗi + đề nghị khách hàng chọn phòng lại
         }
@@ -602,20 +577,20 @@ class Booking extends Controller{
                $data['roomtype2']= $_SESSION['finaloffer']['roomtype2'];
                $data['roomcount2']=  $_SESSION['finaloffer']['roomcount2'];
                print_r($data);
-            //    $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
-                // unset($_SESSION['guest']);
-                // if(empty($_SESSION['guest'])){
-                //     header('Location:'.URL."Home");
-                // }
+               $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
+                unset($_SESSION['guest']);
+                if(empty($_SESSION['guest'])){
+                    header('Location:'.URL."Home");
+                }
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
                 $data['roomcount']=  $_SESSION['finaloffer']['roomcount'];
                 print_r($data);
-                // $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
-                // unset($_SESSION['guest']);
-                // if(empty($_SESSION['guest'])){
-                //     header('Location:'.URL."Home");
-                // }
+                $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
+                unset($_SESSION['guest']);
+                if(empty($_SESSION['guest'])){
+                    header('Location:'.URL."Home");
+                }
             }
             ob_end_flush();
             // print_r($data);

@@ -153,7 +153,8 @@ class Admin extends Controller{
         $_SESSION['admin']['username'] = $user['aUsername'];
         $_SESSION['admin']['mail'] = $user['aEmail'];
         $_SESSION['admin']['img'] =imgAccount. $user['aimg'];
-        header('Location:'.URL);
+        // header('Location:'.URL);
+        echo "<script>window.location.href= '".URLAdmin."'</script>";
     }
     public function createReserveSession($user) {
         $_SESSION['admin']['type']= 'reserve';
@@ -162,7 +163,8 @@ class Admin extends Controller{
         $_SESSION['admin']['mail'] = $user['raEmail'];
         $_SESSION['admin']['img'] =imgAccount. $user['raImg'];
         
-        header('Location:'.URLAdmin);
+        // header('Location:'.URLAdmin);
+        echo "<script>window.location.href= '".URLAdmin."'</script>";
     }
 
     public function logout() {
@@ -172,7 +174,8 @@ class Admin extends Controller{
         unset($_SESSION['admin']['img']);
 
         // $data['main']="Booking/view-booking";
-        header('location:'.URLAdmin.'login');
+        // header('location:'.URLAdmin.'login');
+        echo "<script>window.location.href= '".URLAdmin.'login'."'</script>";
         // $this->viewadmin("login");
         
 
