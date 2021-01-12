@@ -1,4 +1,5 @@
 <!-- Begin Page Content -->
+
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -16,8 +17,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Orders</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">450</div>
+                                Bookings</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $data['dashboard']['0']['countbooking'] ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -34,16 +35,20 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                New Booking
+                                Room
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">200</div>
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $data['dashboard']['0']['countphongday'] ?></div>
                                 </div>
                                 <div class="col">
                                     <div class="progress progress-sm mr-2">
                                         <div class="progress-bar bg-info" role="progressbar"
-                                            style="width: 80%" aria-valuenow="50" aria-valuemin="0"
+                                            style="width: <?php 
+                                                            $kq = $data['dashboard']['0']['countphongday'] *100 / $data['dashboard']['0']['countroom'] ;
+
+                                                            echo round($kq, 0) ;
+                                                        ?>%" aria-valuenow="50" aria-valuemin="0"
                                             aria-valuemax="100"></div>
                                     </div>
                                 </div>
