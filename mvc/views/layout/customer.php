@@ -314,7 +314,7 @@
                     <tr>
                         <td class="innerpadding bodycopy mssg">
                             <form method="POST">
-                                <button class="btn" type="button" data-toggle="modal" data-target="#confirmModal">booking confirmation</button>
+                                <button class="btn" type="button" data-toggle="modal" data-target="#confirmModal">booking confirmation </button>
                             </form>
                         </td>
                     </tr>
@@ -365,9 +365,10 @@
                 <div class="modal-body">Select "Confirm" below If you want to confirm the reservation and then please check your email. Thank you!</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <form method="POST">
+                    <!-- <form method="POST">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal" id="submit" name="finalBooking">Confirm</button>
-                    </form>
+                    </form> -->
+                    <a style="color: #ffff;" id="submit" class="btn btn-primary" >Confirm</a>
                 </div>
             </div>
         </div>
@@ -734,17 +735,17 @@
         `;
     document.getElementById("submit").addEventListener("click", myFunction);
     function myFunction() {
-        alert('OK?');
         Email.send({
         Host: "smtp.gmail.com",
-        Username: "minhchuong.org@gmail.com",
-        Password: "mchuong145",
+        Username: "henrytranls2k@gmail.com",
+        Password: "Henry1234",
         SecureToken: "Generate token here",
-        From: "minhchuong.org@gmail.com",
+        From: "henrytranls2k@gmail.com",
         To: "<?php echo $_SESSION['guest']['mail']; ?>",
         Subject: "You've booked from Quite Luxury!",
         Body: html
-        })
+        });
+        window.location.href= "final";
     }
     </script>
     <?php 

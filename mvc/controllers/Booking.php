@@ -97,7 +97,8 @@ class Booking extends Controller{
             if(empty($data['booking']['NameError'])){
                 $this->createGuestSession($data['booking']);
                 $data['booking']['NameError']="";
-                header('Location:'.URL. 'Booking/OfferBooking');
+                // header('Location:'.URL. 'Booking/OfferBooking');
+                echo "<script>window.location.href= '".URL. 'Booking/OfferBooking'."'</script>";
             }
             else  {
                 $data['booking']['NameError'] = '* Please type your name. Please try again.';
@@ -467,7 +468,8 @@ class Booking extends Controller{
     function OfferBooking(){
         ob_start();
         if(empty($_SESSION['guest']['name'])){
-            header('Location:'.URL. 'Booking');
+            // header('Location:'.URL. 'Booking');
+            echo "<script>window.location.href= '".URL. 'Booking'."'</script>";
         }
 
         $this->offer1();
@@ -492,7 +494,8 @@ class Booking extends Controller{
                    
                     $_SESSION['finaloffer'] = $data['offer'][$stt];
                     
-                    header('Location:'.URL. 'Booking/confirm');
+                    // header('Location:'.URL. 'Booking/confirm');
+                    echo "<script>window.location.href= '".URL. 'Booking/confirm'."'</script>";
                     ob_end_flush(); // dùng để chạy câu lệnh phía trên 
                     // $this->view('layout/customer');
                     
@@ -510,7 +513,8 @@ class Booking extends Controller{
                    
                     $_SESSION['finaloffer'] = $data['offer'][$stt];
                     
-                    header('Location:'.URL. 'Booking/confirm');
+                    // header('Location:'.URL. 'Booking/confirm');
+                    echo "<script>window.location.href= '".URL. 'Booking/confirm'."'</script>";
                     ob_end_flush(); // dùng để chạy câu lệnh phía trên 
                     // $this->view('layout/customer');
                     
@@ -548,23 +552,32 @@ class Booking extends Controller{
     function confirm(){
         ob_start();
         if(empty($_SESSION['guest'])){
-            header('Location:'.URL);
+            // header('Location:'.URL);
+            echo "<script>window.location.href= '".URL."'</script>";
         }
         if(empty($_SESSION['finaloffer'])){
             if(empty($_SESSION['guest']['name'])){
-                header('Location:'.URL. 'Booking');
+                // header('Location:'.URL. 'Booking');
+                echo "<script>window.location.href= '".URL.'Booking'."'</script>";
             }
-            header('Location:'.URL. 'Booking/OfferBooking');
+            // header('Location:'.URL. 'Booking/OfferBooking');
+            echo "<script>window.location.href= '".URL.'Booking/OfferBooking'."'</script>";
             
         }
         
         
-         $countoffer = count($_SESSION['offer']);
+        
         // print_r ($_SESSION['guest']);
         $this->view('layout/customer');
 
         // Sự kiện 'finalBooking' để hoàn tất việc booking và gửi mail cho Khách hàng
-        if(isset($_POST['finalBooking'])){
+        
+        
+
+    }
+    public function final(){
+        // if(isset($_POST['finalBooking'])){
+            $countoffer = count($_SESSION['offer']);
             // print_r($_SESSION['finaloffer']);
             // echo "guest";
             // print_r ($_SESSION['guest']);
@@ -576,28 +589,27 @@ class Booking extends Controller{
                $data['roomcount']=  $_SESSION['finaloffer']['roomcount1'];
                $data['roomtype2']= $_SESSION['finaloffer']['roomtype2'];
                $data['roomcount2']=  $_SESSION['finaloffer']['roomcount2'];
-               print_r($data);
-            //    $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
-            //     unset($_SESSION['guest']);
-            //     if(empty($_SESSION['guest'])){
-            //         header('Location:'.URL."Home");
-            //     }
+            //    print_r($data);
+               $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
+                
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
                 $data['roomcount']=  $_SESSION['finaloffer']['roomcount'];
-                print_r($data);
-                // $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
-                // unset($_SESSION['guest']);
-                // if(empty($_SESSION['guest'])){
-                //     header('Location:'.URL."Home");
-                // }
+                // print_r($data);
+                $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
+               
             }
             ob_end_flush();
             // print_r($data);
-                
-        }
-        
 
+            unset($_SESSION['guest']);
+            if(empty($_SESSION['guest'])){
+                // header('Location:'.URL."Home");
+                echo "<script>window.location.href= '".URL.'Home'."'</script>";
+            }   
+
+        // }
+        // echo "<script>window.location.href= '".URLAdmin.'login'."'</script>";
     }
 
 

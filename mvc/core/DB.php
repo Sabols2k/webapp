@@ -9,6 +9,10 @@ class DB{
     protected $dbname = "quite_luxury";
     protected $result = NULL;
 
+    // protected $username = "id15889535_quite_luxury_dbs";
+    // protected $password = "Chau@Chau0402";
+    // protected $dbname = "id15889535_quite_luxury";
+
     function __construct(){
         $this->con = mysqli_connect($this->servername, $this->username, $this->password);
         

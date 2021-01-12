@@ -1,6 +1,6 @@
 <?php
 
-// print_r($_SESSION['guest']) ?>
+ print_r($_SESSION['guest']) ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -54,7 +54,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Your Name</label>
-                      <input name="bookingname" type="text" class="form-control" placeholder="Your Name">
+                      <input name="bookingname" type="text" class="form-control" value="<?php if(isset($_SESSION['guest']['name'])){ echo $_SESSION['guest']['name'];}?>"placeholder="Your Name">
                       <span style="color: red" >
                            <?php echo  $data['booking']['NameError'] ?>
                       </span>
@@ -63,7 +63,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Email Address</label>
-                      <input class="form-control" name="booking-email" type="email" placeholder="Your Email Address">
+                      <input class="form-control" name="booking-email" value="<?php if(isset($_SESSION['guest']['mail'])){ echo $_SESSION['guest']['mail'];}?>" type="email" placeholder="Your Email Address">
                       <span style="color: red" >
                            <?php echo  $data['booking']['MailError'] ?>
                       </span>      
@@ -72,7 +72,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Phone Number</label>
-                      <input name="booking-phone" type="text" class="form-control" placeholder="Your Phone Number">
+                      <input name="booking-phone" type="text" class="form-control" value="<?php if(isset($_SESSION['guest']['phone'])){ echo $_SESSION['guest']['phone'];}?>" placeholder="Your Phone Number">
                       <span style="color: red" >
                            <?php echo  $data['booking']['PhonenumberError'] ?>
                       </span>
@@ -150,7 +150,7 @@
                             </label>
                             <div class="guests-button">
                               <div class="minus"></div>
-                              <input type="text" name="booking-adults" class="booking-guests" value="0">
+                              <input type="text" name="booking-adults" class="booking-guests" value="<?php if(isset($_SESSION['guest']['numberAdult'])){ echo $_SESSION['guest']['numberAdult'];}else{ echo "0";}?>">
                                
                               <div class="plus"></div>
                             </div>
@@ -163,7 +163,7 @@
                             </label>
                             <div class="guests-button">
                               <div class="minus"></div>
-                              <input type="text" name="booking-children" class="booking-guests" value="0">
+                              <input type="text" name="booking-children" class="booking-guests" value="<?php if(isset($_SESSION['guest']['numberAdult'])){ echo $_SESSION['guest']['numberChildren'];}else{ echo "0";}?>">
                               <div class="plus"></div>
                             </div>
                           </div>
@@ -177,10 +177,14 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Room Type</label>
+<<<<<<< HEAD
                       <select name="booking-roomtype" class="form-control" data-header="Select Room Type">
+=======
+                      <select name="booking-roomtype" class="form-control" title="Select Room Type"  data-header="Select Room Type">
+>>>>>>> c6243b9b4344b1074c2acc5297826a837a0e2f76
                         <option value="Single Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Single Room</option>
                         <option value="Double Room" data-subtext="<span class='badge badge-info'>$129 / night</span>">Double Room</option>
-                        <option value="Deluxe Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Deluxe Room</option>
+                        
                       </select>
                       <span style="color: red" >
                            <?php echo  $data['booking']['RoomTypeError'] ?>
@@ -281,252 +285,3 @@
   </body>
 </html>
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-<script>
-  
-  $("#booking1").click(function(event) {
-    var html =`
-                  <!DOCTYPE html>
-                    <html lang="en">
-                  <head>
-                  <meta charset="UTF-8">
-                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                  <title>Reservation Details</title>
-                  <style type="text/css">
-                      body {
-                      margin: 0;
-                      padding: 0;
-                      min-width: 100%!important;
-                  }   
-                  .content {
-                      width: 100%;
-                      max-width: 600px;
-                      border: 1px solid #f5eddb;
-                  }   
-                  .main {
-                      padding: 30px 0;
-                      color: #acbac4;
-                      line-height: 20px;
-                      font-family: sans-serif;
-                  }   
-                  .main a {
-                      color: #acbac4;
-                      text-decoration: none;
-                  }   
-                  .eheader {
-                      padding: 20px;
-                  }   
-                  .innerpadding {
-                      padding: 30px;
-                  }   
-                  .borderbottom {
-                      border-bottom: 1px solid #e6eff2;
-                  }   
-                  .title {
-                      text-align: center;
-                      text-transform: uppercase;
-                  }   
-                  .title a {
-                      font-size: 30px;
-                      line-height: 40px;
-                      color: #fff;
-                  }   
-                  .subhead {
-                      text-align: center;
-                      font-size: 12px;
-                      color: #fff;
-                  }   
-                  .h1 {
-                      text-align: center;
-                      font-size: 30px;
-                      color: #fff;
-                  }   
-                  .h2 {
-                      padding: 0 0 15px 0;
-                      font-size: 16px;
-                      line-height: 28px;
-                      font-weight: bold;
-                  }   
-                  .h3 {
-                      font-size: 15px;
-                      text-decoration: underline;
-                  }   
-                  .bodycopy {
-                      font-size: 14px;
-                      line-height: 22px;
-                  }   
-                  .details {
-                      font-size: 14px;
-                  }   
-                  .mssg {
-                      font-size: 12px;
-                      text-align: center;
-                  }   
-                  .footer {
-                      padding: 20px 30px 15px 30px;
-                      border-top: 1px solid #f2f2f2;
-                  }   
-                  .footer a {
-                      color: #edcb9a;
-                  }   
-                  .footercopy {
-                      font-size: 15px;
-                      color: #777777;
-                  }   
-                  .footercopy a {
-                      color: #edcb9a;
-                  }   
-                  .social a {
-                      font-size: 14px;
-                  }   
-                  table tr td {
-                    padding: 3px 0;
-                  }   
-                  @media screen and (max-width: 600px) { .main { padding: 0; } }
-              </style>
-          </head>
-          <body>
-              <table width="100%" class="main" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                      <td>
-
-                          <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
-                              <tr>
-                                  <td bgcolor="#edcb9a" class="eheader">
-
-                                      <table class="col425" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
-                                          <tr>
-                                              <td height="70">
-                                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                      <tr>
-                                                          <td class="title" style="padding: 5px 0 0 0;">
-                                                              <a href="%site_url%"><?php echo $_SESSION['guest']['hotel'] ?></a>
-                                                          </td>
-                                                      </tr>
-
-                                                      <tr>
-                                                          <td class="subhead" style="padding: 0 0 0 3px;">
-                                                              Reservation Details
-                                                          </td>
-                                                      </tr>
-
-
-                                                  </table>
-                                              </td>
-                                          </tr>
-                                      </table>
-
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="innerpadding borderbottom">
-                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                              <td class="h2">Dear <?php echo $_SESSION['guest']['name']  ?>,</td>
-                                          </tr>
-                                          <tr>
-                                              <td class="bodycopy">We are pleased to inform you that your booking [booking id] is confirmed. <br><br>
-                                                  Your check-in : <?php echo $_SESSION['guest']['dateCheckIn']  ?> <br>
-                                                  Your checkout :<?php echo $_SESSION['guest']['dateCheckOut']  ?>
-                                              </td>
-                                          </tr>
-                                      </table>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="innerpadding borderbottom">
-
-                                      <table class="col380" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
-                                          <tr>
-                                              <td class="h3">Reservation Details:</td>
-                                          </tr>
-
-                                          <tr>
-                                              <td class="innerpadding details">
-
-                                                  <table class="col380" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
-                                                      <tr>
-                                                          <td>Loại phòng<?php echo $_SESSION['guest']['roomtype'] ?></td>
-                                                      </tr>
-                                                      <tr>
-                                                          <td>Số lượng người là </td>
-                                                          <td>Người lớn: <?php echo $_SESSION['guest']['numberAdult'] ?></td>
-                                                          <td>Trẻ nhỏ: <?php echo $_SESSION['guest']['numberChildren'] ?></td>
-
-                                                      </tr>
-                                                      <tr>
-                                                          <td>Tổng giá: 10.000.000đ</td> 
-                                                      </tr>
-                                                  </table>
-
-                                              </td>
-
-                                          </tr>
-
-                                      </table>
-
-                                  </td>
-                              </tr>
-
-                              <tr>
-                                  <td class="innerpadding bodycopy mssg">
-                                      Sincerely awaiting your visit,
-                                      <br> <?php echo $_SESSION['guest']['hotel'] ?> </td>
-                              </tr>
-                              <tr>
-                                  <td class="footer" bgcolor="#f7f8f9">
-                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                          <tr>
-                                            <td align="center" class="footercopy">
-                                                &#169; 2020 <a href="%site_url%">%site_title%</a> All Rights Reserved.
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                              <td align="center" class="social" style="padding: 10px 0 0 0;">
-                                                  <table border="0" cellspacing="0" cellpadding="0">
-                                                      <tr>
-                                                          <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
-                                                              <a href="%facebook_link%">
-                                                                  facebook
-                                                              </a>
-                                                          </td>
-                                                          <td width="37" style="text-align: center; padding: 0 10px 0 10px;">
-                                                              <a href="%twitter_link%">
-                                                                  twitter
-                                                              </a>
-                                                          </td>
-                                                      </tr>
-                                                  </table>
-                                              </td>
-                                          </tr>
-                                      </table>
-                                  </td>
-                              </tr>
-                          </table>
-
-                      </td>
-                  </tr>
-              </table>
-          </body>
-          </html>
-
-    `;
-    Email.send({
-            Host: "smtp.gmail.com",
-            Username: "quiteluxuryhotel@gmail.com",
-            Password: "Chau1234",
-            SecureToken: "Generate token here",
-            From: "quiteluxuryhotel@gmail.com",
-            To: "dangducchau2000@gmail.com",
-            Subject: "You've booked from Quite Luxury!",
-            Body: html
-        }).then(function(message){
-          alert("mail sent successfully");
-    });
-  });
-  
-
-    
-
-</script>
