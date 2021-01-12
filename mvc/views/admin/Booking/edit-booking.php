@@ -61,7 +61,7 @@
             <div class="col-lg-12 p-t-20 text-center">
                 <button  type="submit" name="editBooking" value="Update" class="mdl-button mdl-button--raised btn-pink" href="<?php echo URLAdmin.'viewBooking'?>"> Submit
                </button>
-                <button type="button" class="mdl-button mdl-button--raised btn-default">Cancel</button>
+               <a class="mdl-button mdl-button--raised btn-default" href="<?php echo URLAdmin."viewbooking" ?>" style="text-decoration: none;">Cancel</a>
             </div> 
         </div>
 

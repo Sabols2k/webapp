@@ -566,12 +566,18 @@ class Booking extends Controller{
         }
         
         
-         $countoffer = count($_SESSION['offer']);
+        
         // print_r ($_SESSION['guest']);
         $this->view('layout/customer');
 
         // Sự kiện 'finalBooking' để hoàn tất việc booking và gửi mail cho Khách hàng
-        if(isset($_POST['finalBooking'])){
+        
+        
+
+    }
+    public function final(){
+        // if(isset($_POST['finalBooking'])){
+            $countoffer = count($_SESSION['offer']);
             // print_r($_SESSION['finaloffer']);
             // echo "guest";
             // print_r ($_SESSION['guest']);
@@ -583,30 +589,27 @@ class Booking extends Controller{
                $data['roomcount']=  $_SESSION['finaloffer']['roomcount1'];
                $data['roomtype2']= $_SESSION['finaloffer']['roomtype2'];
                $data['roomcount2']=  $_SESSION['finaloffer']['roomcount2'];
-               print_r($data);
+            //    print_r($data);
                $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
-                unset($_SESSION['guest']);
-                if(empty($_SESSION['guest'])){
-                    // header('Location:'.URL."Home");
-                    echo "<script>window.location.href= '".URL.'Home'."'</script>";
-                }
+                
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
                 $data['roomcount']=  $_SESSION['finaloffer']['roomcount'];
-                print_r($data);
+                // print_r($data);
                 $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
-                unset($_SESSION['guest']);
-                if(empty($_SESSION['guest'])){
-                    // header('Location:'.URL."Home");
-                    echo "<script>window.location.href= '".URL.'Home'."'</script>";
-                }
+               
             }
             ob_end_flush();
             // print_r($data);
-                
-        }
-        
 
+            unset($_SESSION['guest']);
+            if(empty($_SESSION['guest'])){
+                // header('Location:'.URL."Home");
+                echo "<script>window.location.href= '".URL.'Home'."'</script>";
+            }   
+
+        // }
+        // echo "<script>window.location.href= '".URLAdmin.'login'."'</script>";
     }
 
 

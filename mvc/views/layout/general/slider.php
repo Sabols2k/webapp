@@ -1,3 +1,4 @@
+
 <div class="slider">
         <div id="rev-slider-1" class="rev_slider gradient-slider" style="display:none" data-version="5.4.5">
             <ul>
@@ -169,9 +170,9 @@
             <div class="inner box-shadow-007">
               <!-- ========== BOOKING NOTIFICATION ========== -->
               <div id="booking-notification" class="notification"></div>
-              <form id="booking-form">
+              <form  method="POST">
                 <!-- NAME -->
-                <div class="row">
+                <div class="row"  >
                   <div class="col-md-2">
                     <div class="form-group">
                       <label>Name
@@ -179,8 +180,10 @@
                           <i class="fa fa-info-circle"></i>
                         </a>
                       </label>
-                      <input class="form-control" name="booking-name" type="text" data-trigger="hover" placeholder="Write Your Name">
+                      <input class="form-control" name="bookingname" type="text" data-trigger="hover" placeholder="Write Your Name">
+                      
                     </div>
+
                   </div>
                   <!-- EMAIL -->
                   <div class="col-md-2">
@@ -261,11 +264,13 @@
                   </div>
                   <!-- BOOKING BUTTON -->
                   <div class="col-md-2">
-                    <button type="submit" class="btn btn-book">
-                      <a href="#">BOOK A ROOM</a>
+                  
+                    <button type="submit" name="bookingform" class="btn btn-book" >
+                        BOOK A ROOM
                     </button>
                   </div>
                 </div>
+
               </form>
             </div>
           </div>
