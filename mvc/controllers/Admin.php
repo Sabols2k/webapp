@@ -273,7 +273,8 @@ class Admin extends Controller{
                 
                 $data['booking'] =  $model->getAllBooking();
                 $data['main']="Booking/view-booking";
-                header('Location:'.URLAdmin. 'viewbooking');
+                // header('Location:'.URLAdmin. 'viewbooking');
+                echo "<script>window.location.href= '".URLAdmin. 'viewbooking'."'</script>";
                 $this->viewadmin("index",$data);
             }
         $data['main']="Booking/edit-booking";
@@ -284,7 +285,8 @@ class Admin extends Controller{
         $_SESSION['function'] = 'booking';
         $model= $this->modeladmin("booking");
         $model->DeleteBookingById($id);
-        header('Location:'.URLAdmin. 'viewbooking');
+        // header('Location:'.URLAdmin. 'viewbooking');
+        echo "<script>window.location.href= '".URLAdmin. 'viewbooking'."'</script>";
     }
 
 
@@ -438,7 +440,8 @@ class Admin extends Controller{
                 
                 $data['room'] =  $model->getAllRoom();
                 $data['main']="Room/view-room";
-                header('Location:'.URLAdmin. 'viewroom');
+                // header('Location:'.URLAdmin. 'viewroom');
+                echo "<script>window.location.href= '".URLAdmin. 'viewroom'."'</script>";
                 $this->viewadmin("index",$data);
             }
         $data['main']="Room/edit-room";
@@ -450,7 +453,8 @@ class Admin extends Controller{
         $_SESSION['function'] = 'room';
         $model= $this->modeladmin("room");
         $model->DeleteRoomById($id);
-        header('Location:'.URLAdmin. 'viewroom');
+        // header('Location:'.URLAdmin. 'viewroom');
+        echo "<script>window.location.href= '".URLAdmin. 'viewroom'."'</script>";
     }
 
 
@@ -699,7 +703,8 @@ class Admin extends Controller{
                 
                 $data['account'] =  $model->getAllAccount();
                 $data['main']="Account/view-account";
-                header('Location:'.URLAdmin. 'viewaccount');
+                // header('Location:'.URLAdmin. 'viewaccount');
+                echo "<script>window.location.href= '".URLAdmin. 'viewaccount'."'</script>";
                 $this->viewadmin("index",$data);
             }
         $data['main']="Account/edit-account";
@@ -710,7 +715,8 @@ class Admin extends Controller{
         $_SESSION['function'] = 'account';
         $model= $this->modeladmin("account");
         $model->DeleteAccountById($id);
-        header('Location:'.URLAdmin. 'viewaccount');
+        // header('Location:'.URLAdmin. 'viewaccount');
+        echo "<script>window.location.href= '".URLAdmin. 'viewaccount'."'</script>";
     }
 
     public function addblog(){

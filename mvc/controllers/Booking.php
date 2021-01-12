@@ -97,7 +97,8 @@ class Booking extends Controller{
             if(empty($data['booking']['NameError'])){
                 $this->createGuestSession($data['booking']);
                 $data['booking']['NameError']="";
-                header('Location:'.URL. 'Booking/OfferBooking');
+                // header('Location:'.URL. 'Booking/OfferBooking');
+                echo "<script>window.location.href= '".URL. 'Booking/OfferBooking'."'</script>";
             }
             else  {
                 $data['booking']['NameError'] = '* Please type your name. Please try again.';
@@ -467,7 +468,8 @@ class Booking extends Controller{
     function OfferBooking(){
         ob_start();
         if(empty($_SESSION['guest']['name'])){
-            header('Location:'.URL. 'Booking');
+            // header('Location:'.URL. 'Booking');
+            echo "<script>window.location.href= '".URL. 'Booking'."'</script>";
         }
 
         $this->offer1();
@@ -492,7 +494,8 @@ class Booking extends Controller{
                    
                     $_SESSION['finaloffer'] = $data['offer'][$stt];
                     
-                    header('Location:'.URL. 'Booking/confirm');
+                    // header('Location:'.URL. 'Booking/confirm');
+                    echo "<script>window.location.href= '".URL. 'Booking/confirm'."'</script>";
                     ob_end_flush(); // dùng để chạy câu lệnh phía trên 
                     // $this->view('layout/customer');
                     
@@ -510,7 +513,8 @@ class Booking extends Controller{
                    
                     $_SESSION['finaloffer'] = $data['offer'][$stt];
                     
-                    header('Location:'.URL. 'Booking/confirm');
+                    // header('Location:'.URL. 'Booking/confirm');
+                    echo "<script>window.location.href= '".URL. 'Booking/confirm'."'</script>";
                     ob_end_flush(); // dùng để chạy câu lệnh phía trên 
                     // $this->view('layout/customer');
                     
@@ -548,13 +552,16 @@ class Booking extends Controller{
     function confirm(){
         ob_start();
         if(empty($_SESSION['guest'])){
-            header('Location:'.URL);
+            // header('Location:'.URL);
+            echo "<script>window.location.href= '".URL."'</script>";
         }
         if(empty($_SESSION['finaloffer'])){
             if(empty($_SESSION['guest']['name'])){
-                header('Location:'.URL. 'Booking');
+                // header('Location:'.URL. 'Booking');
+                echo "<script>window.location.href= '".URL.'Booking'."'</script>";
             }
-            header('Location:'.URL. 'Booking/OfferBooking');
+            // header('Location:'.URL. 'Booking/OfferBooking');
+            echo "<script>window.location.href= '".URL.'Booking/OfferBooking'."'</script>";
             
         }
         
@@ -580,7 +587,8 @@ class Booking extends Controller{
                $model->insertbookingfull2($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount'],$data['roomtype2'],$data['roomcount2']);
                 unset($_SESSION['guest']);
                 if(empty($_SESSION['guest'])){
-                    header('Location:'.URL."Home");
+                    // header('Location:'.URL."Home");
+                    echo "<script>window.location.href= '".URL.'Home'."'</script>";
                 }
             }else{
                 $data['roomtype']= $_SESSION['finaloffer']['roomtype'];
@@ -589,7 +597,8 @@ class Booking extends Controller{
                 $model-> insertbookingfull1($data['name'],$data['mail'],$data['phone'],$data['country'],$data['dateCheckIn'],$data['dateCheckOut'],$data['numberAdult'],$data['numberChildren'],$data['roomtype'],$data['Decription'],$data['roomcount']);
                 unset($_SESSION['guest']);
                 if(empty($_SESSION['guest'])){
-                    header('Location:'.URL."Home");
+                    // header('Location:'.URL."Home");
+                    echo "<script>window.location.href= '".URL.'Home'."'</script>";
                 }
             }
             ob_end_flush();
