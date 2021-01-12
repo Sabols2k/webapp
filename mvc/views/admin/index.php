@@ -84,7 +84,6 @@
         require_once('general/js.php');
     ?>
     
-  
 </body>
 
 </html>

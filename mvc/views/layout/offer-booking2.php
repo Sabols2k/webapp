@@ -54,9 +54,9 @@
                   </h3>
                 </div>
                 <div class="col-lg-3 mb30 mt10">
-                  <span>Total Bill</span>
-                  <span name="bill" > <?php $total= $row['price1'] *$row['roomcount1'] +$row['price2'] *$row['roomcount2'];
-                                                    echo $total;?> </span>
+                  <span style="font-weight: bold">Total Bill:</span>
+                  <span name="bill" style="font-weight: bold"> <?php $total= $row['price1'] *$row['roomcount1'] +$row['price2'] *$row['roomcount2'];
+                                                    echo $total;?> $</span>
                 </div>
                 <div class="col-lg-3 mb30 mt10">
                 <button type="submit" name="bookingoffer<?php echo $stt ?>"  class="btn btn-dark" style="float: right;">

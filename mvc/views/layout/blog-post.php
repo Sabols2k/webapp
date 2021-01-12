@@ -119,7 +119,7 @@
                   <span>
                     <i class="fa fa-tags"></i>
                     TAGS</span>
-                  <a href="#" rel="tag">Himara</a>
+                  <a href="#" rel="tag">Quite Luxury</a>
                   <a href="#" rel="tag">Holiday</a>
                   <a href="#" rel="tag">Summer</a>
                 </div>
@@ -145,131 +145,6 @@
               </div>
             </div>
           </article>
-          <div id="comments">
-            <div class="section-title">
-              <h4>COMMENTS</h4>
-              <p class="section-subtitle">Leave your comment</p>
-            </div>
-            <ul id="comments-list" class="comments-list">
-              <li>
-                <div class="comment-main-level">
-                  <div class="comment-avatar"><img src="<?php echo URL ."mvc/Assets/images/blog/users/user1.jpg"?>" alt=""></div>
-                  <div class="comment-box">
-                    <div class="comment_content">
-                      <h4 class="author-name">
-                        <a href="#">JANE Doe</a>
-                      </h4>
-                      <a href="#comment-form" class="reply_link">Reply</a>
-                      <span class="comment_info">
-                        <i class="fa fa-clock-o"></i>
-                        <a href="#">
-                          <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017 at 7:56 pm</time>
-                        </a>
-                      </span>
-                      <div class="comment_said_text">
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <ul class="comments-list reply-list">
-                  <li>
-                    <div class="comment-avatar"><img src="<?php echo URL ."mvc/Assets/images/blog/users/user2.jpg"?>" alt=""></div>
-                    <div class="comment-box">
-                      <div class="comment_content">
-                        <h4 class="author-name">
-                          <a href="#">
-                            Ina Aldrich</a>
-                        </h4>
-                        <a href="#comment-form" class="reply_link">Edit</a>
-                        <span class="comment_info">
-                          <i class="fa fa-clock-o"></i>
-                          <a href="#">
-                            <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017 at 7:56 pm</time>
-                          </a>
-                        </span>
-                        <div class="comment_said_text">
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat, euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="comment-avatar">
-                      <img src="<?php echo URL ."mvc/Assets/images/blog/users/user3.jpg"?>" alt="">
-                    </div>
-                    <div class="comment-box">
-                      <div class="comment_content">
-                        <h4 class="author-name">
-                          <a href="#">William Whiten</a>
-                        </h4>
-                        <a href="#comment-form" class="reply_link">Reply</a>
-                        <span class="comment_info">
-                          <i class="fa fa-clock-o"></i>
-                          <a href="#">
-                            <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017 at 7:56 pm</time>
-                          </a>
-                        </span>
-                        <div class="comment_said_text">
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <div class="comment-main-level">
-                  <div class="comment-avatar">
-                    <img src="<?php echo URL ."mvc/Assets/images/blog/users/user4.jpg"?>" alt="">
-                  </div>
-                  <div class="comment-box">
-                    <div class="comment_content">
-                      <h4 class="author-name">
-                        <a href="#">Amy Ellison</a>
-                      </h4>
-                      <a href="#comment-form" class="reply_link">Reply</a>
-                      <span class="comment_info">
-                        <i class="fa fa-clock-o"></i>
-                        <a href="#">
-                          <time datetime="2017-10-01T19:56:36+00:00">October 1, 2017 at 7:56 pm</time>
-                        </a>
-                      </span>
-                      <div class="comment_said_text">
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div class="section-title mt100">
-              <h4>LEAVE YOUR COMMENT</h4>
-              <p class="section-subtitle">Write your comment</p>
-            </div>
-            <form id="comment-form" class="comment-form">
-              <div class="row">
-                <div class="col-md-4">
-                  <input type="text" class="form-control" placeholder="Name*">
-                </div>
-                <div class="col-md-4">
-                  <input type="email" class="form-control" placeholder="Email*">
-                </div>
-                <div class="col-md-4">
-                  <input type="text" class="form-control" placeholder="Website">
-                </div>
-                <div class="col-md-12">
-                  <textarea class="form-control" placeholder="Write Your Comment"></textarea>
-                </div>
-                <div class="col-md-12">
-                  <button class="btn float-right">
-                    POST YOUR COMMENT
-                  </button>
-                  <div class="align-left">*Your email address will not be published.</div>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
       </main>
       <!-- END BLOG LIST -->
