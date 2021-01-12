@@ -27,7 +27,7 @@
               <li>
                 <a href="<?php echo URL?>">Home</a>
               </li>
-              <li>About Quite Luxury Hotel</li>
+              <li>About us</li>
             </ol>
           </div>
         </div>
