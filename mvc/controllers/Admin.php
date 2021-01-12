@@ -17,9 +17,15 @@ class Admin extends Controller{
         // $this->viewadmin("index");
         $_SESSION['function']= "index";
         
+        $model=$this->modeladmin("dashboard");
+        $data['dashboard'] =  $model->general();
+
         $data['main'] = "home/main";
         // require_once "./mvc/views/admin/index.php";
         $this->viewadmin("index",$data);
+
+        
+
         
     }
    

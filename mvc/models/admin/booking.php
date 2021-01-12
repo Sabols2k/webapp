@@ -43,7 +43,7 @@ class booking extends DB{
       // $sql ="SELECT * FROM bookings";
       $sql= "CALL `viewbooking`();";
       $this->execute($sql);
-      while($datas=$this->getData('bookings')){
+      while($datas=$this->getData()){
           $data[]=$datas;
       }
       return $data;
