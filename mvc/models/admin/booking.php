@@ -34,8 +34,9 @@ class booking extends DB{
         return $this->execute($sql);
      }
      public function DeleteBookingById($id){
-      $sql="DELETE from bookings WHERE bBookingID='$id'";
-    //   $sql="CALL DeleteRoomById($id) ";
+      // $sql="DELETE from bookings WHERE bBookingID='$id'";
+      $sql="CALL `DeleteBookingById`($id); ";
+
       $this->execute($sql);
      }
      public function getAllBooking(){

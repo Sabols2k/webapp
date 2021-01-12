@@ -177,11 +177,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Room Type</label>
-<<<<<<< HEAD
-                      <select name="booking-roomtype" class="form-control" data-header="Select Room Type">
-=======
                       <select name="booking-roomtype" class="form-control" title="Select Room Type"  data-header="Select Room Type">
->>>>>>> c6243b9b4344b1074c2acc5297826a837a0e2f76
                         <option value="Single Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Single Room</option>
                         <option value="Double Room" data-subtext="<span class='badge badge-info'>$129 / night</span>">Double Room</option>
                         

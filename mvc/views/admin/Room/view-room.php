@@ -73,7 +73,7 @@
                     
                     <tr>
                         <td><?php echo $row['RoomID'] ?></td>
-                        <td><img style="height: 50px; width: 50px; border-radius:50%" src=" <?php echo imgRoomtype?> <?php echo $row['rImg'] ?>" alt=""></td>
+                        <td><img style="height: 50px; width: 50px; border-radius:50%" src=" <?php echo imgRoomtype . $row['rImg'] ?>" alt=""></td>
                         <td><?php echo $row['RoomNumber'] ?></td>
                         <td><?php echo $row['rRoomType'] ?></td>
                         <td><?php echo $row['rRoomPrice'] ?></td>
