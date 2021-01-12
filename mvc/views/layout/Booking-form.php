@@ -81,7 +81,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Country</label>
-                      <select name="booking-country" class="form-control" title="Select Your Country" data-header="Select Your Country" data-live-search="true" data-size="5">
+                      <select name="booking-country" class="form-control" data-header="Select Your Country" data-live-search="true" data-size="5">
                         <option value="Australia">Australia</option>
                         <option value="Brazil">Brazil</option>
                         <option value="Cambodia">Cambodia</option>
@@ -177,9 +177,8 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Room Type</label>
-                      <select name="booking-roomtype" class="form-control" title="Select Room Type" data-header="Select Room Type">
-                        <option value="Single Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Single Room
-                        </option>
+                      <select name="booking-roomtype" class="form-control" data-header="Select Room Type">
+                        <option value="Single Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Single Room</option>
                         <option value="Double Room" data-subtext="<span class='badge badge-info'>$129 / night</span>">Double Room</option>
                         <option value="Deluxe Room" data-subtext="<span class='badge badge-info'>$89 / night</span>">Deluxe Room</option>
                       </select>

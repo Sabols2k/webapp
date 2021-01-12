@@ -73,7 +73,7 @@
                 <div class="col-md-3">
                   <figure>
                     <div class="gradient-overlay-hover image-icon sm">
-                      <a href="images/blog/post/blog-post2.jpg"?>">
+                      <a href="images/blog/post/blog-post2.jpg">
                         <img src="<?php echo URL ."mvc/Assets/images/blog/post/blog-post2.jpg"?>" class="img-fluid">
                       </a>
                     </div>
@@ -83,7 +83,7 @@
                 <div class="col-md-3">
                   <figure>
                     <div class="gradient-overlay-hover image-icon sm">
-                      <a href="images/blog/post/blog-post3.jpg"?>">
+                      <a href="images/blog/post/blog-post3.jpg">
                         <img src="<?php echo URL ."mvc/Assets/images/blog/post/blog-post3.jpg"?>" class="img-fluid">
                       </a>
                     </div>
@@ -93,7 +93,7 @@
                 <div class="col-md-3">
                   <figure>
                     <div class="gradient-overlay-hover image-icon sm">
-                      <a href="images/blog/post/blog-post4.jpg"?>">
+                      <a href="images/blog/post/blog-post4.jpg">
                         <img src="<?php echo URL ."mvc/Assets/images/blog/post/blog-post4.jpg"?>" class="img-fluid">
                       </a>
                     </div>
@@ -103,7 +103,7 @@
                 <div class="col-md-3">
                   <figure>
                     <div class="gradient-overlay-hover image-icon sm">
-                      <a href="images/blog/post/blog-post5.jpg"?>">
+                      <a href="images/blog/post/blog-post5.jpg">
                         <img src="<?php echo URL ."mvc/Assets/images/blog/post/blog-post5.jpg"?>" class="img-fluid">
                       </a>
                     </div>
