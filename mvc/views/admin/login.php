@@ -1,6 +1,7 @@
 <?php  
     if(isset($_SESSION['admin']['username'])){
-        header('Location:'.URLAdmin);
+        // header('Location:'.URLAdmin);
+        echo "<script>window.location.href= '".URLAdmin."'</script>";
     }
 ?>
 <!DOCTYPE html>
