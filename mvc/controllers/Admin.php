@@ -207,12 +207,16 @@ class Admin extends Controller{
     public function Addbooking() {
         $_SESSION['function'] = 'booking';
         $data['booking'] = [
-            'bBookingID' =>'',
-            'bGuestID' => '',
-            'bReservationAgentID' => '', 
+            'name' => '',
+            'mail' =>'',
+            'phone' => '',
+            'country' => '',
             'bDateCheckIn' => '',
             'bDateCheckOut' => '',
-            'bRoomCount' => ''
+            'numberAdults' =>'',
+            'numberChildren' => '',
+            'roomType' =>'',
+            'Description' => '',
         ];
         
         //Check for post
@@ -221,22 +225,33 @@ class Admin extends Controller{
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data['booking'] = [
-                'bBookingID' => trim($_POST['BookingID']),
-                'bGuestID' => trim($_POST['GuestID']),
-                'bReservationAgentID' => trim($_POST['ReservationID']),
+                'name' => trim($_POST['name']),
+                'mail' => trim($_POST['mail']),
+                'phone' => trim($_POST['phone']),
+                'country' => trim($_POST['country']),
                 'bDateCheckIn' => trim($_POST['DateCheckIn']),
                 'bDateCheckOut' => trim($_POST['DateCheckOut']),
-                'bRoomCount' => trim($_POST['RoomCount']),
-            
+                'numberAdults' => trim($_POST['NumberAdults']),
+                'numberChildren' => trim($_POST['NumberChildren']),
+                'roomType' => trim($_POST['booking-roomtype']),
+                'Description' => trim($_POST['Descriptions']),
+                'roomcount' => trim($_POST['roomcount'])
+                
             ];
-       
+            // print_r($data['booking']); die();
             $model=$this->modeladmin("booking");
-            $model->InsertBooking($data['booking']['bBookingID'],
-                $data['booking']['bGuestID' ],
-                $data['booking']['bReservationAgentID' ],
+            $model->InsertBooking(
+                $data['booking']['name' ],
+                $data['booking']['mail' ],
+                $data['booking']['phone' ],
+                $data['booking']['country' ],
                 $data['booking']['bDateCheckIn' ],
                 $data['booking']['bDateCheckOut' ],
-                $data['booking']['bRoomCount' ]
+                $data['booking']['numberAdults' ],
+                $data['booking']['numberChildren' ],
+                $data['booking']['roomType' ],
+                $data['booking']['Description'],
+                $data['booking']['roomcount' ],
             );
           
         } 

@@ -4,11 +4,12 @@ class booking extends DB{
 	{
 		parent::__construct();
 	}
-    public function InsertBooking($BookingID,$GuestID,$ReservationAgentID,$DateCheckIn, $DateCheckOut,$RoomCount){
-        $sql="INSERT INTO `Bookings` (`bBookingID`, `bGuestID`, `bReservationAgentID`, `bDateCheckIn`, `bDateCheckOut`, `bRoomCount`) VALUES ('$BookingID', '$GuestID', '$ReservationAgentID', '$DateCheckIn', '$DateCheckOut', '$RoomCount')";
-        // $sql="CALL insertRoom($RoomTypeID,$RoomPrice,$Description,$RoomstatusID)";
-        return $this->execute($sql);
+    public function InsertBooking($name, $mail,$phone, $country, $dateCheckIn, $dateCheckOut, $numberAdult, $numberChildren, $roomtype, $Decription, $roomcount){
+      $sql="CALL `insertbookingfull1`('$name', '$mail', '$phone','$country', '$dateCheckIn', '$dateCheckOut', '$numberAdult', '$numberChildren', '$roomtype', '$Decription', '$roomcount');";
+      
+      return $this->execute($sql);
     }
+    
     // public function editbyId($id){
 
     //     $table= "room";
