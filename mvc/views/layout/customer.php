@@ -744,8 +744,10 @@
         To: "<?php echo $_SESSION['guest']['mail']; ?>",
         Subject: "You've booked from Quite Luxury!",
         Body: html
+        }).then(function (message) { 
+                 window.location.href= "final";
+                  alert("mail sent successfully") 
         });
-        window.location.href= "final";
     }
     </script>
     <?php 

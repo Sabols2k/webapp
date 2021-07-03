@@ -16,8 +16,8 @@ class account extends DB{
     //   return $this->execute($sql);
     // }
     public function getDataAccountById( $id){
-        // $sql="SELECT * from `admin` where `aAdminID`='$id'";
-        $sql = "CALL `getDataAccountById`('$id')";
+        $sql="SELECT * from `admin` where `aAdminID`='$id'";
+        // $sql = "CALL `getDataAccountById`('$id')";
         $this->execute($sql);
         if($this->result){
             $data=mysqli_fetch_array($this->result);
@@ -41,8 +41,8 @@ class account extends DB{
       $this->execute($sql);
      }
      public function getAllAccount(){
+        // $sql = "SELECT * FROM `admin`";
       $sql ="CALL `viewaccount`()";
-    //   $sql= "CALL getAllRoom()";
       $this->execute($sql);
       while($datas=$this->getData()){
           $data[]=$datas;

@@ -1,6 +1,6 @@
 
 <?php  
-    
+    echo "index";    
     if(empty($_SESSION['admin']['username'])){
         // header('Location:'.URLAdmin.'login');
         echo "<script>window.location.href= '".URLAdmin.'login'."'</script>";

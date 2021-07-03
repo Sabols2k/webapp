@@ -16,7 +16,7 @@ class Admin extends Controller{
     function index(){
         // $this->viewadmin("index");
         $_SESSION['function']= "index";
-        
+        // echo "abc"; die();
         $model=$this->modeladmin("dashboard");
         $data['dashboard'] =  $model->general();
 
@@ -435,8 +435,7 @@ class Admin extends Controller{
                         $data['room']['Description' ] );
                 
             }
-            $data['main']= "Room/view-room";
-            $this->viewadmin("index",$data);
+            echo "<script>window.location.href= '".URLAdmin. 'viewroom'."'</script>";
 
         } 
         $data['main']= "Room/add-room";
@@ -504,7 +503,7 @@ class Admin extends Controller{
     
     public function viewaccount(){
         $_SESSION['function'] = 'account';
-
+        // echo "Welcome ". $_GET['value']. "<br />"; 
         if(isset($_GET['value'])) {
             // echo "Welcome ". $_GET['value']. "<br />"; 
             $data['value'] = trim($_GET['value']);
@@ -524,6 +523,7 @@ class Admin extends Controller{
                         $stt++;
                     }
                     $data['main'] = 'Account/view-account';
+                    // print_r ($data['main']); die();
                     $this->viewadmin('index',$data);
                     
                }
